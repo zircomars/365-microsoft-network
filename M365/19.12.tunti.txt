@@ -1,0 +1,155 @@
+19.12. maanantai luento
+
+microsoft 365
+
+1-3 rekistörintiä, yhdellä luottokorttia voi 3 käyttäjiä
+
+yks tilaus ja kaikki käytätjä tunnus, 
+
+eri taso versioita, business, basic ja jne.
+
+versioita saa online tarkoittaa selaimella saa käsiksi, tai asetettu tilauksesta
+
+riippuu lisensistä, 25 käyttäjä liesnssiä
+
+tenant - vuokra yritys organisaatio käyttää, taustalla azure mutta eri tausta ja saa tilaukseen saa erillisenä oma pakettina
+
+m365 office core services
+exchange online - perus kalenteri ja sähköpostit (premisis ympäristö) oma konsepti , database group 
+yrityksen tilaus eli käyttäjät , mihin käyttäjt menee? azure ad , azure portaali ei käytä
+
+sharepoint online - web site väline, mutta rajoitettu online versiota, siinä ei voi tehdä julkisia web sitte, vaan intra net. monesti tartuttaan on, sitä mahdollista tiedosto ja kansion jakamista, jaettu kansiot luodaan sharepoint, myös voi luoda teams site ja siitä jaetttava rajoitettu kansio.
+
+nojautuu azureen (azure ad) sharepoint ja jne muita projektia, ja muita taustoi
+
+exchange palvelin admin centerin on palveluiden hallinta päätyökalu
+
+käyttäjähallinta voi tehdä admin centeristä 365 linkitetty oma , kirjaudu offfice ja mee admin sieltä vasemman alhaalla lukee hallintakeskus
+
+
+overview of exchange: ominaisuuksia
+
+perus sposti, tietokantaa, integroitu kalenteri, drive
+
+resurssi sposti, perus varaus esim. neukkari ja jne.
+
+exchange room maksimi määärä
+
+smtp ei salaa organisaation oman sähköpostit 
+
+overview of sharepoint online: ominaisuuksia
+
+jakaa dokumenttia,
+
+intranet, perus kansio ja jakaa sisäisiä tiedostoja käyttäjille ja näkyy käyttäjän tiedoston kansiossa & team sites
+
+manage version history
+
+microsoft vision (reititin kytkentä, mindmap ja kuvan piirtämistä)
+
+-------------
+
+
+m365 personal use - kotikäyttäjät 10/kk tai muu hinta
+business subscription plan - yrityksen oma väline karkea jako (pien yritys rajoitus esim. 300 käyttäjää max)
+enterprise - ei ole rajoitettua käyttäjää 
+other - education lisenssi hinnoittelu maltilisempi, government oma lisenssi
+
+käyttäjä luonti
+
+dns vyöhykkeet, ainoa mahdollisuus on lisätä tietokantaan, 365 admin center:istä custom domain tulee dns 
+
+dns nimen selvitys tyyppillisesti nimen ja ip osoitteeksi, tai kertoo palvelun sijainti
+
+hybridi kulkemista - sposti kohde domain löytyy, nimipalvelu mx tietue smtp, jos hybridi ohjaa on premisis palvelumille ne viestit ja mahdollista kulkea viestin pilven kautta ja siitä on premisis & myös muita tietotuet
+
+dns management in m365 dns records 
+exchange online - mx (sähköposti ohjaus), cname (alias nimi), txt (joka määrittää sähköposti reittejä)
+srv - service location
+
+microsoft 365 SSO - host (A)
+mobile device management for m365 - hallinta järjestelmä se tarvitsee kumppani hallintaohjelman (microsoft intune)
+
+https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide
+
+-----------------------------
+
+dns management m365
+
+custom dns alue , yrityksellä pitää olla admin center 
+
+split brain dns - ad käyttössä oma dns nimi palvelin siellä on domain ja ulkoinen nimi, että käyttää sisä ja ulkopuolella 
+
+
+päivitys kiinteä päivitys m365
+
+microsoft remote connectivity analyzer
+
+--------------------------------
+
+m365 admin center --> settings (domains) oletus domain, jos luo
+
+onenote online (muistiinpano, kuvakaappaukset ja jne)
+
+m365 partner admin - microsoft partner oma kumppannuuus 
+
+---------------------------------
+
+!!!! microsoft administration tools and techonique
+
+hallinta ja työkalut
+
+hallinta roolit , eri nimisiä portaalista vs powershell
+
+m365 admin center:stä pääsee (hallintakeskus / tietoturva -> microsoft 365 defender) 
+
+exchange admin center 
+
+azure ad admin center käyttäjähallinta (manage /  azure ad connect) 
+
+
+
+powershell
+
+käsittelee microsoft 365 admin center , ei mitään muita & edellyttää moduuli läsnä olo ms online , käyttäjähallitnaa, ei mikä hyvä käyttön tekemiseesn, jos purkki muutos on edeton & scripttaus, käyttäjähallintaa se ei riittä että antaa nimi ja salasana, että käyttäjä tarvitse parametriä ja muita kommentoja
+lisenssiä voi hallinnoida, antaa tai poistaa lisenssiä, käyttöoikeudet, salasana hallinta ja jne. 
+
+powershell (admin)
+get-command Module MSOnline
+
+degelointi toisen telekointi voi hallinnoida m365 asioita 
+
+hallintoi degeloint (käyttöhallintaoikeus) - partner organisaatio lähettää sposti authorizoi ja luodaan tilit. kumppani organisaaatiolla full tai limited administrator
+
+
+---------------------------------
+
+synkranointi
+
+
+suuret yritykset käyttää federaatiota (federation)
+
+on helppo (expreses) antaa päätili ja salsana, hankala osuus valitaan adtribuutteja mitä synkranoidaan pilveen
+ 
+synkranointi tapahtuu on premisis AD DS <----> azure ad (tapahtuu objekti ja adtribuutteja) 
+
+pk käyttää synkranointi ja suuret yritykset federointia , että useita ad metsiä, käyttäjiä ja 
+
+joka domain synkranoidaan erikseen, 
+
+azure toimii välittäjänä
+
+synkranointi hyöydyntämisessä minimioida liikennettä pilveen, azure ad connect välinen toimintaan 
+
+azure ad connect 
+
+synkranointi service manager lokit 
+
+filtteröinti
+objektia pilveen kerräminen (1. domain taso , kaikki domain objektit synkranoidaan ja voi olla useitakin, organisaatio yksikkö taso on-premisis pilvi käyttäjät ja niiden pilvikäyttäjtä, yksittäiset adtribuuttet, exchange adtribuuttit), monitorointi monelal tavalla ja yleisi tuote: system center management) operation manager, azure synkranointia ja asennettu manager,
+
+azure ad connect health - terveyden tilan seuranta
+
+sähköposti muutokset tapahtuu exchange:ssa 
+
+poistaminen käyttäjistä admin center, n. 30pv aikaraja, jotta tarvittaessa voidaan palauttaa
