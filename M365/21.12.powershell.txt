@@ -1,0 +1,119 @@
+
+
+teams 21.12.22
+
+PS C:\WINDOWS\system32> Set-ExecutionPolicy Unrestricted                                                                                                                                                                                        Execution Policy Change
+The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
+you to the security risks described in the about_Execution_Policies help topic at
+https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
+PS C:\WINDOWS\system32> Install-Module -Name MicrosoftTeams
+
+Untrusted repository
+You are installing the modules from an untrusted repository. If you trust this repository, change its
+InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to install the modules from
+'PSGallery'?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> Connect-MicrosoftTeams
+
+Account                                    Environment Tenant                               TenantId
+-------                                    ----------- ------                               --------
+testikayttis@OpiframeOy837.onmicrosoft.com AzureCloud  4f59296a-ab65-4b37-8576-341e06ed095d 4f59296a-ab65-4b37-8576-...
+
+
+PS C:\WINDOWS\system32> Get-Module
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Manifest   3.1.0.0    Microsoft.PowerShell.Management     {Add-Computer, Add-Content, Checkpoint-Computer, Clear-Content...}
+Manifest   3.0.0.0    Microsoft.PowerShell.Security       {ConvertFrom-SecureString, ConvertTo-SecureString, Get-Acl, Get-AuthenticodeSignature...}
+Manifest   3.1.0.0    Microsoft.PowerShell.Utility        {Add-Member, Add-Type, Clear-Variable, Compare-Object...}
+Script     4.9.1      MicrosoftTeams                      {Add-TeamChannelUser, Add-TeamUser, Connect-MicrosoftTeams, Disconnect-MicrosoftTeams...}
+Binary     1.0.0.1    PackageManagement                   {Find-Package, Find-PackageProvider, Get-Package, Get-PackageProvider...}
+Script     1.0.0.1    PowerShellGet                       {Find-Command, Find-DscResource, Find-Module, Find-RoleCapability...}
+Script     2.0.0      PSReadline                          {Get-PSReadLineKeyHandler, Get-PSReadLineOption, Remove-PSReadLineKeyHandler, Set-PSRead...
+
+
+---------------------------------------------------------------------------------------------------
+tämä komento on offline/down tällä hetkellä alkaen march 2022
+
+PS C:\WINDOWS\system32> Register-PSRepository -Name PSGalleryInt -SourceLocation https://www.poshtestgallery.com/ -InstallationPolicy Trusted
+Register-PSRepository : The specified Uri 'https://www.poshtestgallery.com/' for parameter 'SourceLocation' is an inval
+id Web Uri. Please ensure that it meets the Web Uri requirements.
+At line:1 char:1
++ Register-PSRepository -Name PSGalleryInt -SourceLocation https://www. ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (https://www.poshtestgallery.com/:String) [Register-PSRepository], Argu
+   mentException
+    + FullyQualifiedErrorId : InvalidWebUri,Register-PSRepository
+
+uusi komento on periaatteessa 
+
+PS C:\WINDOWS\system32> Register-PSRepository -Name PSGalleryInt -SourceLocation https://www.powershellgallery.com/ -InstallationPolicy Trusted
+PS C:\WINDOWS\system32> Get-PSRepository
+
+Name                      InstallationPolicy   SourceLocation
+----                      ------------------   --------------
+PSGallery                 Untrusted            https://www.powershellgallery.com/api/v2
+PSGalleryInt              Trusted              https://www.powershellgallery.com/api/v2/
+
+
+PS C:\WINDOWS\system32> Install-Module MicrosoftTeams -Repository PSGalleryInt -Force
+PS C:\WINDOWS\system32> Get-InstalledModule MicrosoftTeams
+
+Version    Name                                Repository           Description
+-------    ----                                ----------           -----------
+4.9.1      MicrosoftTeams                      PSGalleryInt         Microsoft Teams cmdlets module for Windows PowerShell and PowerShell Core....
+
+
+kirjaudu office 365 jollakin tilli tunnuksilla sisään eli mikä on olemassa
+PS C:\WINDOWS\system32> Connect-MicrosoftTeams
+
+Account                             Environment Tenant                               TenantId
+-------                             ----------- ------                               --------
+zhaot@OpiframeOy837.onmicrosoft.com AzureCloud  4f59296a-ab65-4b37-8576-341e06ed095d 4f59296a-ab65-4b37-8576-341e06ed095d
+
+
+luo teams admin center uusi grouppi
+
+New-Team -Displayname talvi-Office” -MailNickName talvi-Office” -Visibility Public
+
+PS C:\WINDOWS\system32> New-Team -Displayname talvi-Office" -MailNickName talvi-Office" -Visibility Public
+
+GroupId                              DisplayName        Visibility  Archived  MailNickName       Description
+-------                              -----------        ----------  --------  ------------       -----------
+5f8c7c86-ec2e-48c3-95be-d2cb4683ee31 talvi-Office -M... Public      False     msteams_ec3436     talvi-Office -M...
+
+
+Add-TeamUser -GroupId <GroupID> -User AlexW@_YourTenant_.onmicrosoft.com
+
+Add-TeamUser -GroupId 5f8c7c86-ec2e-48c3-95be-d2cb4683ee31 -User testikayttis@OpiframeOy837.onmicrosoft.com
+
+
+New-TeamChannel -GroupId 5f8c7c86-ec2e-48c3-95be-d2cb4683ee31 -DisplayName "SupportNimi"
+
+PS C:\WINDOWS\system32> New-TeamChannel -GroupId 5f8c7c86-ec2e-48c3-95be-d2cb4683ee31 -DisplayName "SupportNimi"
+
+Id                                               DisplayName Description MembershipType
+--                                               ----------- ----------- --------------
+19:f58571a6ce7a49e2bc728cb21b54ced1@thread.tacv2 SupportNimi                   Standard
+
+
+
+New-TeamChannel -GroupId 5f8c7c86-ec2e-48c3-95be-d2cb4683ee31 -DisplayName "Recruiting"
+PS C:\WINDOWS\system32> New-TeamChannel -GroupId 5f8c7c86-ec2e-48c3-95be-d2cb4683ee31 -DisplayName "Recruitingasdf"
+
+Id                                               DisplayName    Description MembershipType
+--                                               -----------    ----------- --------------
+19:390a036adb9c4e83806faa9f8a1cfa1b@thread.tacv2 Recruitingasdf                   Standard
+
+New-TeamChannel -GroupId 5f8c7c86-ec2e-48c3-95be-d2cb4683ee31 -DisplayName "Administration" -MembershipType Private
+
+
+PS C:\WINDOWS\system32> New-TeamChannel -GroupId 5f8c7c86-ec2e-48c3-95be-d2cb4683ee31 -DisplayName "Administration" -MembershipType Private
+
+Id                                               DisplayName    Description MembershipType
+--                                               -----------    ----------- --------------
+19:cf2a2fdfe2444a098372ddf7f1d875ce@thread.tacv2 Administration                    Private
+
