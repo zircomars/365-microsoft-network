@@ -1,0 +1,206 @@
+20.12.2022
+
+m365 exchange online
+ 
+sharepoint pohja yammer ja onedrive
+ 
+admin and troubleshooting exchange online
+ 
+sanoma välitys ja kalenteri välitys tulee pakettina, enter price ja muissa education pakettina
+ 
+exchange online - perus microsoft työpaikan / oppilaitoksen sähköposti & sisältyen kahdennettu sähköposti, kalenteri ja jne.
+ 
+on muita hybridi ratkaisu ja osa spotit ovat pilvessä
+ 
+hallinta admin center joka pääasiallinen työkalu ja rinnalla powershell
+ 
+powershell toimii muualla ja toimii pilvessä / looginen palvelin & yhteys yhellä/pari kommenolla & olemassa oma exchange oma istunto & postilaatikkoita
+ 
+käyttäjä pitää olla enismmäisenä ennen kun tulee sposti/postilaatikko
+-------------------------------------------------------------------------------------------
+exchangeo nline management overview
+ 
+perus exchange online & pilviympäristö, pitää olla putiikin dns viitaus pilveen
+ 
+admin voi hallinoida exchange online ja konnetorit, säännöt ja käsittellä viestiä kun kuljetus vaiheessa ja siihen voi liittää ominaisuuksia
+ 
+hallinta jakaantuu kahteen osaa: admin ja käyttäjä (user)
+ja käyttäjä voi rooleja delekoida/muokata ja muuta powershell:iä ja jonkilainen silmukka
+ 
+exchange online tilauksia on monenlaisia (business, government e1, e3, enterprise e5 ja jne) tilanneus tilaa on jokaiselle subscription on oma koko (50gb, 100gb ja jne)
+ 
+arkistoviestiä on tietty raja ja ei ole
+ 
+voi ottaa erikseen exchane online , ei ole mukana sharepoint, teams ja jne. mikraatio prosessi ja voi integroitua muihin pakettiin n. 2GB tallennus tilaa
+plan 1 - business
+plan 2 - enter prise
+protection - erillinen ei tarvi exchange palvelua ja ylemmän lisäksi tule palvelua ja mukana tietoturva, eli voi hybridid turvaa
+archiving - arkisto, exchange postilaatikko, arkisto voi viedä pilveen ja vähentää oman paikallisen levyn tilaa
+kiosk -
+ 
+email flow in m365
+dns riippuvainen pitää kytkeä yrityksen oma domain pilveen voi välittää viestiä ja lähettää viestiä pilven kautta. mx record tietuki muuttuu kertoo spf record. domain info perusteella oikea tilaukseen viesti
+ 
+viesti lähetyksen authentikonti ratkaisu microsoft 365, voi tehdä on premises ympäristö ja edellyttää kahta palvelua. täyttyy olla spf (tekstitiedosto), micorosft on olemassa uathentikonti tiedosto ja sallii viestin pilvenkautta spf1 sallii ja muita useita (includes:spf.protection.outlook.com)
+ 
+main flow - sovellus jotta käyttä spostia, sanoma reititys
+kumppani organisaatio konnektoreita - tilaus järjestelmä
+integratio on-premises exchange server - hybridi toteutuu 365 exchange liikkeelle suhde 2:3 orgasaniton välillä
+ 
+exchange online hybridi
+ 
+powershell voi yhdistää exchange online (on oma script , oma komento) userId = microsoft sähköposti (get email)
+ 
+piilottaa istunto hallintaa
+ 
+-------------------------------------------------------------------------------------------
+ 
+admin roolit overview
+ 
+hajautettu hallinta rooleja , hyödyntää compliance management, yhteen sopivuuden sääntöjä, helpdesk ja organisaatio management, record management ja jne.
+ 
+organisaatio management voi hallinoita exchange online kaikkia osian ja muita ympäristöjä
+ 
+vastaavia postilaatikkoita, dns oikeudet
+ 
+ 
+admin ja käyttäjä roolit
+ 
+ 
+exchange admin center on oma admin
+ 
+ 
+delegointi käyttöoikeuksia ja rooleja, antaa käyttäjille rooleille rooleja
+ 
+exchange admin center / recipents / käyttäjä delegation
+ 
+toimii powershell, käyttää ja lisätä jäseniä ja käyttö oikeuksia
+ 
+exchange online voi varata neukkaria
+ 
+käyttäjät näkee, kun valitsee vastaanottajat ja kontaktit saadaan global / tai tehdä domain, global access list
+ 
+oma email ominaisuuksiamanage email address type : voi luoda eri tyyppisiä
+ 
+email sovellus ovat oeltuksena (IMAP, POP3 - perinteisiiä sähköposti protokollia)
+ 
+mail flow - rajoitukset, viesti maksimi koko, lähettäjiltä on rajoituksia
+ 
+conffaus group m365
+on omia ryhmiä (m365 ryhmiä, exchane online security group, exchane online distribution list [jakelulista, jäsenet eivät voi saada oikeutta/ryhmä oikeuksia, mutta sposti oikeutta, käyttäjät voi luoda oma käyttöjakelistoi omia omia listaan]
+) admin center voi hallinnoida niitä
+ 
+exchange online dynamic distribution - attribuutin perusteella, exchange näkee käyttöoikeuksia ja muita jakelulistoi, dynaaminen jäsenyys voi olla käyttäjän sijainnin perusteella ja sillä elää automaatisesti, käyttäjät eivät voi itse tehdä.
+ 
+configuration resurssit - sposti , room & equipment kalenteri varaukseen, varauksen modeemi joko hyväksytty tai kieltäminen, kun käyttäjä tekee kalenteriin neukkari nii se hyväksyy, ja ei ole automatiikka estäisi päällekkäisiä, mutta vaan ilmoittaa ja on olemassa moderaattori joko hyväksyy/hylkää varauksen
+käyttäjä voi kirjautua resurssi sähköpostiin, mutta viestei ei lähetä ja käyttäjä ei ole tekemistä resurssie spostissa. resurssi sposti laatikko nimetä näkyy mitä resurssia voi varata mm. neukkarit ja nimestä voi varata
+ 
+shared mailboxes:
+nimen mukaan tarkoittaa postilaatikko voi useita käyttäjiä, on aina henkilökohtainen ja ei annetta oikeuksia, mutta jos projekti käyttöön voi olla sisäisiä viestiä ja luodaan jaettu sposti laatikko. käyttäjä pitää lisätä oma client, jotta näkee sen oma sposti laatikkon sisään ja myös oikeudet (full access, send as, send on behalf of.)
+jos pitää määrittää projekti käyttössä, ja lähettäjä laitaa viestin.
+ 
+jos on henkilökohtainen antaa oikeuksia niin (send on behalf of) .
+ 
+kuka pääsee käsiksi mailbox käyttäjä ja mail käyttäjä (m365 käyttäjä ja jos on ulkoimainen sposti järjestelmä), mutta konkati ei voi käyttää tätä spostilaatikkoa, vaan ulkoisesta sähköpostilaatikkosta
+ 
+HUOM!
+alias name (joku alias nimi sposti tai muu nickname, että admin centeri valikosta voi valita column ja siitä filtteröidä, että mitä halutaan etsiä)
+ 
+ 
+csv tiedosto excel taulukko, perus tärkeät etunimi, sukunimi, email ja muut objektit
+ 
+Set-mailcontact cmdlet - attribuutin luotujen kontaktit
+ 
+exchane online , client access - joka vastaa web email, mobiililaite ja erilaisia policy.
+ 
+file acceses - liite tiedostoi mitä sallittaan x tiedon läpi
+offline acceses - tallenttaan viesti paikallisesti vai luetaanko exchange online:sta
+ 
+paikallinen kopio omasta tiedostosta & AD FS authentikonti, tietoturva elementti
+ 
+----------------------------------------------------------------------------------------------------
+ 
+exchane admin center - classic admin policy , erilaisia ominaisuuksia kenen kanssa voi kommunikoida, viesti ominaisuuksia & poikeavia ominaisuuksia
+ 
+mobiili laiteitta voi sallia tai kieltä mobiili laiteesta viestiä, ja yleensä sallittaan,  mutta tiukat tietoturvat laitaa karanteeni (Quarantined), monitorointi tarkistaa onks asiallinen viestija yleensä on sallittu ja oletuksena mobiililaiteesta
+ 
+mobiililaite on paikallinen salasana ja laiteelle pituudelle, elinikä ja muita määrityksiä ja vaatia virus torjunta mobiililaiteelle.
+ 
+salasana vaatimuksia ja salauksia, että on jokin salaus yhteydessä joko varmenne pohjainen
+ 
+troubleshooting mail flow:
+accepted and remote domain , joko hyväksytty tai ei , jos on useita domain , nii exchange on ulkopuolisia domain
+ 
+remote  domain - mihin viestiä voi lähteä oletuksena tähti nii kaikki ja rajoitettu asetuksia ja viestin kulku vaikeuttuu
+ 
+connector sisään ja ulos päin
+ 
+transport sääntö rajoitettu protokollat ja muita rajoituksia, mahdolliset sanoma reititykset
+ 
+ 
+----------------------------------------------------------------------------------------------------
+ 
+sharepoint - intranet site
+ 
+ryhmätyö site
+ 
+admin sharepoint pyörittää online sites, ja mitä tekee website:t
+ 
+sallitaanko ulkopuolisia organisaatio site:hin, ja toimii kutsu anonyymi tai kohdennettu tai jotakin external oikeuksia, ja usein toteutuu intra net
+ 
+onedrive <--naimissa-> sharepoint läsnä oloa, sharepoint pitää olla tilauksia mukana toinen tapa laajentaa powershell ns e paketti
+ 
+sharepoint admin center, public, externat tai private keskennään
+ 
+ja mahdollista lisätä webbi sovelluksia, jota käytetään selaimen avulla & sovellus kirjasto, valmiitta tai koodata tyhjistä paperista
+ 
+admin center seuraa tallennus mekanismiä esim. onedrive ja käyttöoikeuksia hallitsee sisältö eli sisään pääsyä (kuka voi käyttää, ja kuka ylläpitää/muokata), erityyppisiä käyttäjiä
+käyttäjillä on personal site & ulkoisia tietokantaa weppu, haettaan ulkopuolisia dataa, hakuoptiota,
+ 
+käyttäjä profiilit
+ 
+voi julkaista sovelluksia kuten azure marketplaces, löytyy monitorointi
+ 
+admin sharepoint online sites (hierarkki) yhestä palikkasta alempaa (3palikkaa)
+ 
+sharepoint app omia sovelluksia, poistamisesta on n. 30päivää aikaa ennen kun oikeasti se poistuu sieltä varsinaisest datatsta tai muuten tulee aloittaa alusta alkaen
+ 
+ulkoiset käyttjät kutsu perusteinen, sallittu myös anonyymi jos on hallussa se kutsu ja ei ole käyttäjä authentikontia, dokumentti jakaminen / editointi ja ulos päin jakaminen, sekä eri tapa poistaaa ulkoinen tapa mahdollisuus
+ 
+ulkoisia käyttäjät 3 menetelmää:
+- koko site voi jakaa, mutta silloin pitää lähettää kutsu joko kirjautuu m365 tili tai joku muu tunnus / käyttäjä tunnus
+- yksittäisiä dokumenttia voi jakaa joko kirjautuu organisaatio tili tai m365
+- ja jakaa dokumentti anonyymillä jotta voi lukea tai editoida dokumenttiä
+ 
+yksittäisiä site , koska global on liikkaa sharepoint ympäristöä ja on tilanne kannattavaa.
+ 
+jakaminen: ei ole salittu, kutsu, tai kutsu linkki tai invitations,
+ja linkistä saa luku oikeudet
+jos auditointi käyttäjät tai oikeuksia
+ 
+kutsu defendoiri ja search
+ 
+käyttäjä oikeus poisto, eli käyttöoikeudet sharepoint:lle sisältöön, kutsuminen peruttaminen on mahdollista ja linkki disablointi, tai poistaa ulkoinen jakaminen
+ 
+onedrive - synkronointi vittaa paikallista <--> pilveen
+ 
+kansion jakaminen mahdollisuus
+ 
+ 
+onedrive business
+käyttöoikeudet onedrive on henkilökohtainen
+ 
+kutsu vain spostitse tai linkki tai muu
+luku oikeus, luku ja editointi
+ 
+on oikeuksia antaa, mutta objekti kennelle on poistettu
+ 
+sharepoint vian selvitys - sharepoint admin centerillä, group policy:llä voi hakea tietoa asiakas organisaatiolla ja asetuksista muuttaa
+ 
+ulkoinen käyttäjät, jos annettu globaali käyttäjät ja alemmat ei voi ylittää oikeuksia, ja sites kiinteöinti tallennus
+ 
+ 
+onedrive synkronointi onko domain suhteita, tiedostotyyppit voi olla synkronointi joko estetty
+ 
+tiedosto koko
+

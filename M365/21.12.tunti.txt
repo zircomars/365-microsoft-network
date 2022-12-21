@@ -1,0 +1,219 @@
+21.12. admin teams
+ 
+defender maksullinen tuote
+ 
+palvelin pääällle, pilvi asetukset ja myös hallinnoida client, mutta policy ne tehdään teams admin center:issä, myös erikseen powershell tuotteisiin (pyörittää)
+ 
+teams perus toiminta istunnot/palaverit, ryhmä työ ja sovellus ja aikaisemmat virittelmät esim. skype
+ 
+tietoturvasta yhteensopivuus, m365 admin center löytyy security ja complis ja määrittää pien standardi toteutus ja pitää olla tehty ja sieltä valitsee template
+ 
+joko admin center tai powershell ja siinä mukaan client mm. tiimien hallinta
+ 
+erillisenä ryhmätyö, perus kommunikointi ja siihen voi liittää työ ominaisuuksia ja muokkatavissa, integroida sovelluksia eli tuoda tiimiin käyttöön sovellus, webbi sovellus teams site kautta, tiedosto jakelu ja toimii, sharepoint tietoturvasta
+ 
+eri käyttö kohde ryhmä, projekti tai yms, oma tiimi ja resurssit tuodaan sisään ja mitä tarvii
+ 
+kontakti lista olemassa ja paljon muuta
+ 
+kanavia on public ja private, public ulkopuolisia henkilöitä ja private vain m365 käyttäjille
+ 
+integroituu moneen m365 palveluun outlook linkki ja outlook kalenterista jos on useita kutsua, sekä sharepoint teams site, tiedosto ja kansion jakaminen, myös yammer teams linkki ja tuotua sisältöä
+ 
+voi rakentaa lomaketta ja jakaa siitä kautta myös tehtävien hallinta, ja integroituu muihin
+ 
+messaging extensions - tiedoston käsittelyt
+ 
+teams integratio power platform (sovellukset)
+ 
+power app - omia ja muita sovelluksia (power apps custom sovelluksia prosessointi, power automate työkulkua jakaa teams avulla, power bi visualisointi työkalu päätöksen esityksestä datasta joko jaettu tai teams peräisin data)
+ 
+ 
+connector conf - suuljettu organisaation välillä, omassa organisaatiossa ei tarvi mitään konnektoria
+ 
+teams hallinta perus service admin,
+teams communication admin
+                    support engineer
+                    support specialist
+ 
+hajautettu roolit, keskitettyjen tapamisia ja muita ominaisuuksia, support engineer vähemmän oikeus helpdesk tason 2 ryhmä
+ 
+right management services
+rms palvelu generoidaan varmenne johon tulee salausta , jos ei ole varmannetta rms
+ 
+ilmaiset lisenssit menee client:ille
+ 
+teams personal editing enter price
+ 
+----------------------------------------------------------------------------------------------------------------------
+ 
+hallinta 365 ryhmä kaikissa sovelluksissa näkyvillä, että hyödyntää ryhmän ottaa jäsenystä sharepoint site myös muita ominaisuuksia
+ 
+päätee sama ryhmä m365 kaikis paikkoissa ja ryhmän jäsenyyttää
+ 
+ 
+classification - windows tiedosto palveluun, luokkittelut aiheuttaa automatiikkaa että voidaan esim. viestejä luokitella jos luokittaa m365 ryhmiä oletuksena keskinnäinen kommunikaatio (classificationlist= standard, internal, confidential), ryhmä viestintä automaatisesti määrittä unigroup confidensi
+ 
+merkitsee tag se määrityksen mukaan ryhmän sisäisessä käytössä, kuin sama internal
+ 
+väliaikainen ryhmä, voidan määrittää policy, kun se aikana poistuu sen jälkeen 30 pv mahdollista palauttaa ryhmän, mahdollinen etuliite tai muu liite
+ 
+edellyttä azure ad premium p1 tai perus azure ad basic edu lisenssit,
+ 
+käyttöraporttia suoraan admin centeristä, jokinlainen rooli m365 global admin sai kaiken tai teams pääkäyttäjä & pstn yrityksen puuhelin järjestelmä raporttointi
+ 
+muita resurssia kunhan tehdään päivitys
+ 
+dynaaminen kerrottaan 1-2 sääntö, käyttäjät voi rajoittaa kyseisen tai poistuu käyttäjän, mutta edellyttää premium p2 maksun n. 7per kk tai per käyttäjät
+ 
+external vs guess access
+ 
+ulkoisia puolisia käyttäjiä voi ottaa käyttöön mukaan, yleisesti global sallittaanko vai ei, että voi nipistää tarjoaa pääsyn tiimiin yksittäisille käyttäjille johonkin meeting
+external tarkoittaa kaikkiin jonkun domain pääsee sisään, ei oma domain vaan ulkopuolienn domain silloin pääsy on oikeus  jos lisenssi kysymys jos on guess access se tallentaa organisaation lisenssi antaa 5 vierailun
+jos on käyttämötön lisenssi niin antaa voidaan hyödyntää
+ 
+identity protection features, eli käyttämätön lisenssi, mutta hallinnointi tapahtuu 365
+ 
+-----------------------------------------------------------
+ 
+toinen aihe kappale
+ 
+microsoft 365 apps for enterprise
+ 
+asennuksen hallinta jokaisen konen / asetukset, omat dokumenttit & asetusket tulee mukaan oma kieliversio ja protokolla
+ 
+portaalista liikelle managerille, mistä voi hallita siihen jokin ulkoinen työkalu system enter manager tai muu sähköinen sovellus jakelu järjestelmä ja group policy client office asennukset
+ 
+m365 apps aktivointi, päivitykset ja sovelluksen käyttöönotto lisä palvelut 2019 kuin word, excel ja muut perus tuotteet ja vaatimuksia vähä
+ 
+lisesointi joka käyttäjälle pitää olla 365 ja erillinen täppä asennukse, että sallii fyysiselle koneelle, sekä aktivointi painikke
+ 
+jos on useita käyttäjiä tai useampi saman aikaan tuottaa joskus onglemia
+ 
+pilvestä asentaminen ei ole oikea menetelmä, sieltä ladataan se set up tiedosto, ja tyyppilisesti muokkataan ja asentamisen group policy avulla määritetty start up ja jne. vai onko pien yritykset käydään paikan päällä tai joku muu menetelmä
+ 
+päivitys sovellukset päivittyy normaalien ruutinen eli kuukausittain, ja mahdollista ottaa n. puoli välein (semi-annual channel) ja targetet voi määrittää vastaanottaja käyttäjä jakelua. esim. system center configuration management avulla
+ 
+millä voi päivitystä hallita: 365 admin enter löytyy asetusta
+ 
+ladattava työkalu office deployment tool luuoo xml tiedoston noudattaa set up vaihdetta, group policystä löytyy mutta edellyttä ladattaan laajennus admin template
+ 
+m365 app enterprise deployment jakelukanavat ja jopa isois organisaatiossa on pilotti ryhmä
+ 
+managing user-dirver installation:
+sharepoint design voi luoda asennus piste jossa on ominaisuuksia ja ottaa myös mukaan muita asennukseen, sharepoint design ei lataudu automaatisesti kuin perus paketti teams, word ja excel ja jne.
+ 
+yrityksellä on erillinen policy josta saa suorittaa tietyt henkilöt pari työkalua on applocker policies, app-v 5.0 or later, microsoft intune
+ 
+makuston tuote: office deployment tool: configuration.xml tuoda dokumentti pohjia, setup joku special komento polku
+ 
+ 
+päivitykset joko kuukausittain tai kerran (6kk aika), target release for selected users,
+ 
+32 suosittus xml konffaus, mutta normalisti menee 64-bittinen?
+32-bittinen? 64-bittinen?
+ 
+luku oikeudet jakoon - oikeudet, käyttäjän asennuksissa pitää olla pääkäyttäjä oikeus
+ 
+aktivointi on se lisenssi aktivointi pitää olla muuten ei toimi ja laitteelle n. 5 voi asentaa ja jos 6 nii ei toimisi
+ 
+run ospp.vbs scriptti siihen voi muuttaa aktivointi deadline n. 30pv lisää ja muita asetuksia, jotka käyttökelpoisia ja perus internet yhteys esim. proxy asetuksia pitää tarkistaa ettei ole mitään estoa
+ 
+set ut replay - jos on muuta syystä asetuksetsta kirille
+ 
+------------------------------------------------------------------------------
+ 
+admin ja troublshooti compliance and security
+ 
+kaksi admin centeri
+ 
+yleiset tietoturvat , löytyy kaikissa tuoteitta
+ 
+ 
+admin center / admincenters --> security (m365 defender) hälytyksiä, uhkian hakeminen, tunnistaminen analysointi jos ympäristöstä löytyy vikoja, action centers (saastunut), threat analytics (ulkoisen uhkientunnistaminen) alerts havaitu jotakin ongelmia, microsoft secure score (pisteytys) suositeltavia create safe links policies ja jne)
+ 
+sähköposti tietoturva määritys, pilvi oma asetukset, seuranta ja raporti, käyttöoikeus ja jne. tietoturvan määritys
+ 
+compliance - yhteys sopivuus määrittellyt,
+ 
+microsoft purview - yhteensopivuus erilaisia toimintoja, data loss prevention, lifecycle management ja jne.
+ 
+voi olla omia templates jos on organisaatio oma tietoturva käsittelyt
+ 
+antaa pisteytyksen yleisestä yhteensopivuus ja yleisiä tietoturvan määrityksiä
+ 
+ 
+---------------------------------------------------------------------------------
+ 
+security portal - asetukset ovat ilmaisia
+ 
+service trust portal - mahdollista tuoda kolmannen osa puolen omia säännöksiä/standardia , esim. GDR (servicetrust.microsoft.com) sertifointia ja lisää ladattua template
+ 
+m365 security / compliance
+ 
+admin information protection
+ 
+voi suojata yrityksen lähtevää dataa, kun on saappuntu vastaanottajaan, sellaiset luvat käyttäjäillä ei ole lupaa, vain luku oikeus mm. korkeatietoturva mm. valtori ja armeijassa
+right management - tämä poistaa hallinta mahdollisuuden käyttjältä sillä on se hallinta ja siirtää sen hallinan mahdollisuuden palvelin pitää varmenteita, allekirjoituksia ja vastaavasti luku oikeuksia esim. käyttäjä hänellä saa allekrijoituksen.
+AD RMS azure information
+ 
+voi hyödyntää pilven käyttöä, mm. tietoturvat. lisäksi luokittelua mm. secret, private, confidensi ja mitä voi tuoda pilveen / window serveriin (azure information protection in m365)
+ 
+ad hyödyntää myös hakemiston synkratnointi azure ad välillä, myös exchange on premises sharepoint voi liittää azure information protection
+ 
+salaus kaikille tiedostoille jotka ladataan jostain site:sta dokumentti kirjastosta ja muiden sovelluksen suojatut tiedosto kunhan on azure rms
+ 
+oikeuksia voi määrittää & aikarajoitus, eli kuinka kauan dokumentti on käytössä ja käyttö oikeudet on voimassa (aikapommi)
+ 
+window server fci - se tarjoaa luokittleu palvelut ja automaatinen luokittelut jos jokin hakemisto defenssi luokiteltuja. FSRm oma vindows työkalu, joka hallinnoidaan verkkotulostuksia asioita, luoikttelu kautta attribuutteja voi tuoda azure ad templatetiin.
+se määrittää label josta tarjoaa suojaus palvelu joko digittaalinen ,digitaalinen kenelle ja mihin eli perus luku ja kirjoitus oikeudet.
+ 
+ 
+microsoft compliance features
+ 
+archive mailboxes arkisto postilaatikko, mitä tapahtuu exchange postilaatiikko saappuvista joko 50 vai 100gb rajoittamaton
+ 
+retention tag - exchange asiat, mikä muodostuu tag:stä tehdään policies microsoft  compliance portal, DLP policies, raportointi
+ 
+arkistojen - oikeus sallii tai ei,
+aiheuttamisen arkiston automaatinen, retention(säilytys käytäntö); koostuu täggit, organisaation retentaion tag, tag sisältönä on mitä tyyppinen tiedosto tehdään kun retention aika tulee täytteen, arkistointi poistaminen / kokonaan, pitää sisällää päällekäisyys käyttäjän yli organisaation määritys esim. ristiriittaisia taggien kanssa niin vaikuttaa määritystä käyttäjään
+ 
+DLP policies (Data loss prevention)
+ 
+sisältöjen suhteiden viestiä voi tutkia
+ 
+auditointi activointi saadaan raportti mm. tietoturva mielessä raportteja, kuka, mitä ja milloin tehty --> security centeristä
+määritellään mitä otettaan auditointi aika väli, mistä haettaan käyttäjät toimintoja seurataan ja objekti mitä on käsittelyt & sharepoint site, ja voi liittää hälytys käyttäntöä
+ 
+ 
+EOP on-premises exchange servers - tietoturva määritykset ja suurin omaks, uhkakuvien hallinta
+ 
+EOP -vastaa virustorjunta ja haittaliset, roskapostit
+tulevia posteja tutkitaan ja kriitistä, suoritettaan määritetty toimenpide, action osa, että meneekö karanteeniin liite tiedostoa, eli skannataan molempia.
+ 
+ulos päin myöskin skannattaan
+ 
+zero-day uhkia on ominaisuuksia mm. uusia uhkia mitä ei ole havaitu, jotka helppottaa.
+ 
+anti-malware policies - määrittää liitteen ajettava tiedosto tunniste haitta ohjelmaksi siirrettään karanteeniin tai liittää exchange tiedosto
+ 
+digitaalinen allekirjoitus, ja tunnistamista haittaohjelmia, ilmoitus menettely joko lähettää lähettäjälle haaviin ja ylläpitäjä (tyyppillisesti), jos on hyöökäävä nii ei onnistu
+ 
+roskaposti suodattus - yksi connection filtteri pitää sisällä ip-osoitteen perusteella, ei kelpoinen mutta yksi niistä sellaisia lähettäjä osoiteitta
+cidr /24 255.255.255.255.0 tai sitä pienempi
+ 
+spam filteri - junk email kansio, roska posti viesti jää käyttäjälle onko posti vai ei. käyttäjä roski posti oma kansio.
+ 
+EOP raportointi - 365 admin center päästää raportteihin käsiksi, top senders and recipients, top malware, perus kuka eniten lähetätnyt ja vastaanotto, yleisesti havaitse määrät, roskaposti määrät
+ 
+spoof mail = lähettäjä osoitteen väärentäminen, haittalista viestiä validin osoitteen suojissa josta pääsee eteenpäin
+ 
+hybridi ympäristössä posti ohjauttuu pilven kautta, exchange online ja luodaan konnektori välittämään viestit haluttumalla kriteerit on-premises ympäristöön, mx muuttaa domain nimi palvelun xm tietue m365
+transport sääntö havaitsee x kenttän ja siitä tekee jotakin
+ 
+salausta smtp ei saalaa mitään, mutta kaikissa uusissa smtp transport security https salaus / sama methodi varmenne pohjainen ratkaisu ja voi ottaa käyttöön admin centeristä
+ 
+lisä suojaus ilmoitus menetelmä havaittavista ohjelmista, mitä pitää olla selkeä viesti vastanottajalle
+safe list - ohittaa muut suojaukset esim. kumppani organisaatio lähettäjä ja saattaa olla osoite buuffaus kumppani organisaatio voi tulla jotakin
+tarvittaessa laittaa karanteeniin
+ 
