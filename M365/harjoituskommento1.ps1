@@ -5,6 +5,8 @@ Supply values for the following parameters:
 Credential
 PS C:\WINDOWS\system32> Connect-MsolService -Credential $credential
 PS C:\WINDOWS\system32>
+
+Kirjaudu m365 officeen eli ponnahtaa pien ikkuna, että pyyttää käyttäjän kirjautumaan sisään
 PS C:\WINDOWS\system32> Connect-ExchangeOnline
 Connect-ExchangeOnline : The 'Connect-ExchangeOnline' command was found in the module 'ExchangeOnlineManagement', but t
 he module could not be loaded. For more information, run 'Import-Module ExchangeOnlineManagement'.
@@ -37,6 +39,8 @@ For more information check https://aka.ms/exov3-module
 ----------------------------------------------------------------------------------------
 
 PS C:\WINDOWS\system32>
+
+tulostaa organisaation sisäisen henkilöstöt, mutta rajoitettu vain tulostuu alias nimi
 PS C:\WINDOWS\system32> Get-Mailbox
 
 Name                      Alias           Database                       ProhibitSendQuota    ExternalDirectoryObjectId
