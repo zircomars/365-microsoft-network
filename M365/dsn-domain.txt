@@ -18,6 +18,7 @@ e.g. gmail.com --> mail.google.com (esim. tässä on yksi ja sama polku, että m
 - MX (Mail Exchanger)
 Pointti email serveriin
 voi tukea verkkosivuston ja sähköpostina esim. website.net , ja @website.net 
+tarkoituksena on saada/vastaanottaa ulkopuolisia domain sähköposteja, että voi itse lähettää sähköpostia ulkomaailmalle
 
 - TXT
 sekalaista tietoa & vahvistaa verkkotunnuksen (domain name) omistajuuden
