@@ -2,7 +2,7 @@ DNS-domain/records m365:ssä tarkoittaa domain nimeä kolmannen osapuolen hostin
 
 Yhteenveto käyttäjäntunnuksen luonti pysyy rekitröitynä isännälle, mitä organisaation ylläpitäjä tai ylempi henkilöstö osti lisenssit, mutta m365 voi käyttää antaa käyttäjän luoda sähköpostiosoitteeksi esim. (käyttäjätunnus@verkkotunnus.com)/(username@yourdomain.com) ja muihin tarkoituksiin palveluihin. Myös domain nimeä voi tarvitaessa muokata .
 
-domain tunnuksien luomisessa on muutama tärkeitä kohtia:
+domain tunnuksien luomisessa on muutama tärkeitä kohtia, ja jokaisella on käyttö tarkoitus microsoft tuoteissa/lisenssien toiminnassa:
 
 - A (and AAAA)
 Hostname -> IP address
@@ -15,6 +15,8 @@ alis nimi / muu nimi & organisaation ylläpitäjä antaa serverille toisen nimen
 e.g. gmail.com --> mail.google.com (esim. tässä on yksi ja sama polku, että molemmista pääsee google:n sähköpostiin)
 [www.website.net | CNAME | qwerty.abchost.net]
 
+microsoft 365 Exchange online - CNAME auttaa asiakasohjelmien muodostamista yhteyden ja palvelu automaattisen haun. Automaattinen haku prosessi oikean  Exchange server isännäle ja määärittää outlookin käyttäjille.  
+
 - MX (Mail Exchanger)
 Pointti email serveriin
 voi tukea verkkosivuston ja sähköpostina esim. website.net , ja @website.net 
@@ -22,6 +24,8 @@ tarkoituksena on saada/vastaanottaa ulkopuolisia domain sähköposteja, että vo
 
 sähköposti ympäristössä voi olla useita käyttäjiä organisaatiossa. MX-tuki kuuluu myös prioriteetti arvo, mikä määrittää kuinka tärkeä kyseinen tietotue on mihin tukeisiin verratuna. 
 Pienin ehdollinen arvo on nolla 0, mikä on prioteetiltään tärkein tai korkein prioriteetti taso. 
+
+microsoft 365 Exchange online -  lähettää toimialueen saapuvia sähköpostia Exchange online - palveluun m365 office:een. 
 
 - TXT
 sekalaista tietoa & vahvistaa verkkotunnuksen (domain name) omistajuuden
