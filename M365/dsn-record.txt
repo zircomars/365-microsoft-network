@@ -1,0 +1,12 @@
+DNS-record m365:ssä tarkoittaa domain nimeä kolmannen osapuolen hosting tarjoaja, ja DNS record on kuin käyttäjäntunnuksien luonti / rekisteröinti
+
+Yhteenveto käyttäjäntunnuksen luonti pysyy rekitröitynä isännälle, mitä organisaation ylläpitäjä tai ylempi henkilöstö osti lisenssit, mutta m365 voi käyttää antaa käyttäjän luoda sähköpostiosoitteeksi esim. (käyttäjätunnus@verkkotunnus.com)/(username@yourdomain.com) ja muihin tarkoituksiin palveluihin. Myös domain nimeä voi tarvitaessa muokata .
+
+domain tunnuksien luomisessa on muutama tärkeitä kohtia:
+
+
+
+
+
+
+
