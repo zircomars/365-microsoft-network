@@ -20,8 +20,15 @@ Pointti email serveriin
 voi tukea verkkosivuston ja sähköpostina esim. website.net , ja @website.net 
 tarkoituksena on saada/vastaanottaa ulkopuolisia domain sähköposteja, että voi itse lähettää sähköpostia ulkomaailmalle
 
+sähköposti ympäristössä voi olla useita käyttäjiä organisaatiossa. MX-tuki kuuluu myös prioriteetti arvo, mikä määrittää kuinka tärkeä kyseinen tietotue on mihin tukeisiin verratuna. 
+Pienin ehdollinen arvo on nolla 0, mikä on prioteetiltään tärkein tai korkein prioriteetti taso. 
+
 - TXT
 sekalaista tietoa & vahvistaa verkkotunnuksen (domain name) omistajuuden
+
+Domain tunnuksien, verkkosivu tai sähköpostien käyttöönottossa on vaativia erillisten vahvistusta. Koska on olemassa tietuetyyppi, joka rakentuuu kuin CNAME-tuki. TXT on on domain-osa tai kohdeosa, mitä tietuki käyttävät esim. kotisivusto palvelussa tai sähköpalveluntarjoajana eli microsoft. Tietuki voi olla esim.
+| website.fi        | TXT  | MS=ms123456789
+| abcd.website.fi   | TXT  | verify.squarespace.com  
 
 DNS hallinta M365:ssä tarkoittaisi
 Exchange  online eli perus sähköposti/kalenteri, outlook ja tms.
