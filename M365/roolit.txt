@@ -10,12 +10,19 @@ Jokaisen amdin portaalien rooliin voi kohdistua mm:
 - office apps 
 - ja jne..
 
-Yksittäisiä rooleja/malleja ja niiden pieni taustat on mm:
-| Global admin | organisaation ylläpitäjä/admin | suorittaa kaikki hallinnon ylläpidon eli periaatteessa  ykkönen ja korkein ylläpitäjä | 
-| billing admin | laskutus ylläpitäjä | tekee ostoksia, tilauksia hallinnoi tukilippuja ja seuraa palvelun tilaa | Laskutuksen järjestelmänvalvojat voivat myös: Hallitse kaikkia laskutuksen näkökohtia & Luo ja hallinnoi tukilippuja Azure-portaalissa
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+Yksittäisiä rooleja/malleja ja niiden pieni taustat on mm (ainakin nää ovat muutamista listattu, ja m365 sivustolta löytyy lisää):
+| Global admin | organisaation ylläpitäjä/admin ja suorittaa kaikki hallinnon ylläpidon eli periaatteessa  ykkönen ja korkein ylläpitäjä | 
+
+| billing admin | laskutus ylläpitäjä, joka tekee ostoksia, tilauksia hallinnoi tukilippuja ja seuraa palvelun tilaa | Laskutuksen järjestelmänvalvojat voivat myös: Hallitse kaikkia laskutuksen näkökohtia & Luo ja hallinnoi tukilippuja Azure-portaalissa
+
+| Exchange admin | Määritä Exchange-järjestelmänvalvojan rooli käyttäjille, joiden on tarkasteltava ja hallinnoitava käyttäjien sähköpostilaatikoita, Microsoft 365 -ryhmiä ja Exchange Online -palvelua. |
+
+| Helpdesk admin | Määritä Helpdesk-järjestelmänvalvojan rooli käyttäjille, joiden on tehtävä seuraavat: salasanan resetointi, pakota käyttäjäiä kirjautumaan ulos, hallitsee palvleupyyntöä, tarkkailee palvelun kuntoa |
+
+| License admin | Määritä lisenssin järjestelmänvalvojan rooli käyttäjille, joiden on myönnettävä ja poistettava lisenssejä käyttäjille ja muokattava heidän käyttösijaintiaan. Lisenssi valvoja voi käsittellä lisenssienmääritystä uudelleen  ryhmäphjaista lisensointia ja määritää tuotelisenssiä ryhmille ryhmänpohjaista lisensointia |
+
+| sharepoint admin | Muistuttaa facebook julkaisua, jaettavia tiedostoi, dokumenttia ja jne, että sharepoint ylläpittäjä voi poistaa ja luoda sivustoja, että hallitsee sivusto kokoelmia ja yleisiä sharepoint asetuksia |
+
+| User admin | käyttäjä admin & Käyttäjän järjestelmänvalvoja voi myös tehdä seuraavat toiminnot käyttäjille, jotka eivät ole järjestelmänvalvojia, ja käyttäjille, joille on määritetty seuraavat roolit: Hakemiston lukija, Vieraskutsuja, Helpdesk-järjestelmänvalvoja, Viestikeskuksen lukija, Raporttien lukija: hallitsee käyttäjätunnuksia,  poisto ja palautuaminen, salasanan palautus ja jne|
+
+Myös erillisenä kategoriana on muita yhtesityö toiminnan rooleja mm. 
