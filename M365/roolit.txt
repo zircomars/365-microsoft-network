@@ -1,0 +1,21 @@
+Pää admin antaa käyttäjille tietyt oikeudet, että vastaa m365 erilaisiin järjestelmä rooliin ja vastuun.
+
+Jokaisen amdin portaalien rooliin voi kohdistua mm:
+- security
+- compliance (noudattaminen)
+- azure ad (active directory)
+- exchange (sähköposti)
+- sharepoint
+- teams
+- office apps 
+- ja jne..
+
+Yksittäisiä rooleja/malleja ja niiden pieni taustat on mm:
+| Global admin | organisaation ylläpitäjä/admin | suorittaa kaikki hallinnon ylläpidon eli periaatteessa  ykkönen ja korkein ylläpitäjä | 
+| billing admin | laskutus ylläpitäjä | tekee ostoksia, tilauksia hallinnoi tukilippuja ja seuraa palvelun tilaa | Laskutuksen järjestelmänvalvojat voivat myös: Hallitse kaikkia laskutuksen näkökohtia & Luo ja hallinnoi tukilippuja Azure-portaalissa
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
