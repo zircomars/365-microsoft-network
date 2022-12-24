@@ -3,6 +3,8 @@ PS C:\WINDOWS\system32> c
 cmdlet Get-Credential at command pipeline position 1
 Supply values for the following parameters:
 Credential
+
+Tämä komento aloittaa yhteyden azure ad:yyn (active directory)
 PS C:\WINDOWS\system32> Connect-MsolService -Credential $credential
 PS C:\WINDOWS\system32>
 
@@ -82,3 +84,6 @@ talvi                     talvi-alias     EURP190DG003-db119             49.5 GB
 talvi-demo                talvidemo       EURP190DG082-db127             49.5 GB (53,150,2... dd38e7b5-a865-45dd-80f1-406514455f83
 d7b2c037-1900-4188-a7a... toivol          EURP190DG120-db108             99 GB (106,300,44... d7b2c037-1900-4188-a7ac-ea1a273c18cf
 78d1442e-ef8d-40c7-b57... testikayttis    EURP190DG091-db031             99 GB (106,300,44... 78d1442e-ef8d-40c7-b57f-a3ce66b36f76
+
+Ottaa yhteytä microsof teams:siin
+PS C:\WINDOWS\system32> Connect-MicrosoftTeams
