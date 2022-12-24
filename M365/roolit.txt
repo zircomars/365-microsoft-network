@@ -25,4 +25,4 @@ Yksittäisiä rooleja/malleja ja niiden pieni taustat on mm (ainakin nää ovat 
 
 | User admin | käyttäjä admin & Käyttäjän järjestelmänvalvoja voi myös tehdä seuraavat toiminnot käyttäjille, jotka eivät ole järjestelmänvalvojia, ja käyttäjille, joille on määritetty seuraavat roolit: Hakemiston lukija, Vieraskutsuja, Helpdesk-järjestelmänvalvoja, Viestikeskuksen lukija, Raporttien lukija: hallitsee käyttäjätunnuksia,  poisto ja palautuaminen, salasanan palautus ja jne|
 
-Myös erillisenä kategoriana on muita yhtesityö toiminnan rooleja mm. 
+Myös erillisenä kategoriana on muita yhtesityö toiminnan rooleja mm. dynamic 365 admin, exchange admin, insights analyst, network admin, power bi admin ja jne.
