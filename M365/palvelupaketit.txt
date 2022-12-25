@@ -19,3 +19,23 @@ M365 lisenssi E3 ja E5, jotka sisältyvät sama kuin business kaikki ominaisuude
 
 
 microsoft sivustolta löytyy jokaisen paketin hinta e/kk tai e/vuosi, että mitä kaikkee ominaisuuksia löytyy eli sovelluksia ja työkaluja niihin pakettiin. ENnen kuin lopettaa kantsii tarkistaa, että paketti on lakauttunut muuten se hinta pyörii pyörii jatkuvasti ja tuottaa hirveen kustannuksen.
+
+
+Lisenssien vaatimuksen tietosuojat:
+
+Kaikki M365 lisenssiin sisältyvät suojattujen asiakirjoja, että esim. tili jolla on office 365 E5 lisenssi voi suojat asiakirjan jollakin merkkinnällä ja jakaa asiakirjan seuraaville käyttäjäille, jolloin on F1 lisenssit (F1 lisenssi on tarkoitettu front line työntekijälle (etulinja)). 
+Vaikka F1 lisenssi tyyppillä on oikeuksia siihen lupa, mutta niillä ei ole lupaa muuttaa asiakirjan suojausta, mutta voivat avata ja tarkastella sisältöä. Myös he voivat päivittää Advanced Protection and Compliance - apuohjelmistoa lisensoidakseen mahdollisen suojatun asiakirjaa. 
+
+Office 365 message ecryption sisältyy office 365 E3- ja E5 sopimuksiin (yritys-, akateemi ja valtiollinen lisenssi), sekä M365 Business premium. Muissa sopimuksissa kuten exchangeonline plan1 tai 2, jotka on ostettava azure information protection apuohjelmaa.
+
+
+
+
+
+
+
+
+
+
+
+
