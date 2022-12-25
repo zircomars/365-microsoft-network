@@ -28,14 +28,6 @@ Vaikka F1 lisenssi tyyppillä on oikeuksia siihen lupa, mutta niillä ei ole lup
 
 Office 365 message ecryption sisältyy office 365 E3- ja E5 sopimuksiin (yritys-, akateemi ja valtiollinen lisenssi), sekä M365 Business premium. Muissa sopimuksissa kuten exchangeonline plan1 tai 2, jotka on ostettava azure information protection apuohjelmaa.
 
+Azure Information Protection -lisenssit myydään erillisinä tai sitä niputettaan Enterprise Mobility and seucirty ja M365 yritys pakettiin. Säännössä on, että AIP( Azure Information Protection)-asiakkaan käyttöön tiedoston suojaamista tai tiedoston suojauksen muuttamista vaatii lisenssin. Lisennsi ei tarvita henkilöitä, joka vain avaa ja käyttää suojattujen tiedostjen sisältöä. 
 
-
-
-
-
-
-
-
-
-
-
+Azure Information Protection - asiakkuus ei tarkista käyttöoikeutta. Jos organisaatiolla on AIP-tilaus, kaikki organisaation asiakkaat voivat ladata käytännön ja käyttää tunnisteita. Tarrojen käyttö vaatii lisenssiä, joten tämän välttämiseksi voi pakottaa työasemat, joita lisensoimattomat (kennellä ei ole lisenssiä) käyttäjt voivat käyttää asiakasta vain suojaustilassa estäkseen asiakkaiden lataamasta käytäntöjä.
