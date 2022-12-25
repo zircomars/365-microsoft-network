@@ -1,8 +1,8 @@
 palvelupaketit eli tuotteen sisäisen ominaisuuksia, että mitä työkaluja on tarjolla
 
-esim. M365 paketiin sisältyy pilvipalvelu, ettei vain perus word, excel, power point ja outlook sovellukset. 
+esim. M365 paketiin sisältyy pilvipalvelu, ettei vain perus word, excel, power point ja outlook sovellukset, ja pilvipalvelu tiedoston tallentamiseen varten. 
 
-M365 paketteja on mm (basic, standard ja premium), että paketilla on hinta joko per e/kk tai e/vuosi ja myös vaikuttaa iso/pien yrityksen käyttöön, että onko tarvetta käyttää special palvelu pakettia
+M365 paketteja on mm (basic, standard ja premium), että paketilla on hinta joko per e/kk tai e/vuosi ja myös vaikuttaa iso/pien yrityksen käyttöön tai siviilien eli peruskoti, että onko tarvetta käyttää special palvelu pakettia
 
 
 
