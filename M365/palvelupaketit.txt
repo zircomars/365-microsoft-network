@@ -2,10 +2,20 @@ palvelupaketit eli tuotteen sisäisen ominaisuuksia, että mitä työkaluja on t
 
 esim. M365 paketiin sisältyy pilvipalvelu, ettei vain perus word, excel, power point ja outlook sovellukset, ja pilvipalvelu tiedoston tallentamiseen varten. 
 
-M365 paketteja on mm (basic, standard ja premium), että paketilla on hinta joko per e/kk tai e/vuosi ja myös vaikuttaa iso/pien yrityksen käyttöön tai siviilien eli peruskoti, että onko tarvetta käyttää special palvelu pakettia
+M365 business paketteja on monipuolista (basic, standard ja premium), että paketilla on hinta joko per e/kk tai e/vuosi ja myös vaikuttaa iso/pien yrityksen käyttöön tai perus kotikäyttöön että onko tarvetta käyttää special palvelu pakettia.
 
+Usein vaihtelevista summista yksittäisille tai organisation yrityksen käyttäjille, jotka vaikuttaa pien tai suuren yrityksen sisältäviä valikoiman toimintoja.
 
+- basic : perintinen pilvipalvelu ohjelmistopaketit eli perus office sovelluksia (outlook, word, excel ja powerpoint, myös tuttu teams ja sharepoint sovellus selaimeen varten) mutta ei voi ladata työpöytään, ja käyttössä on 50Gt tilaa outlook sähköposti tilaan ja henkilökohtaisen pilvipalveluun n. 1TB onedrive. Tämä paketti on edullisin ja soveltuu usein pien yrityksen tarpeisiin n. alle 50-100 henkilöstä varten.
 
+keski yritys n. alle 300 henkilöä 
+- standard : sisältyy sama kuin basic, mutta on ladattavissa työpöytään ja sen viimeisimmän versiolle, jotka voidaan vain asentaa minimissään eri viidelle koneelle. Myös mukaan tulee käyttöön microsoft bookings, jolla voi ylläpitää online-varausjärjestelmää.
+
+- premium : sisältyy mainittujen paketteja eli basic ja standard ominaisuuksia, mutta lisäksi on tietoturva parannuksen ominaisuuksia. Esim. microsoft Intunen ja azure AD premium P1-paketi, jonka avulla saa kehittyneen suojauksen käyttöön kuten Multi-factor authentication (MFA), ja conditional acces (ehdollinen pääsy)
+Intunen avulla voi saada pc- ja mobiililaitteiden hallinnan käyttöä. Tässä paketissa on kaikki tärkeimmät tietoturvao minaisuudet, kuten muissa kalliimmissa Enterprise -lisensseissä, mutta kustannuksen/hinann tehokkaassa paketissa.
+
+Isot yritykset n. yli 300 henkilöä
+M365 lisenssi E3 ja E5, jotka sisältyvät sama kuin business kaikki ominaisuudet, mutta mukaan on tarpeisia suunniteltujen ominaisuuksia, jotka helpottaa ja tukee hallinnan, valvonnan ja muita tietoturvan parantavia tuotteidein ominaisuuksia.
 
 
 
