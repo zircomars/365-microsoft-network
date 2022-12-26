@@ -8,7 +8,7 @@ https://www.youtube.com/watch?v=t7nL3ZLXCT0
 Microsoft Azure Information Protection (AIP) on osa Microsoft Purview Information Protectionia, ja tämä Microsoft Purview Information Protection auttaa sinua löytämään, luokittelemaan, suojaamaan ja hallitsemaan arkaluontoisia tietoja kaikkialla, missä ne elävät tai liikkuvat.
 
 
-
+https://learn.microsoft.com/en-us/azure/information-protection/what-is-information-protection
 
 
 
