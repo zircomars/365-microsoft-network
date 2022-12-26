@@ -112,7 +112,7 @@ a = joku komento termi ja tulostettaan a
 PS C:\WINDOWS\system32> $mod = get-command get-mailbox | select-object -expandproperty source 
 PS C:\WINDOWS\system32> $mod
 
+tavallinen kommento:
 PS C:\WINDOWS\system32> get-mailbox
-
 
 
