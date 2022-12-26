@@ -96,10 +96,14 @@ kirjaudu ensin sisään eli:
 
 PS C:\WINDOWS\system32> Connect-ExchangeOnline
 
-tulostuu commandtype, name ja versio & source nimi id
+tulostuu commandtype, name ja versio & source nimi id (alempi on malli versio)
 PS C:\WINDOWS\system32> get-command get-mailbox
 
-tämä komento tarkoituksena on antaa ei mitään, mutta periaatteessa toimii
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Function        Get-Mailbox                                        1.0        abcd.qwer1324
+
+tämä komento tarkoituksena on antaa ei mitään, mutta periaatteessa toimii & saattaa tulostaa rivin funktio kommentoja, että voidaan suorittaa jotakin testausta
 PS C:\WINDOWS\system32> get-command -module <source_nimi-Id>
 
 tulostaa source nimen
