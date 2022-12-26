@@ -13,5 +13,21 @@ InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure yo
 'PSGallery'?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
 
-# siinä menee hetki kun se lataa sen azure ad pakettin ja suorittamisen
+# siinä menee hetki kun se lataa sen azure ad pakettin ja suorittamisen ja jonka jälkeen tarkistellaan kommentoja että löytyy kyseisen funktiota ja yms toimintoja
+
+PS C:\WINDOWS\system32> get-command -module azuread
+
+# jos yrittää kokeilla edellisen kommenon jokin testauksen esim. $get-azureaduser - josta tulostuu punainen error, koska käyttäjä ylläpitäjä pitää ottaa yhteytä suoraan azure ad:seen
+# joten ennen sitä pitää ottaa yhteytö office azure ad eli kirjautua sisään 
+
+PS C:\WINDOWS\system32> connect-azuread
+
+# jonka tulostaa kirjautunun sisään kyseisen käyttäjän tunnuksen (kokonainen sposti domain nimi), environemnt, tenant id , tenant domain (sposti loppu osa onmicrosoft.com) ja jne.
+
+# tämän jälkeen voi kokeilla uudestaan sitä komentoa eli rivi 20 ($get-azureaduser)
+# HUOM ennen aloittamista kantsii kirjautua aina azure ad:seen, koska vaikka aloittaisi alusta niin powershell admin ylläpitoa ei koskaan muista sitä.
+
+
+
+
 
