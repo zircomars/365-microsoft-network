@@ -87,3 +87,32 @@ d7b2c037-1900-4188-a7a... toivol          EURP190DG120-db108             99 GB (
 
 Ottaa yhteytä microsof teams:siin
 PS C:\WINDOWS\system32> Connect-MicrosoftTeams
+
+----------------------------------------------------------------------------------------
+
+muita komennon harjoituksia
+
+kirjaudu ensin sisään eli:
+
+PS C:\WINDOWS\system32> Connect-ExchangeOnline
+
+tulostuu commandtype, name ja versio & source nimi id
+PS C:\WINDOWS\system32> get-command get-mailbox
+
+tämä komento tarkoituksena on antaa ei mitään, mutta periaatteessa toimii
+PS C:\WINDOWS\system32> get-command -module <source_nimi-Id>
+
+tulostaa source nimen
+PS C:\WINDOWS\system32> get-command get-mailbox | select-object source 
+
+TAI sama vaihtoehotinen komento methodi
+PS C:\WINDOWS\system32> get-command get-mailbox | select-object -expandproperty source 
+
+a = joku komento termi ja tulostettaan a 
+PS C:\WINDOWS\system32> $mod = get-command get-mailbox | select-object -expandproperty source 
+PS C:\WINDOWS\system32> $mod
+
+PS C:\WINDOWS\system32> get-mailbox
+
+
+
