@@ -1,4 +1,4 @@
-pieni tutoriaali  powershell käyttäjille; right management (oikea hallinta)
+pieni tutoriaali powershell käyttäjille; right management (oikea hallinta)
 
 pdf tuhat sivunen 1208/1229
 
@@ -6,9 +6,23 @@ https://www.youtube.com/watch?v=t7nL3ZLXCT0
 
 
 Microsoft Azure Information Protection (AIP) on osa Microsoft Purview Information Protectionia, ja tämä Microsoft Purview Information Protection auttaa sinua löytämään, luokittelemaan, suojaamaan ja hallitsemaan arkaluontoisia tietoja kaikkialla, missä ne elävät tai liikkuvat.
+AIP tarjoaa salauspalvelua azure giht managementiin, jota tukee microsoft Purview information protection käyttöä.
 
+Kun muodostaa yhteytä palveluun niin pitää kirjautua admin tunnuksella/oikeudella sisään, voi suorittaa Get-AipService (tai $Connect-AipService)- komennon, mikäli suojaus on aktiivinen (enbaled). Jos palvelu ei ole käytössä (not enabled), tarkoittaa käyttäjä ei voi suojata tietoja.
+Tileillä pitäisi olla järjestelmänvalvoja oikeudet eli administrative right, jos ne ovat määritetty:
+- global administrative for the tenant
+- global for the azure tenant
+- myönnettyjen adminstrato käyttöoikeuden (Add-AipServiceAdminisstrator) komennolla & 
 
-https://learn.microsoft.com/en-us/azure/information-protection/what-is-information-protection
+mikäli jos ei ole annettu tai toistuu virheilmoitusta niin kantsii antaa rooli käyttäjälle, ja alemmassa on esim. 
+komento kuinka annettaan käyttäjälle aip oikeudet:
+$Add-AipServiceRoleBasedAdministrator -EmailAddress Kim.Akers@Office365itpros.com
 
-
+Myös tarkistuksen kohteena kuinka monella käyttäjällä on oikeus tähän rooliin:
+[PS] C:\> Get-AipServiceRoleBasedAdministrator | Format-Table DisplayName, Role, EmailAddress
+DisplayName Role EmailAddress
+----------- ---- ------------
+Kim Akers GlobalAdministrator SMTP:Kim.Akers@office365itpros.com
+Marc Vilas GlobalAdministrator SMTP:Marc.Vigneau@office365itpros.com
+James Ryan GlobalAdministrator smtp:JRyan@Office365itpros.com
 
