@@ -13,7 +13,16 @@ Jos on uusi x-jäsen, joka haluaa liittyä  sharepoint ryhmään niin hänen siv
 
 Sharepoint omistaja voi lisätä jäseniä sisään hakemalla  perus etu-ja sukunimen avulla. Mutta mikäli jos site on julkinen, niin kuka tahansa voi osallistua julkaisun / tiedostojen sisään.  Myös pääomistaja voi jakaa muille käyttäjille oikeudet mutta vain joko on (user/owner roolit) 
 
+Site permissions:
+Sharepoint sivuston oikeuden julkaisussa on aina jokin käyttöoikeudet (permissions), siinä jakautuu kolmeen osaan eli: sivuston (site) owner eli omistaja, site jäsenet ja site vierailijat (visitors)
+Kolmessa osuudessa on periaatteessa oma hallinta osuus, owner (hallitsee kaikken), members (jokin osuuden), visitors (oikeus lukea ja lataa tiedoston/dokumenttin, mutta ei ole oikeus muokata sivustoa ja eikä mitään)
+
+Sivuston jakamisasetukset:
+- joko sivuston omistaja ja jäsenset voivat jakaa tiedoston, kansion ja sitet ihmisille. Henkilöt, jolla on muokkaus oikseudet, voivat jakaa  tiedostoja ja kansioita. 
+- Sivustojen omistjaat ja jäsenset sekä henkilöt,  joilla on muokkaus oikeudet niin voivat jakaa tiedostoja ja  kansioita,  mutta vain siuvstoj omistjaat voivat jakaa sivuston.  
+- vain sivuston omistajat voivat jakaa tiedostoja, kansioita ja sivuston.
 
 
+default permissions levels:
 
 
