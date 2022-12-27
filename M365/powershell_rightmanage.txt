@@ -5,8 +5,10 @@ pdf tuhat sivunen 1208/1229
 https://www.youtube.com/watch?v=t7nL3ZLXCT0
 
 
-Microsoft Azure Information Protection (AIP) on osa Microsoft Purview Information Protectionia, ja tämä Microsoft Purview Information Protection auttaa sinua löytämään, luokittelemaan, suojaamaan ja hallitsemaan arkaluontoisia tietoja kaikkialla, missä ne elävät tai liikkuvat.
-AIP tarjoaa salauspalvelua azure giht managementiin, jota tukee microsoft Purview information protection käyttöä.
+Microsoft Azure Information Protection (AIP) on osa Microsoft Purview Information Protectionia, ja tämä Microsoft Purview Information Protection auttaa käyttäjän löytämään, luokittelemaan, suojaamaan ja hallitsemaan arkaluontoisia tietoja kaikkialla, missä ne elävät tai liikkuvat.
+AIP tarjoaa salauspalvelua azure giht managementiin, jota tukee microsoft Purview information protection käyttöä. Myös AIP auttaa orgsaniaation/yrityksen löytämään, luokittelee, merkitsemään ja suojaamaan arkaluontoisia asiakirjoja ja sähköposteja. Admin valvoja voivat määrittää säännöt 
+ja ehdot tarrojen automaattiseen käyttöön, jotta käyttäjät voivat käyttää tunnisteita manuaaliseen tai kahden käyttäjän yhdistelmää voi käyttää, jolla hyödyntää annettavien suosistusta tarrojen lisäämistä. 
+Käyttäjät hyötyvät siitä, koska he voivat liittää sisältönsä manuaalisesti herkkyydentunnisteita tai luokitella sisällönsä automaattisesti.
 
 Kun muodostaa yhteytä palveluun niin pitää kirjautua admin tunnuksella/oikeudella sisään, voi suorittaa Get-AipService (tai $Connect-AipService)- komennon, mikäli suojaus on aktiivinen (enbaled). Jos palvelu ei ole käytössä (not enabled), tarkoittaa käyttäjä ei voi suojata tietoja.
 Tileillä pitäisi olla järjestelmänvalvoja oikeudet eli administrative right, jos ne ovat määritetty:
