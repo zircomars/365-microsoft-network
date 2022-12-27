@@ -1,0 +1,19 @@
+Sharepoint oikeudet (sharepoint toimii kuin facebook, mutta se on office yksi tuote, joka kuuluu office palvelupaketiin)
+
+Luominen tapahtuu office ympäristössä, että käyttäjän oikeuksia voi olla global admin tai sharepoint yksittäinen oma ylläpitäjä ja jne. 
+
+Office luomisessa tapahtuu (create a site) valikko, mutta tyyppillisesti joko julkinen tai yksityinen julkaisu. 
+Site voi olla usein joko projekti, uutiset, asiakirja / dokumentti, kalenteri, tiimien julkaisut ja jne.
+
+Site on kaksi tyyppistä (team & communication site)
+
+privacy settings  on kaksi tyyppistä (private / public)
+
+Jos on uusi x-jäsen, joka haluaa liittyä  sharepoint ryhmään niin hänen sivustoon saattaa nähä (You need permission to access this site), niin hänen tulee lähettää jokin pikku viesti omistajalle/ylläpitäjälle, jotta sharepoint site sivuston omistaja voi lisätä x-jäsen henkilöstön.
+
+Sharepoint omistaja voi lisätä jäseniä sisään hakemalla  perus etu-ja sukunimen avulla. Mutta mikäli jos site on julkinen, niin kuka tahansa voi osallistua julkaisun / tiedostojen sisään.  Myös pääomistaja voi jakaa muille käyttäjille oikeudet mutta vain joko on (user/owner roolit) 
+
+
+
+
+
