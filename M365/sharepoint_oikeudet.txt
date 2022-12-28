@@ -30,6 +30,7 @@ Grand permissions - joka antaa yksittäisen oikeuden käyttäjille, että kutsuu
 permissions levels:
 site/sivuston yksittäisen oman - edit, full control, read (kuin melkee omistajan taso)
 tai muu erilliset ei liitty omistajan suuntaan: full control, disgn, edit, constribute, read
+myös permission level:istä saa lisätä oman haluamansa tyyppisen, mitä microsoft voi tukea ja siellä on listattu mitä sallitaan ja jne.
 
 Full Control	Has full control.
 Design	    - Can view, add, update, delete, approve, and customize.
