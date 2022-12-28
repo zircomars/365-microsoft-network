@@ -37,3 +37,11 @@ Design	    - Can view, add, update, delete, approve, and customize.
 Edit	    - Can add, edit and delete lists; can view, add, update and delete list items and documents.
 Contribute	- Can view, add, update, and delete list items and documents.
 Read	    - Can view pages and list items and download documents.
+
+
+
+https://lazyadmin.nl/office-365/sharepoint-permissions/
+https://learn.microsoft.com/en-us/sharepoint/sites/user-permissions-and-permission-levels
+
+
+
