@@ -30,3 +30,9 @@ Grand permissions - joka antaa yksittäisen oikeuden käyttäjille, että kutsuu
 permissions levels:
 site/sivuston yksittäisen oman - edit, full control, read (kuin melkee omistajan taso)
 tai muu erilliset ei liitty omistajan suuntaan: full control, disgn, edit, constribute, read
+
+Full Control	Has full control.
+Design	    - Can view, add, update, delete, approve, and customize.
+Edit	    - Can add, edit and delete lists; can view, add, update and delete list items and documents.
+Contribute	- Can view, add, update, and delete list items and documents.
+Read	    - Can view pages and list items and download documents.
