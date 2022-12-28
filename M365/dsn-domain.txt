@@ -55,7 +55,8 @@ svn.mydomain.com.       CNAME   ns1.config.mydomain.com.  #ttl 21600
 
 Oletus arvo käytettään välityspalvelimella tuen automaattisen TTL arvolla 300sekuntia. Koska vain IP-resoluutiotuki voi välittää välityspalvelimen, ja tämä asetus varmistaa, että verkkotunnus (domain nimi) koskevat kyselyn ratkaisee nopeasti. 
 Myös tämä asetus koskee kaikkia välityspalvelimia A-, AAAA- tai CNAME-tietuen muutosta tapahtuvien alle tai tasan viiden minuutin päästä. Jos ylittyy tai kestää 5minuuttia niin huomaa tietuen muutosta, koska paikallisen DNA-välimuisti päivittäminen voi kestä pitempään. 
-Vain DNS-tietuki voi valita TTL väliltä 30sekuntia (enterprise) tai 60seuntia (non-enterprise) ja 1 vuorokausi.
+Vain DNS-tietuki voi valita TTL väliltä 30sekuntia (enterprise) tai 60sekuntia (non-enterprise) tai 1 vuorokausi.
 
-
+Jos on asetettu DNS TTL arvoksi 1800sekuntia (30min), ratkaisejan (resolver) on kerättävä tiedot uudellleen verkkosivustolta example.com  joka 30minutin välein. Jos 100 käyttäjä vierailee sivustolla kyseisen ajankohdalla, niin he kaikki näkevät saman asiansa, kunnes resolver ratkaiasija on päivittyy siihen TTL aikaan. 
+Aika toimii vähiten ymmärrettyn  yleisen DNS-strategian kannalta.
 
