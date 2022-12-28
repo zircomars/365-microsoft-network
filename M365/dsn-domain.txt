@@ -39,3 +39,20 @@ DNS hallinta M365:ssä tarkoittaisi
 Exchange  online eli perus sähköposti/kalenteri, outlook ja tms.
 
 https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide
+
+
+- TTL (Time to live)
+Tarkoittaa ISC-postituslistalla olevan viestin mukaan CNAME ja tietuen, joka osoittaa tallenetaan välimuistiin selvittävien nimipalveluia (resolving name server) avuall, jotta ratkaisija  voivat optimoida ratkaisu-/välimuistinprosessin asiakaspuolella.
+Jos CNAME TTL on kelvollinen, mutta A:n joka se osoittaa on virheellinen, ja se toistaa vain haun osoittamaan tietuen, ei alkuperäisen CNAME ellei kunnes myös CNAME TTL on päällä.
+Jos CNAME vanhenee,  niin A-tuki päivittyy samanaikaisesti
+
+TTL luvut on välimuistiin enintään 3600, 10800 ja 21600 sekuntia & 1h = 60min eli 3600s | 3h = 180min = 10800s ja jne. 1pv = 24h = 1440min = 86 400s
+
+mydomain.com.           CNAME   s2.config.mydomain.com.   #ttl 3600
+mail.mydomain.com.      CNAME   s2.config.mydomain.com.   #ttl 10800
+svn.mydomain.com.       CNAME   ns1.config.mydomain.com.  #ttl 21600
+
+
+
+
+
