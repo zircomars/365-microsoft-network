@@ -42,9 +42,10 @@ https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/crea
 
 
 - TTL (Time to live)
-Tarkoittaa ISC-postituslistalla olevan viestin mukaan CNAME ja tietuen, joka osoittaa tallenetaan välimuistiin selvittävien nimipalveluia (resolving name server) avuall, jotta ratkaisija  voivat optimoida ratkaisu-/välimuistinprosessin asiakaspuolella.
+Tarkoittaa ISC-postituslistalla olevan viestin mukaan CNAME ja tietuen, joka osoittaa tallenetaan välimuistiin selvittävien nimipalvelua (resolving name server) avuall, jotta ratkaisija  voivat optimoida ratkaisu-/välimuistinprosessin asiakaspuolella.
 Jos CNAME TTL on kelvollinen, mutta A:n joka se osoittaa on virheellinen, ja se toistaa vain haun osoittamaan tietuen, ei alkuperäisen CNAME ellei kunnes myös CNAME TTL on päällä.
-Jos CNAME vanhenee,  niin A-tuki päivittyy samanaikaisesti
+Jos CNAME vanhenee,  niin A-tuki päivittyy samanaikaisesti.
+esim. Kun hakee selaimesta domain nimen (verkkosivun), niin se kysyy  paikallisen nimipalvelimen ja kyseisen toimialueen IP-osoitetta.
 
 TTL luvut on välimuistiin enintään 3600, 10800 ja 21600 sekuntia & 1h = 60min eli 3600s | 3h = 180min = 10800s ja jne. 1pv = 24h = 1440min = 86 400s
 
@@ -52,7 +53,9 @@ mydomain.com.           CNAME   s2.config.mydomain.com.   #ttl 3600
 mail.mydomain.com.      CNAME   s2.config.mydomain.com.   #ttl 10800
 svn.mydomain.com.       CNAME   ns1.config.mydomain.com.  #ttl 21600
 
-
+Oletus arvo käytettään välityspalvelimella tuen automaattisen TTL arvolla 300sekuntia. Koska vain IP-resoluutiotuki voi välittää välityspalvelimen, ja tämä asetus varmistaa, että verkkotunnus (domain nimi) koskevat kyselyn ratkaisee nopeasti. 
+Myös tämä asetus koskee kaikkia välityspalvelimia A-, AAAA- tai CNAME-tietuen muutosta tapahtuvien alle tai tasan viiden minuutin päästä. Jos ylittyy tai kestää 5minuuttia niin huomaa tietuen muutosta, koska paikallisen DNA-välimuisti päivittäminen voi kestä pitempään. 
+Vain DNS-tietuki voi valita TTL väliltä 30sekuntia (enterprise) tai 60seuntia (non-enterprise) ja 1 vuorokausi.
 
 
 
