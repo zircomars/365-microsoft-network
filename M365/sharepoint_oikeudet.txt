@@ -22,7 +22,11 @@ Sivuston jakamisasetukset:
 - Sivustojen omistjaat ja jäsenset sekä henkilöt,  joilla on muokkaus oikeudet niin voivat jakaa tiedostoja ja  kansioita,  mutta vain siuvstoj omistjaat voivat jakaa sivuston.  
 - vain sivuston omistajat voivat jakaa tiedostoja, kansioita ja sivuston.
 
+Site/sivuston omistajan permission oikeudet asetukset (Advanced permissions settings) eli periaatteessa tässä tämä on tarkoitettu ylläpitäjään asetuksiin, ja listattu ylemmän mukaan (Sivuston jakamisasetukset), mitä oikeus leveliä on olemassa (edit, full control & read).
 
-default permissions levels:
+Käyttöliittymistä voi luoda oman grouppin (create group), joka voi rajoittaa erillisen oikeuden, että antaa käyttäjille sallia muokata site/sivustoa.
+Grand permissions - joka antaa yksittäisen oikeuden käyttäjille, että kutsuu x- tai y henkilöstön organisaatiosta, ja antaa jokin oikeuden level:in (permission level)
 
-
+permissions levels:
+site/sivuston yksittäisen oman - edit, full control, read (kuin melkee omistajan taso)
+tai muu erilliset ei liitty omistajan suuntaan: full control, disgn, edit, constribute, read
