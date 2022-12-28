@@ -29,7 +29,8 @@ Pienin ehdollinen arvo on nolla 0, mikä on prioteetiltään tärkein tai korkei
 microsoft 365 Exchange online -  lähettää toimialueen saapuvia sähköpostia Exchange online - palveluun m365 office:een. 
 
 - TXT
-sekalaista tietoa & vahvistaa verkkotunnuksen (domain name) omistajuuden
+sekalaista tietoa & vahvistaa verkkotunnuksen (domain name) omistajuuden.
+käytettään tosi paljon DKIM (DomainKeys Identified Mail)-tukea, sähköpostin suojauksen ja verkkotunnuksen omistajuuden vahvistamista. TXT-tietuki muutetaan harvoin ja 1-12h ajanjakso pitäis olla riittävä.
 
 Domain tunnuksien, verkkosivu tai sähköpostien käyttöönottossa on vaativia erillisten vahvistusta. Koska on olemassa tietuetyyppi, joka rakentuuu kuin CNAME-tuki. TXT on on domain-osa tai kohdeosa, mitä tietuki käyttävät esim. kotisivusto palvelussa tai sähköpalveluntarjoajana eli microsoft. Tietuki voi olla esim.
 | website.fi        | TXT  | MS=ms123456789
