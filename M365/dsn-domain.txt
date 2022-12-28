@@ -62,3 +62,4 @@ Jos on asetettu DNS TTL arvoksi 1800sekuntia (30min), ratkaisejan (resolver) on 
 Aika toimii vähiten ymmärrettyn  yleisen DNS-strategian kannalta.
 
 TTL:stä lisää: https://www.varonis.com/blog/dns-ttl
+https://support.dnsmadeeasy.com/support/solutions/articles/47001001255-what-is-ttl-
