@@ -61,3 +61,4 @@ Vain DNS-tietuki voi valita TTL väliltä 30sekuntia (enterprise) tai 60sekuntia
 Jos on asetettu DNS TTL arvoksi 1800sekuntia (30min), ratkaisejan (resolver) on kerättävä tiedot uudellleen verkkosivustolta example.com  joka 30minutin välein. Jos 100 käyttäjä vierailee sivustolla kyseisen ajankohdalla, niin he kaikki näkevät saman asiansa, kunnes resolver ratkaiasija on päivittyy siihen TTL aikaan. 
 Aika toimii vähiten ymmärrettyn  yleisen DNS-strategian kannalta.
 
+TTL:stä lisää: https://www.varonis.com/blog/dns-ttl
