@@ -21,7 +21,7 @@ microsoft 365 Exchange online - CNAME auttaa asiakasohjelmien muodostamista yhte
 - MX (Mail Exchanger)
 Pointti email serveriin
 voi tukea verkkosivuston ja sähköpostina esim. website.net , ja @website.net 
-tarkoituksena on saada/vastaanottaa ulkopuolisia domain sähköposteja, että voi itse lähettää sähköpostia ulkomaailmalle
+sen tarkoituksena on saada/vastaanottaa ulkopuolisia domain sähköposteja, että voi itse lähettää sähköpostia ulkomaailmalle
 
 sähköposti ympäristössä voi olla useita käyttäjiä organisaatiossa. MX-tuki kuuluu myös prioriteetti arvo, mikä määrittää kuinka tärkeä kyseinen tietotue on mihin tukeisiin verratuna. 
 Pienin ehdollinen arvo on nolla 0, mikä on prioteetiltään tärkein tai korkein prioriteetti taso. 
