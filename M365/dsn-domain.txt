@@ -38,3 +38,4 @@ Domain tunnuksien, verkkosivu tai sähköpostien käyttöönottossa on vaativia 
 DNS hallinta M365:ssä tarkoittaisi
 Exchange  online eli perus sähköposti/kalenteri, outlook ja tms.
 
+https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide
