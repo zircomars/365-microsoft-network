@@ -32,10 +32,28 @@ Parametrin tunnistaa edeltävien yhdysmerkkin viiva (-), joka viittaa seuraavaks
 ![Alt text](harjoituksia/images/powershell-parameter-1.PNG)
 
 
-## alias
+## modules
 
-joko vaihtoehtoisia nimejä puhtaihta alias, ja lyhenne kuten dir, cd, mkdir, type
+Moduuli on paketti, joka sisältää PowerShell-jäseniä, kuten cmdlettejä, palveluntarjoajia, toimintoja, työnkulkuja, muuttujia ja aliaksia.
 
-ei ole com tiedosto, vaan käyttöjärjestelmä pohjaisia ja powershell / alias systeemi tulee pien ongelma esim. $dir - palauttaa tiedosto polun
-$dir /s - listaa kaikki aliakset, koska se ei toimi, niin kuvittelee osa polkua ja sillä ei ole vaihtoehtoisia kommentoa eli pelkä (dir) ja lisää vaihtoehtoisia erikois hakuja niin sillä ei ole ja rajoitettu
+Toimii  powershell versio 3:sta tai sitä uudempaa versioon & Toimitetaan osana eri ohjelmistopakettien hallintatyökaluja
+
+wildcard characters tarkoittaa tähteä * ja suomeks. jokerimerkki, powershell ympäristössä se tarkoittaa komentojen olevian etsimistä, ei käyttöä ja eivät tuo mitään moduuleja esim. nämä alemmat kaksi komennot ovat samoja
+
+PS C:\WINDOWS\system32> Get-Module
+PS C:\WINDOWS\system32> Get-Module *
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
