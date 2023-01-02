@@ -41,8 +41,6 @@ Toimii  powershell versio 3:sta tai sitä uudempaa versioon & Toimitetaan osana 
 wildcard characters tarkoittaa tähteä * ja suomeks. jokerimerkki, powershell ympäristössä se tarkoittaa komentojen olevian etsimistä, ei käyttöä ja eivät tuo mitään moduuleja esim. nämä alemmat kaksi komennot ovat samoja
 
 PS C:\WINDOWS\system32> Get-Module
-PS C:\WINDOWS\system32> Get-Module *
-
 
 ## Alias
 
@@ -60,7 +58,6 @@ jos haluaa luoda oman uuden komennon menisi alemman mukaan, eli Demo tilalle luo
 New-Alias –name “Demo” Get-ChildItem
 
 ainii myös kun käynissä oleva powershell admin istunnon se uusi komennon alias tapahtuu vain kerran, ettei sitä voi käyttää jatkuvasti sitä samaa, koska muuten tulisi tekee powershel ISE scriptauksessa (jotenkin jännästi)
-
 
 
 ## Pipeline
