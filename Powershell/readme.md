@@ -44,16 +44,22 @@ PS C:\WINDOWS\system32> Get-Module
 PS C:\WINDOWS\system32> Get-Module *
 
 
+# Alias
 
+Tarkoittaa powershell toiminnan lyhenteitä esim. dir = direction
 
+PS C:\WINDOWS\system32> Get-Alias "Dir"
 
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           dir -> Get-ChildItem
 
+Syöttämällä komennon niin periaatteessa sama methodi toimii molemmissa termeinä esim.  $dir tai $Get-ChildItem - että molemmat toistaa hakemiston, myös voidaan luoda oma alias lyhenne toiminta. myös muita esim. $cls tai $clear puhdistaa koko powershell komentorivin
 
+jos haluaa luoda oman uuden komennon menisi alemman mukaan, eli Demo tilalle luoo oman haluamansa lyhenteen:
+New-Alias –name “Demo” Get-ChildItem
 
-
-
-
-
+ainii myös kun käynissä oleva powershell admin istunnon se uusi komennon alias tapahtuu vain kerran, ettei sitä voi käyttää jatkuvasti sitä samaa, koska muuten tulisi tekee powershel ISE scriptauksessa (jotenkin jännästi)
 
 
 
