@@ -44,7 +44,7 @@ PS C:\WINDOWS\system32> Get-Module
 PS C:\WINDOWS\system32> Get-Module *
 
 
-# Alias
+## Alias
 
 Tarkoittaa powershell toiminnan lyhenteitä esim. dir = direction
 
@@ -63,3 +63,13 @@ ainii myös kun käynissä oleva powershell admin istunnon se uusi komennon alia
 
 
 
+## Pipeline
+
+Kommenossa se tarkoittaisi | (putki)
+
+komento lyödään powershell, sillo ollaan Pipeline kuvitteelinen putki, joka kuvaa kommenon suoritusta. putken vasemsta sorvutaan objekteja sisään ja putken oikeast pätkästä muokattuja (ei aina). 
+useampi kommenotja objektejä mm. filteröinti, muokkausta, mittaamisesta, sorttausta, laskemista ja yms. voidaan tuottaa näkymä näillä format komennolla. periaatteessa tapahtuu putken sisällä.
+
+listatat jokeri merkkejä get up computer vs muuta, varsinaiset filtterit where object kommennon käyttö ja basic malli. 
+enumerating viittaa prosessiin haettaan jostakin, yksikerralaan muokkataan niitä ja ei voi tehd yhtä aikaan esim. muokata joidenkin koneiden ominaisuuksia.  haetaan koneet muuttujaan ja sen jälkeen joudutaan yksittelen tekemään muutosta. 
+koska komennossa siellä on parameter computer name, ja sitä nimi voi vaa yhden objektin. jolloin luetaan yksi kerrallaan, for each silmukassa käsitteelee yksittelen ja taas seuraava.
