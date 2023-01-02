@@ -24,4 +24,5 @@ Get-help on ominaisuuksia ja synktasia, kun on kulma sulku <string> pakolinen ja
 
 Parametrin tunnistaa edeltävien yhdysmerkkin viiva (-), joka viittaa seuraavaksi parametrin nimi. Nimestä ja arvosta voidaan erottaa välilyönnin tai kaksoispisteellä. Jotkut parametrit eivät vaadi tai hyväksy pamaetrin arvoa, mutta muut parametrit vaativat arvon, mutta eivät vaadi parametrin nimeän  komennossa.
 
-![Alt text](harjoituksia/images/powershell-calc-properties-2.PNG)
+![Alt text](harjoituksia/images/powershell-parameter-1.PNG)
+
