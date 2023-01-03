@@ -15,7 +15,3 @@ BaseUtcOffset              : 02:00:00
 SupportsDaylightSavingTime : True
 
 
-######### scripti malli 
-
-
-
