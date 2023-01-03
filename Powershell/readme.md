@@ -2,6 +2,11 @@
 
 special kommentoja josta voidaan luoda scripttauksia algroitmiä, objectia, parametriä, filteröintiä ja yms
 
+## lisää harjoituksia
+
+https://learn.microsoft.com/en-us/training/browse/
+https://learn.microsoft.com/en-us/training/browse/?terms=powershell
+
 ## cmdlet struktuurit
 
 Verbit: get, set, new, add, remove
