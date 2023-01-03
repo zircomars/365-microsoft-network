@@ -14,4 +14,16 @@ DaylightName               : Suomen kesäaika
 BaseUtcOffset              : 02:00:00
 SupportsDaylightSavingTime : True
 
+# scriptin luomisessa  tapahtuu
+# eli avaa joko admin tai tavallisen powershell:in niin syöttää new-item <nimi>.txt esim.  tai joku muu vaikka csv mikä onkaan ja jne
+# editointia ei voi tapahtua powershellissä, mutta mikäli jos tiedosto on oikeasti ps1 eli powershell tyyppinen niin avautuu automaatinen powershell ISE scriptaus editori
 
+PS C:\Users\name-\Documents> New-Item teksti.txt
+
+
+    Directory: C:\Users\name-\Documents
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          3.1.2023     20.24              0 teksti.txt
