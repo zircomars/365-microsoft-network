@@ -1,0 +1,300 @@
+powershell  2.1.23
+
+laaja työkalu, kaikkia m365 voi hallinnoida powershell ja m erki pohjainen välinen ja komentotulkki
+
+scripti ympäsristö
+
+visual basic ympäristö - turvallisuude kanssa, ei vain hiiren klikkausta ja scripti suoritettaan kommennon mukaan
+laajennus on iso asia, koska ei ole mahdollista rakentaa monolista kättelystä windows tuotteet ja täytyy laajentaa ja modulaarisuus ja taustalla
+
+kokeille leikkisti powershell admin kommennolla $dir function: | measure 
+measure - funktio
+
+
+versiointi keskittyy ja komennon syntaksi, myöhemmin alias, lyhenteitä, get-command ja jne...
+gcm (alias) tai tehty , dir (alias, kommento get child item) ja yms.
+
+host powershell, ISE scripti editoti mukana powershell consoli ja sitä ei ole tarkoitettu normaaliin suoritukseen ja oma ominaisuudet, ja se on testausta scriptaukseen
+
+powershell avaaminen ja konffaus esim.  fontien osalta
+
+functio - voi olla stand alone, ihan kommento ja script editotilla ja kyseessä funtio ja funktio nimetttään get-command , se toimii istunnossa ja kommennossa, jos istunto loppuu ja siitä pitää aloittaa alusta
+funktiota käytettään komponentissa script moduuli,  jolla tuo uusi moduuli. powershell moduuli ja uusia kommentoja powershell:iin
+
+filters - filtteri , rajoittaa objekti kenttää, mitä ollaan käsittelelmäsä esim. ad kommento, esim. get - ad user, pakollinen filtteri vaikka ei haluttaisi kaikki, voi parameter - * ja yms. eri tilanteessa voi olla jokin objekti käsittellyyn ja palveluun jokin ylhäällä tai muuta
+
+were object
+
+workflow - työkulkua , script peräkkäisiä kommentoja ja toimii samalla, se voi olla monimutkainen, powershell automate ja siellä monikäyttösyyttää ja kysyä käyttäjältä parametriä ja mihin se kohdistuu yksityiseen palvelimeen temppuun, ja anna palvelin nimi ja eri koneisiin, eli monikäyttöinen
+
+microsoft server sovellus - sovellus kohtaisia cmdlets, voi hakea excel moduuli (ei suositella), mutta tyyppilisesti pääsovellus ja jolla voi hallida powershell:illä, ja nii saadaan koneeseen moduuli jossa on komennot (get command) kyseisen sovelluksen hallintaan tarkoitettu
+jos realisti kukaan ei ole näppäile kommentoa, ehkä laajempi tai tarvii istunto, 
+
+kynnys versio 2 ja 3, mutta 5 yhteen sopiva 3:seen asti, mutta 2:sta ei ole toteuttava parempaa versioon. sky for business 
+
+windows features (windows työkalu koneesta) löytyy versio 2 , mutta erikois tapaukset on olemassa ja tommoinen puuttuu
+
+windows powershell vs operating system
+native funktionality
+
+harvoin perus moduuleita, ja toki usein powershell on sovellushallinta esim. ad käyttäjiä tai muu sovellus, silloin on oltava moduuli tai laajennus joka tuoo lisää kommenot ja tietyn version, mutta sovelluksen version kannalta päivitys uudempaa versioon ja sisään tulee ominaisuuksia ja moduuli päivittyy
+
+tuote versio, ja erikseen pitää valita powershell asennus
+
+two host application
+console - perus command line interface
+ise - script editor ja konsole, kommand referense ja poimia kommentoja
+kolmannen osa puolen sovellus tai editor, powershell liittyvien elemnttiä ja tyyppillisesti hinta lappu ja muita ominaisuuksia. mahdollista tuoda yhteyksiä esim. visual studio code tia visual studioon
+
+eri versioita windows:sta, 10 ja 11, 7 ei ole enään RIP
+ajatus on ilmoitettaan versio kohtaiset kohtavaiset, kuitenkin versio ei ole tärkeä
+
+$PsVersionTable - to determine the version of windows powershell...
+
+powershell operaattori järjestelmä käytettään 64 bitti järjestelmä versiota, mutta 32 on olemassa, ei toimi yksi yhteen. 32 ei ole kaikkia toiminnot tuettu ja console ylä palkkissa x86
+yleensä käytettään 64 bittistä ja koskee ISE
+
+ikkkunan palkkissa pitäisi lukea administrator teksti ja jne. ylläpitäjä oikeudet
+
+ei ole maailman loppu kun käynnistää uudelleen
+
+console kantsii erottaa 
+
+start scripting  kerrää historiat
+Start-Transcript -Path C:\temp 
+nauhoittaa kommentoja ja palautetta tiedostoon, niin lopettaminen (Stop-Transcript)
+
+$notepad <file.txt>
+
+conffaus ISE 
+kaksi panelia ja console, ja samat tarinat kuin custom font ja väriä ja jne. 
+
+PS C:\WINDOWS\system32> Write-Host test
+test
+PS C:\WINDOWS\system32>
+
+----------------------------------------------------------------------------
+
+Syntax 
+
+oma parametrit , on lisättävä paremetrit ja on jokin arvo
+
+microsoft ylläpitää Get-Help - kaikkien command pitää ladata paikallisesti
+
+cmdlet structure:
+verbit : get,set new,add, remove
+noun (substantiivi) /objekti, service, process 
+ad, sp & azuread 
+
+usein käytettään paljo objektia, ja lyhenteitä, ja aliaksia voi tehdä itsekin & select objekct 
+
+paremetrit määrittää toimintaa command:itlle, mihin object ominaisuus kohdistuu esim. set ad user ja jne. voi olla filtterit ja joku parametrit ja tekee jotakin
+esim. järjestää uudestaan sort obnject ja sille annettaan parametri ja yksittäinen attribuutti aakkosjärjestyksessä (nouseva tai laskevat)
+
+parametriä voi sijoittaa arvoja, ja eroteltuna pilkkuna - computer names muuttujaan viedään asoita (huono esim.) 
+
+joskus parametri nimi on valinnainen position parameter, esim. get-service BITS << palvelunimi, riittää kun arvo laitettaan oikeaan paikkaan
+get-serivce -name BITS (selkeä lukuseksi, mutta sama kuin ylempi, BITS = background intelligent transfer service). position parametri 
+
+Get-help on ominaisuuksia ja synktasia, kun on kulma sulku <string> pakolinen ja hakasulku [valinnainen] 
+
+komentojen paikallisesti:
+ei lue vian verkosta, vaan asennettu moduulien kautta
+
+$gcm *DNS* - moodulista riippumaton, mistä kotoisin, dnsclient, aliaks, function, cmdlet ja jne.
+
+powershell gallery --> perus nettin kautta powershell gallery 
+
+alias - joko vaihtoehtoisia nimejä puhtaihta alias, ja lyhenne kuten dir, cd, mkdir, type
+
+ei ole com tiedosto, vaan käyttöjärjestelmä pohjaisia ja powershell / alias systeemi tulee pien ongelma esim. $dir - palauttaa tiedosto polun
+$dir /s - listaa kaikki aliakset, koska se ei toimi, niin kuvittelee osa polkua ja sillä ei ole vaihtoehtoisia kommentoa eli pelkä (dir) ja lisää vaihtoehtoisia erikois hakuja niin sillä ei ole ja rajoitettu
+
+ulkoinen kommento tarkoittaa on olemassa joku exe tiedosto jonkun polun varrella, ja pelittää normaalisti ja ohjelman suoritus. 
+
+$ping localhost
+$ping localhost -t - toistaa niin kauan kuin käyttäjä katkaisee tai lopettaa yhteyden 
+
+powershell eri syntaksi kuin alias komennot ja eri tarppeinen
+demo alias esim. ja tehdä oma pieni alias [$New-Alias -name "Demo" Get-ChildItem]
+
+mee cd temp polkkuun
+$New-Alias -name "temp" Get-ChildItem
+toista $temp 
+niin tulostuu sen temp hakemiston
+
+kun kirjautuu uudestaan powershell:in eli sammuttaa ja avataa uudestaan niin se edellisen istunto poistuu vähä kuin kerta käyttöinen ja jos haluaa pysyväksi pitää tallentaa se moduuli
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+PowerShell kirja step-by-step
+harjoituksia:
+
+PS C:\> Set-Location $pshome
+PS C:\Windows\System32\WindowsPowerShell\v1.0> typeperf "\memory\available bytes"
+jos kone on suomeks menisi kait.. typeperf "\muisti\käytettävät tavut"
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> bcdedit
+windows boot manager ja boot loader
+Windows Boot Manager
+--------------------
+identifier              {bootmgr}
+device                  partition=\Device\HarddiskVolume1
+path                    \EFI\Microsoft\Boot\bootmgfw.efi
+description             Windows Boot Manager
+locale                  fi-FI
+inherit                 {globalsettings}
+default                 {current}
+resumeobject            {bba3c994-6a46-11eb-90ee-9eb3c6711a8d}
+displayorder            {current}
+toolsdisplayorder       {memdiag}
+timeout                 0
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Set-Location c:\mytest
+PS C:\mytest> fsutil file createnew mytestfile.txt 1000
+File C:\mytest\mytestfile.txt is created
+PS C:\mytest> Get-Date
+
+maanantai 2. tammikuuta 2023 11.09.33
+
+PS C:\mytest> Get-command
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           Add-AppPackage                                     2.0.1.0    Appx
+Alias           Add-AppPackageVolume                               2.0.1.0    Appx
+Alias           Add-AppProvisionedPackage                          3.0        Dism
+Alias           Add-ProvisionedAppPackage                          3.0        Dism
+
+pitkälistaus
+
+PS C:\mytest> Get-Command -name Get-Alias
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Get-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
+
+---------------------------------------------------------------------------------------------------
+
+cmdlets for administrator
+
+listaus ja ei ole harjoitusta ad kanssa, ja komennot löytyy ad moduulista
+
+ad ympäristö
+käyttäjienhallinta, organisaatiot, yksikköt ja ad obit 
+
+voi luoda käyttäjiä esim. bulkkina teksti tiedosto, csv, käyttäjätiedot ja sillä rakentaa käyttäjät ja sillä mitä on luomassa. 
+
+set muokkaa olemassa ja käytätjä tiliä, käyttäjät attribuuttia
+
+yksittäiset: salasnaan unohtaminen, account väliaikainen (Helpposti  määräaikainen), unlock esim. monta kirjautuminen niin meneel ukkoon ja tili ei voida kirjautua ja pari vaihtoehto aikaisesti menee lukkoon tai 30min menee lukkoon tai muu lukitus. 
+myös erikseen voi avata käyttäjäntiliä
+
+ad object management cmdlets - käyttäj voi itse liittää domain, jos tili on tehty new account computer
+
+luoto suhde edellyttää tietokonen tiliä ad kanssa, voi tarkistaa se luotosuhde 
+
+organisaatio tai yksikköillä ei ole attribuutti, vain polku eli distinys name, adorganisationunit lisätty koska, organisaatio ei käytä ryhmiä se kaikki objekti poistuu yhtälailla ja suojaus tuottu mukaan koska jos sitä yritettään poistaa sieltä tulee ilmoitus se on suojattu ja pyyttää tarkistaa organisaatio yksikkö.
+
+yleinen ad objekti, jos e iole sopivaa silti voi viedä ja hallita ad vietäviä objektia, kontakti tyyppiä uusi ad objekti
+
+palomuuria on erikseen powershell, ja onnistuu mutta hankala, ei ole pulkki muutosta ja onnistuu hallida 
+
+
+Hyper - v 
+oma hallinta, jolla voi pyöritellä ja esim. toistaa virtuaalikoneessa. cdmlet three prefixes: vm, vhd (virtuaalikone levy), vfd
+
+IIS management 
+
+vian selvitys
+
+
+---------------------------------------------------------------------------------------------------
+
+PowerShell Pipeline | << periaatteessa toi näppäimistön putki (puhekielessä)
+
+komento lyödään powershell, sillo ollaan Pipeline kuvitteelinen putki, joka kuvaa kommenon suoritusta. putken vasemsta sorvutaan objekteja sisään ja putken oikeast pätkästä muokattuja (ei aina). 
+useampi kommenotja objektejä mm. filteröinti, muokkausta, mittaamisesta, sorttausta, laskemista ja yms. voidaan tuottaa näkymä näillä format komennolla. periaatteessa tapahtuu putken sisällä.
+
+listatat jokeri merkkejä get up computer vs muuta, varsinaiset filtterit where object kommennon käyttö ja basic malli. 
+enumerating viittaa prosessiin haettaan jostakin, yksikerralaan muokkataan niitä ja ei voi tehd yhtä aikaan esim. muokata joidenkin koneiden ominaisuuksia.  haetaan koneet muuttujaan ja sen jälkeen joudutaan yksittelen tekemään muutosta. 
+koska komennossa siellä on parameter computer name, ja sitä nimi voi vaa yhden objektin. jolloin luetaan yksi kerrallaan, for each silmukassa käsitteelee yksittelen ja taas seuraava.
+
+output tulostus datasta tyyppilisesti format kommento
+
+yleinen Pipeline kommennot on get |set, get ja jne. 
+
+object ja methodit, kodhdistuneita 
+
+get-service -palvelu objekti 
+get-service | get-member - tulostuu aliaksi, methodi, property ja jne
+
+format Pipeline formaatti
+format-list
+format-table
+
+järjestys objektia  
+sort-object
+
+esim. Get-Service | Sort-object status,
+
+Get-Process |sort ID 
+Get-Process | sort name
+
+
+datan mittaus tai koko:
+measure-object , kerrää  objecti ja laskee niitä objekteja, mutta tähä käytetään t osi harvoin ja file tiedostja
+
+Get-ChildItem -File | Measure -Property Length -Sum -Average -Minimum -Max
+
+Select object 
+first  10, last 10, skip joka ottaa alusta skippaa rivejä annettjen märää , unique ottaa kaikista jos on sama nimisiä nii ottaa yhden
+
+select object valitsee erilisen tiedoston hakee erillisen tiedostja
+
+invoke-command etähallinta yhteys hallinta, koneeeseen ja suoriuttuu get-service script
+
+select object - voi valita parametrejä useampaan pilkkuna erottuna, ja on sama kin format kommennossa, kumpaa käytetätän nii select on jollain jatko jalostaa, viedään muuttujaa 
+
+
+
+calculated properties
+select-object 
+label 
+expression - mitä dataa label alle,
+
+haetaan levyt esim- tunnus, koko ja jäljelä oleva tunnus
+
+esim. $get-volume
+
+
+filteri object out of Pipeline
+
+vertailu suorittaminen, että täyttää ehdon tai ei täytä ehdon,  perus filterröinti, advance, demonstration filtering, optimization filtering
+
+comprasion type -eq, -gt, -lt ja jne yhtäsuuri, suurempi, pienempi kuin ja jne.
+
+vmi - vmi operaattori
+
+filteri syntax - where-object, prosessi käyttö eli fyysinen koneen datat, prosessori ja jne. 
+
+muu operaattorit (and, or)
+
+get-serivce |Where {$PSItem.Name -like "A*" -and $PSItem.status}
+
+toiminnat vievät suoritus kykyä, ja enemmän/vähemmän akatemia, vaikka ois hankalia kommentoja 
+
+enumerating - numeraali, for each jostakin numeraalia
+ottaa kokoelma objectia ja suorittaa yksittäisen/kokonaisen toiminto, koska parameterjä on rajoituksia saa yksittäisen arvon
+
+salauksia  scriptauksia ei voi rakentaa if else silmukkaa  
+
+advanced syntax filteröintiä  antaa mahdollisuuden tehdä mitä tahansa  powershell:ssä, että kirjataan scriptausta eli $PSItem.Encrypt()
+
+data vienti powershell, oletuksena out host = out default, jos tiedostoon niin on mahdollista outfile kommentoa ohjata tai uudelleen ohjaus kulma sulut
+convertointia json, xml ja yms.. out printer powershell
+teksti tiedostoksi outfile 
+
+converto-csv
+export-csv 
+
+

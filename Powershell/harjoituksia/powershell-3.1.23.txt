@@ -1,0 +1,633 @@
+3.2.23
+powershell toinen tunti
+
+PS C:\WINDOWS\system32> $arr = 1..15
+PS C:\WINDOWS\system32> $arr[4]
+5
+
+PS C:\WINDOWS\system32> $h = @{
+>> Computername = $env:computername
+>> PSVersion = $PSVersionTable.PSVersion
+>> Date = (Get-Date).ToShortDateString()
+>> }
+PS C:\WINDOWS\system32> $h
+
+Name                           Value
+----                           -----
+Date                           3.1.2023
+Computername                   LAPTOP-M61U9PNQ
+PSVersion                      5.1.19041.2364
+
+
+PS C:\WINDOWS\system32> $h.add("Name",@("Bits","WinRM"))
+PS C:\WINDOWS\system32> $h.Remove("date")
+PS C:\WINDOWS\system32> $h.remove("psversion")
+PS C:\WINDOWS\system32> Get-Service @h
+
+Status   Name               DisplayName
+------   ----               -----------
+Stopped  Bits               BITS (Background Intelligent Transf...
+Stopped  WinRM              Windowsin etähallinta (WS-Management)
+
+
+PS C:\WINDOWS\system32> $h = [ordered]@{
+>> Computername = $env:computername
+>> Services = (Get-Service | Where-Object {$_.status -eq 'running'})
+>> Processes = (Get-Process | Sort-object -Property WS -Descending |
+>> Select-object -first 5)
+>> TempSize = (Get-ChildItem -Path $env:temp -file -Recurse |
+>> Measure-object -Property length -sum).sum
+>> }
+PS C:\WINDOWS\system32> New-Object -TypeName PSObject -Property $h
+
+Computername    Services                                                             Processes
+------------    --------                                                             ---------
+LAPTOP-M61U9PNQ {AarSvc_8f796, AdobeARMservice, AdskLicensingService, AGMService...} {System.Diagnostics.Process (ms...
+
+
+PS C:\WINDOWS\system32> Get-Eventlog -list -computername $env:computername |
+>> Where-Object {$_.entries.count -gt 0} |
+>> Select-Object -Property Log,MaximumKilobytes,
+>> @{Name="Entries";Expression={$_.entries.count}},
+>> @{Name="Computername";Expression={$_.machinename}}
+
+Log                MaximumKilobytes Entries Computername
+---                ---------------- ------- ------------
+Application                   20480     218 LAPTOP-M61U9PNQ
+OAlerts                         128      38 LAPTOP-M61U9PNQ
+OneApp_IGCC                     512       6 LAPTOP-M61U9PNQ
+Security                      20480   33057 LAPTOP-M61U9PNQ
+System                        20480   35555 LAPTOP-M61U9PNQ
+Windows PowerShell            15360   11994 LAPTOP-M61U9PNQ
+
+
+PS C:\WINDOWS\system32> Get-ChildItem $env:temp -file -Recurse |
+>> Group-Object -Property extension |
+>> Select-Object Name,Count,
+>> @{Name="Size";Expression={($_.group |
+>> measure-object -Property length -sum).sum}}
+
+Name  Count    Size
+----  -----    ----
+.ses      1      53
+.tmp      9 5984025
+.etl      7  405504
+.png    154  954014
+.log     19 8824637
+.dat      4       0
+.dll      3  534024
+.x        2       0
+          3    2958
+.BLOB     2  211552
+.MAP      2    8735
+
+#random luku, että count tulostaa kaksi kertaa
+PS C:\WINDOWS\system32> $arr = "a","b","c","d","e"
+PS C:\WINDOWS\system32> $x = $arr | Get-Random -Count 2
+PS C:\WINDOWS\system32> Switch ($x) {
+>> "a" { "alpha" }
+>> "b" { "bravo" }
+>> "c" { "charlie" }
+>> "d" { "delta" }
+>> "e" { "echo" }
+>> }
+charlie
+
+#teksti käänteisenä/peilikuvana
+PS C:\WINDOWS\system32> $text = "PowerShell Forever"
+PS C:\WINDOWS\system32> $arr = $text.ToCharArray()
+PS C:\WINDOWS\system32> $arr[$($text.length)..0] -join ""
+reveroF llehSrewoP
+
+
+PS C:\WINDOWS\system32> $h = Get-Service | group-object starttype -AsHashTable -AsString
+PS C:\WINDOWS\system32> $h
+
+Name                           Value
+----                           -----
+Manual                         {AarSvc_8f796, AJRouter, ALG, AppIDSvc...}
+Automatic                      {AdobeARMservice, AdskLicensingService, AGMService, AGSService...}
+Disabled                       {NetTcpPortSharing, RemoteAccess, RemoteRegistry, shpamsvc...}
+
+
+PS C:\WINDOWS\system32> $h.Disabled[-1].DisplayName
+Microsoft Update Health Service
+
+
+PS C:\WINDOWS\system32> 10..100 | Get-Random -Count 25 | foreach-object { $_ * 3 } |
+>> Measure-Object -sum -Average -Maximum -Minimum
+
+Count    : 25
+Average  : 166,68
+Sum      : 4167
+Maximum  : 300
+Minimum  : 33
+Property :
+
+#hakee edellisiä kommentoja historian aikana, eli kaikki mitä on näppytetty powershell admin istunnon aikana
+PS C:\WINDOWS\system32> Get-History | Where-Object {$_.commandline -notmatch "help"} |
+>> Sort Commandline | foreach-object {$_.CommandLine.ToLower() } | Get-Unique
+
+#hakee edellisiä kommentoja historian aikana, sama methodi ja vaihtoehtoinen komento
+(Get-History).CommandLine.ToLower() |
+where-object {$_ -notmatch "help"} |
+Sort-Object | Get-Unique
+
+#hakee edellisiä kommentoja historian aikana, sama methodi ja vaihtoehtoinen komento
+(Get-History).where({$_.commandline -notmatch "help"}).Commandline.toLower() |
+Sort-Object | Get-Unique
+
+---------------------------------------------------------------------------------------------------------------------
+
+erikoinen tapaus pipeline ( | )
+
+data välitys pipeline usein ei ole ongelmia , ominaisuuden arvo tai parametrien arvo tai parametrien value 
+
+attribuuttit hyväksyy sen pipeline sen arvon ja  muita erikoisia tapauksia ettei toimi, parametri vastaan sen ominaisuuden nimen perusteella ja sillä perustella tuottaa ongelmia silloin pipeline ei toimi ja kuinka ratkaistaan?  se on rissuaita # 
+
+siinä luodaan custom properties name, jotta putkinimen toiselle puolelle eli datan välittäminen toiselle, ja komennossa se menee 
+
+aina, kun välitettään pipeline dataa piilotettu prosessi prosessing piding, sitä ei voi valita koska se on sisään rakennettu parametrien ominaisuus 
+ByValue - passing data 
+
+esim.
+Get-Serice -name Bits
+-name on se parametri , verkosta löytyy lisäohjettta viiva -<string> jotakin 
+
+aikanata kirjoittaa ylikäsin pipeline, koska muuten lakkaa käsin tai ylikirjoitettu
+sulkujen käyttö ensin,  koska vähä kuin matematiikkassakin
+
+tarkista mitä parametri pipeline voi käyttää binding kohtaan
+
+yksittäisen ominaisuuden laajentaminen eli suodattaa tarkempaa tietoa a = hakea hakemiston, ominaisuuden, parametri ja nimi, sisältyen pipeline
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+Using psproviders and psdrives
+
+pslevy & psproviders
+
+joko on tai ei,  oletuksena providers
+jos asennettaan ad koneeseen tai iis niin saadaan providers - ei kantsi kiinnittää huomioita koska olisi tekemistä niiden kanssa
+yleensä ja  mitä ne on? windows ympäristössä on  paljon elementtiä, jotka rakenteeltaan hierarkkisia (levy/tiedostojärjestelmiä) kuin ala kansio jossa on dataa, myös yksittäistä dataa on vaikee hakea 
+
+fortigate storage on vaikea viitata työkalu viitatta ja hakea 
+
+powershell providers - ottaa hierarkkisen tai storage, tarjoaa näkymän powershell kuin kiintolevynä silloin saadaan efektejä, voidaan sisältöä hallita käytmällä tiedostojärjestelmiä  kommentoja cd kmmentoa, dir ja jne.
+
+koska ne on näkymeksen levy näkemys
+
+helppoin on tutkimassa mitä siellä on
+
+$Get-PSProvider
+
+pieni testaus, avaa powershell admin ;;;;;;;;;
+cd cert:
+cd CurrentUser
+cd my  
+dir joku varmenne on asennettu sisään koneeseen & pc levyn sisältöä 
+
+helppoin tapa luke variable & muuttujia 
+cd variable
+cd env
+
+jälkeen dir (env tai variable polun jälkeen)
+
+sama järjestelmä rekisteri, on oma graafinnen työkalu graf edit jossain scriptaus rekisteristä ottaa järjestelmä rekisterin kautta, josta kaks taulua (cd hklm)
+hklm on rajoitettu dir muuttuja & cd hkcu --> dir , päästään eri tilanteisiin, asetuksiin, 
+cd software --> dir
+ei kantsi muuttaa sisäistä asetuksia, mutta kantsii pitää oletuksena
+
+
+rekisteri provider capabilities,
+transactions - nauhoitettu operaattori, mitä on tehty ja nauhoitettaan, sitten ongelmana palata takaisin rekisterissä on sellainen ominaisuus, jotta voi  käyttää viimeistä kokooonpanoa jos ongelma tilanne tulee,  muissa on perus käyttö
+
+saattaa tulla vmi ympäristössä 
+
+levyasema paikalal tunnus : siitä se voi päätellä ps levy asema luettu
+
+
+tiedostojärjestelmä psdrives, kun avaap powershell istunto nii näkyy levyasema järjestelmä oletuksena. sama koskien järjestelmä rekisteri, varmenteetki on oletuksena ja sitä vaikea päästä powershell käsiksi
+
+mmc - tyhjä konsoli, yksittäiset certifikaatit (personal/certifikaatit)
+
+omat hierarkkit
+
+harjoituksia 128/657
+
+## Exploring the certificate provider ##
+
+PS C:\WINDOWS\system32> Get-ChildItem | Get-Member | Where-Object {$_.membertype -eq "property"}
+
+
+   TypeName: System.IO.DirectoryInfo
+
+Name              MemberType Definition
+----              ---------- ----------
+Attributes        Property   System.IO.FileAttributes Attributes {get;set;}
+CreationTime      Property   datetime CreationTime {get;set;}
+
+
+PS C:\WINDOWS\system32> Get-PSDrive | where name -like "c*"
+
+Name           Used (GB)     Free (GB) Provider      Root                                               CurrentLocation
+----           ---------     --------- --------      ----                                               ---------------
+C                 139,38         97,85 FileSystem    C:\                                               WINDOWS\system32
+Cert                                   Certificate   \
+
+PS C:\WINDOWS\system32> Set-Location cert:\
+PS Cert:\> GCI
+
+
+Location   : CurrentUser
+StoreNames : {TrustedPublisher, ClientAuthIssuer, ISG Trust, Root...}
+
+Location   : LocalMachine
+StoreNames : {TestSignRoot, ClientAuthIssuer, Remote Desktop, Root...}
+
+
+#tulostuu aika pitkä listaus katkaise välissä eli ctrl + c
+PS Cert:\> GCI -Recurse
+Location   : CurrentUser
+StoreNames : {TrustedPublisher, ClientAuthIssuer, ISG Trust, Root...}
+
+Name : TrustedPublisher
+
+Subject      : CN=Oracle Corporation, OU=Virtualbox, O=Oracle Corporation, L=Redwood Shores, S=CA, C=US
+Issuer       : CN=DigiCert Assured ID Code Signing CA-1, OU=www.digicert.com, O=DigiCert Inc, C=US
+Thumbprint   : 6F474206BCBB391BB82BA9E5DC0302DEF37AEBBE
+FriendlyName :
+NotBefore    : 19.3.2019 2.00.00
+NotAfter     : 23.3.2022 14.00.00
+Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, S
+               ystem.Security.Cryptography.Oid...}
+
+
+#avaa txt ja käskee lopettaa, että tallenettaanko johonkin
+PS Cert:\> GCI -Recurse > C:\a.txt; notepad.exe a.txt
+
+
+## Examining the environment provider ##
+
+PS C:\WINDOWS\system32> New-PSDrive -Name al -PSProvider alias -Root .
+
+Name           Used (GB)     Free (GB) Provider      Root                                               CurrentLocation
+----           ---------     --------- --------      ----                                               ---------------
+al                                     Alias         .
+
+
+PS C:\WINDOWS\system32> SL al:\
+PS al:\> GCI | Sort -Property name
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           % -> ForEach-Object
+Alias           ? -> Where-Object
+
+
+PS al:\> GCI | Sort -Property name | Where Name -gt "t"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           tee -> Tee-Object
+Alias           trcm -> Trace-Command
+Alias           type -> Get-Content
+Alias           wget -> Invoke-WebRequest
+Alias           where -> Where-Object
+Alias           wjb -> Wait-Job
+Alias           write -> Write-Output
+
+PS al:\> SL C:\
+PS C:\> Remove-PSDrive al
+PS C:\> Get-PSDrive
+
+Name           Used (GB)     Free (GB) Provider      Root                                               CurrentLocation
+----           ---------     --------- --------      ----                                               ---------------
+Alias                                  Alias
+C                 139,38         97,85 FileSystem    C:\
+Cert                                   Certificate   \
+Env                                    Environment
+Function                               Function
+HKCU                                   Registry      HKEY_CURRENT_USER
+HKLM                                   Registry      HKEY_LOCAL_MACHINE
+Variable                               Variable
+WSMan                                  WSMan
+
+
+PS C:\>
+PS C:\> Get-Item -Path env:\
+
+Name                           Value
+----                           -----
+COMPUTERNAME                   LAPTOP-M61U9PNQ
+USERPROFILE                    C:\Users\zhao-
+HOMEPATH                       \Users\zhao-
+LOCALAPPDATA                   C:\Users\zhao-\AppData\Local
+PSModulePath                   C:\Users\zhao-\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell...
+PROCESSOR_ARCHITECTURE         AMD64
+Path                           C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common F...
+CommonProgramFiles(x86)        C:\Program Files (x86)\Common Files
+ProgramFiles(x86)              C:\Program Files (x86)
+PROCESSOR_LEVEL                6
+LOGONSERVER                    \\LAPTOP-M61U9PNQ
+PATHEXT                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+HOMEDRIVE                      C:
+SystemRoot                     C:\WINDOWS
+ProgramW6432                   C:\Program Files
+ALLUSERSPROFILE                C:\ProgramData
+SystemDrive                    C:
+DriverData                     C:\Windows\System32\Drivers\DriverData
+QT_DEVICE_PIXEL_RATIO          auto
+APPDATA                        C:\Users\zhao-\AppData\Roaming
+PROCESSOR_REVISION             8e0c
+USERNAME                       zhao-
+CommonProgramW6432             C:\Program Files\Common Files
+OneDrive                       C:\Users\zhao-\OneDrive
+CommonProgramFiles             C:\Program Files\Common Files
+OS                             Windows_NT
+PT8HOME                        C:\Program Files\Cisco Packet Tracer 8.0
+USERDOMAIN_ROAMINGPROFILE      LAPTOP-M61U9PNQ
+PROCESSOR_IDENTIFIER           Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+ComSpec                        C:\WINDOWS\system32\cmd.exe
+INTEL_DEV_REDIST               C:\Program Files (x86)\Common Files\Intel\Shared Libraries\
+MIC_LD_LIBRARY_PATH            C:\Program Files (x86)\Common Files\Intel\Shared Libraries\compiler\lib\mic
+TEMP                           C:\Users\zhao-\AppData\Local\Temp
+ProgramFiles                   C:\Program Files
+NUMBER_OF_PROCESSORS           4
+TMP                            C:\Users\zhao-\AppData\Local\Temp
+ProgramData                    C:\ProgramData
+ADSK_3DSMAX_x64_2021           C:\Program Files\Autodesk\3ds Max 2021\
+windir                         C:\WINDOWS
+USERDOMAIN                     LAPTOP-M61U9PNQ
+PUBLIC                         C:\Users\Public
+
+
+PS C:\> Get-Item -path env:\ | Get-Member
+
+
+   TypeName: System.Collections.Generic.Dictionary`2+ValueCollection[[System.String, mscorlib, Version=4.0.0.0, Culture
+=neutral, PublicKeyToken=b77a5c561934e089],[System.Collections.DictionaryEntry, mscorlib, Version=4.0.0.0, Culture=neut
+ral, PublicKeyToken=b77a5c561934e089]]
+
+Name           MemberType   Definition
+----           ----------   ----------
+Add            Method       void ICollection[DictionaryEntry].Add(System.Collections.DictionaryEntry item)
+Clear          Method       void ICollection[DictionaryEntry].Clear()
+Contains       Method       bool ICollection[DictionaryEntry].Contains(System.Collections.DictionaryEntry item)
+CopyTo         Method       void CopyTo(System.Collections.DictionaryEntry[] array, int index), void ICollection[Dic...
+Equals         Method       bool Equals(System.Object obj)
+GetEnumerator  Method       System.Collections.Generic.Dictionary`2+ValueCollection+Enumerator[string,System.Collect...
+GetHashCode    Method       int GetHashCode()
+GetType        Method       type GetType()
+Remove         Method       bool ICollection[DictionaryEntry].Remove(System.Collections.DictionaryEntry item)
+ToString       Method       string ToString()
+PSDrive        NoteProperty PSDriveInfo PSDrive=Env
+PSIsContainer  NoteProperty bool PSIsContainer=True
+PSPath         NoteProperty string PSPath=Microsoft.PowerShell.Core\Environment::
+PSProvider     NoteProperty ProviderInfo PSProvider=Microsoft.PowerShell.Core\Environment
+Count          Property     int Count {get;}
+IsReadOnly     Property     bool IsReadOnly {get;}
+IsSynchronized Property     bool IsSynchronized {get;}
+SyncRoot       Property     System.Object SyncRoot {get;}
+
+PS C:\> $objEnv=Get-Item -Path env:\
+PS C:\> $objEnv.Count
+41
+PS C:\> $objEnv.Get_count
+
+OverloadDefinitions
+-------------------
+int get_Count()
+int ICollection[DictionaryEntry].get_Count()
+int ICollection.get_Count()
+int IReadOnlyCollection[DictionaryEntry].get_Count()
+
+
+
+PS C:\> $objEnv.Get_count()
+41
+PS C:\> $objEnv.GetType()
+
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+False    True     ValueCollection                          System.Object
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+CIM and WMI 
+
+common information model
+windows management instrumentation
+
+hallinta informaatiota, eniten käytettään kun kysyttään laiteesta kuin windows laiteesta
+ohjelmat esim system eneter, simiäja tukee wmi, mutta komennossa on erot. snmp ne toteutukset wmi pohjaisia ja käytettään muualla esim. group policy sek ä wmi filtteri
+
+tarkistaa ominaisuuksia että  onko riittävästi muistia ennen kuin suorittaa sen toiminnan ja prosessin 
+wmi kautta pääsee erilaisiin asioihin ja ehkä jopa monimutkainen kyselly, että riippuuu mitä haetaan ja vaaditaan perustietoa
+
+wmi console 
+$wmic - ehkä pian poistumassa 
+wmic:root\cli>
+
+sillä on valmiina aliaksia, että suorittaa kysellyyn 
+
+kysyy leiikkist $CPU - nii kertoo kyseisen koneen esiin ja mitä ominaisuuksia löytyy 
+$memphysical - tehdä jonkinlainen ehto kapasittetti muistissa pitää olla 
+$qfe
+
+wmi - tiedon kerruuseen ja sivu roolissa aktiivinen tekeminen, ohjaaminen ja tiedon keruus (quering) ympäristön tehtävä
+
+sen konen kerätään posteriin, ja riippuu simiä onko uusi vai uutta wmi, se data pysyy ennallaan, mutta protokolla palvelu joka eroaa , ja tiestysti kommennot
+
+finding dokumentication - se ympäristö jossa suoritettaan eli avaruus simw2 se on hyvin dokumentoitu, mutta nimi avaruuksia koneessa käytetään osat ei ole kunnon dokumentti, että voi rakentaa omia tietoja ja melko avoin. myös riipppuu mitä etsii ja mitä löytyy 
+
+older (WMI) --> dcom 
+newer (CIM) --> ws-man
+
+$get-WmiObject -Class (attribuutti nimi, position nimi) Win32_Service | gm (hakee memeberit)
+ominaisuuksia tulostuu tosi paljon ja methodi vähä enemmän
+
+
+class - luokka (querying data by using cim and wmi)  
+
+nimi avaruus, mitä nimi avaruuksia on koneessa on esim. $Get-WmiObject -Namespace root -List -Rrecurse | Select -Unique __NAMESPCAE
+lista Root polkujen tiedostoja, policy, security center ja jne
+
+listing classes - luokka on olennaista
+
+kysellyt quering get-wimobject tai get-cmi jossa on luokkat samat ja filtterinä property 3 tarkoittaa kiintolevyä 
+
+WQL - wmi query language
+luodaan kyselly , query parametri ja annettana kyselly kuten sql (select * from ja jne), where jotakin 
+
+etä yhteys / kone, mitä usein käytettään silloin vmi ja cmi:ssä ympäristtössä käytettään computer name parameter, ja sopii yksi kerrallaan
+jos on useita koneita pitää tutkia niin, sitte menisi for each silmukka ja suorittamaan kysellyä
+jos on sellainen tunnus
+
+tietojen kysellyä hallintaan, todenn ei tule tarvitsee admin hommia kantsii oppia, mutta tilanteessa niin wmi kysellyä ja ehkä ad ylläpitäjä,  group policy ylläpiätjäksi
+
+komennossa ? - alias objekt 
+
+page 332 - 334
+
+perus powershell, ei tarvi mitään wmi methodia
+gcim = get cim lyhenne
+gwmi = get wim lyhenne objekti 
+
+
+PS C:\WINDOWS\system32> gcim win32_service | ? displayname -match 'server'
+
+ProcessId Name        StartMode State   Status ExitCode
+--------- ----        --------- -----   ------ --------
+6624      VMwareHostd Auto      Running OK     0
+
+
+PS C:\WINDOWS\system32> gcim win32_service | ? name -eq 'bits'
+
+ProcessId Name StartMode State   Status ExitCode
+--------- ---- --------- -----   ------ --------
+11492     BITS Auto      Running OK     0
+
+
+PS C:\WINDOWS\system32> $class = Get-Cimclass -ClassName win32_logicaldisk
+PS C:\WINDOWS\system32> $class.CimClassMethods
+
+Name               ReturnType Parameters                                                        Qualifiers
+----               ---------- ----------                                                        ----------
+SetPowerState          UInt32 {PowerState, Time}                                                {}
+Reset                  UInt32 {}                                                                {}
+Chkdsk                 UInt32 {FixErrors, ForceDismount, OkToRunAtBootUp, RecoverBadSectors...} {Implemented, Mappin...
+ScheduleAutoChk        UInt32 {LogicalDisk}                                                     {Implemented, Mappin...
+ExcludeFromAutochk     UInt32 {LogicalDisk}                                                     {Implemented, Mappin...
+
+
+PS C:\WINDOWS\system32> Get-WmiObject win32_logicaldisk | Get-Member -MemberType methods
+
+
+   TypeName: System.Management.ManagementObject#root\cimv2\Win32_LogicalDisk
+
+Name                MemberType   Definition
+----                ----------   ----------
+Chkdsk              Method       System.Management.ManagementBaseObject Chkdsk(System.Boolean FixErrors, System.Bool...
+Reset               Method       System.Management.ManagementBaseObject Reset()
+SetPowerState       Method       System.Management.ManagementBaseObject SetPowerState(System.UInt16 PowerState, Syst...
+ConvertFromDateTime ScriptMethod System.Object ConvertFromDateTime();
+ConvertToDateTime   ScriptMethod System.Object ConvertToDateTime();
+
+
+PS C:\WINDOWS\system32> Get-CimInstance win32_logicaldisk | Get-Member -MemberType methods
+
+
+   TypeName: Microsoft.Management.Infrastructure.CimInstance#root/cimv2/Win32_LogicalDisk
+
+Name                      MemberType Definition
+----                      ---------- ----------
+Clone                     Method     System.Object ICloneable.Clone()
+Dispose                   Method     void Dispose(), void IDisposable.Dispose()
+Equals                    Method     bool Equals(System.Object obj)
+GetCimSessionComputerName Method     string GetCimSessionComputerName()
+GetCimSessionInstanceId   Method     guid GetCimSessionInstanceId()
+GetHashCode               Method     int GetHashCode()
+GetObjectData             Method     void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System....
+GetType                   Method     type GetType()
+ToString                  Method     string ToString()
+
+
+PS C:\WINDOWS\system32> Get-CimInstance -ClassName win32_operatingsystem | Select-object *
+
+
+Status                                    : OK
+Name                                      : Microsoft Windows 10 Home|C:\WINDOWS|\Device\Harddisk0\Partition3
+FreePhysicalMemory                        : 2786080
+FreeSpaceInPagingFiles                    : 5714620
+FreeVirtualMemory                         : 7269632
+Caption                                   : Microsoft Windows 10 Home
+
+PS C:\WINDOWS\system32> Get-CimInstance -ClassName win32_service -filter "startmode='auto' AND ` state <>'running'" | Select-Object -property Displayname
+
+Displayname
+-----------
+Toimituksen optimointi
+ Microsoft Edge -päivitys -palvelu (edgeupdate)
+Ryhmäkäytäntöasiakas
+Intel(R) TPM Provisioning Service
+Intel(R) Audio Service
+Ladattujen karttojen hallinta
+Ohjelmistojen suojaus
+
+https://learn.microsoft.com/en-us/training/browse/
+https://learn.microsoft.com/en-us/training/browse/?terms=powershell
+
+
+PS C:\WINDOWS\system32> Get-Volume -DriveLetter C | Select-Object -Property DriveLetter,
+>> FileSystemLabel,@{Name="SizeGB";Expression={$_.size/1gb -as [int]}},
+>> @{Name="FreeGB";Expression={$_.SizeRemaining/1gb}}
+
+DriveLetter FileSystemLabel SizeGB           FreeGB
+----------- --------------- ------           ------
+          C Windows-SSD        237 97,8828239440918
+
+
+PS C:\WINDOWS\system32> Get-Ciminstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct
+
+
+displayName              : Windows Defender
+instanceGuid             : {D68DDC3A-831F-4fae-9E44-DA132C1ACF46}
+pathToSignedProductExe   : windowsdefender://
+pathToSignedReportingExe : %ProgramFiles%\Windows Defender\MsMpeng.exe
+productState             : 397568
+timestamp                : Tue, 03 Jan 2023 06:36:58 GMT
+PSComputerName           :
+
+PS C:\WINDOWS\system32> Get-CimInstance Win32_PerfFormattedData_PerfOS_System |
+>> Select-Object -property File*,ProcessorQueueLength,Uptime
+
+
+FileControlBytesPersec      : 20036020
+FileControlOperationsPersec : 16767
+FileDataOperationsPersec    : 867
+FileReadBytesPersec         : 604690
+FileReadOperationsPersec    : 518
+FileWriteBytesPersec        : 104575
+FileWriteOperationsPersec   : 349
+ProcessorQueueLength        : 0
+Uptime                      :
+
+
+
+PS C:\WINDOWS\system32> Get-CimInstance Win32_PerfFormattedData_PerfOS_System |
+>> Select-Object -property File*,ProcessorQueueLength,
+>> @{Name="Uptime";Expression={New-TimeSpan -Seconds $_.systemuptime}}
+
+
+FileControlBytesPersec      : 49214
+FileControlOperationsPersec : 587
+FileDataOperationsPersec    : 278
+FileReadBytesPersec         : 53673
+FileReadOperationsPersec    : 142
+FileWriteBytesPersec        : 53627
+FileWriteOperationsPersec   : 135
+ProcessorQueueLength        : 1
+Uptime                      : 05:57:04
+
+
+
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
