@@ -1,0 +1,238 @@
+4.1.23
+powershell kolmas tunti
+
+variables, arrays and hash tables
+
+muuttujat
+
+array = list/taulukko
+
+hash tables  - custom tables, viedään data ja mitä tuokaan  
+
+rajoitettu  istunnon aikana, että powershell scriptauksen aikana, kun sammutaa kerran powershell niin se istunnon scriptaukset poistuu tallenteesta
+
+data sisältöä voi muokata lennosta 
+
+$<muuttujan_nimi>> voi ola myös objekti numeraallinen tai kirjain 
+
+$computer = jotakin jotakin 
+
+kerä ensin tiedot, ja sitten toistaa ton muuttujan, ja tallentanut tohon info vähä kuin koodauksessa a = numero tai dataa
+$computer = get-computerinfo
+
+voi laskentaa ja kerätä tietoja jopa 30pv viimeksi kone oli päällä tai sitä dataa 
+
+tietotyyppin mukaisesti , konen objekti että hakee koneen ominnaisuutta
+$computer | gm 
+
+muuttujan nimi voi pitää sisältään välilyöntiä kyseisen erikoisenmerkiin, mutta yksinkertaisempi ja tunnistaa muuttuja ja generoida niitä, mutta ei kanata nimeä kirjain ja erikoismerkki yhteen
+
+tietotyyppi automaatinenn, koska siellä on objekti mutta objekti viedään kommenolla sisään.
+
+muuttujien pyörittäminen:
+ei kovin usein ei pyöritä, mutta tietyissä komennossa ja mahdollista. ekaks pitää selvittä method ja ominaisuudet on käyttössä ja  tulee siitä datasta
+
+muuutuja, ominaisuus ja objekti esim. $logFile = "demostraatio"
+$logFile.contains("demo")
+$logFile.ToUpper()
+$logFile.length
+
+sisältöä voi lisätä väliin, $logFile.Insert(8, "\MyScript")
+$logFile.Split("\") | Select -Last 1
+
+
+array contains multile values or objects - eli useampi arvo 
+$users[] << sisään jokin numero 
+jos pipeline kanssa nii menisi $files | Get-member
+
+tyhjentää tiedon ja käyttää u udestaan samalal sisällöllä
+
+hash table [] periatteessa tämä on se taulukko
+voi tuoda avain ja liitety arvo 
+
+https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-hashtable?view=powershell-7.3
+https://www.mssqltips.com/sqlservertip/5185/powershell-and-hash-table-examples/
+
+----------------------------------------------------------------------
+remoting - etähallinta (admin remote computer)
+
+powershell voi toimia helpposti hallita, että käyttää tai kohdistaa useampaa  koneita kaikenlaisia tehtäviä
+pari vaihtoehtoa:  etähallintaan
+yksittäinen temppu tai mainostettu  istunto tyyppi ratkaisu 
+
+PS remoting kaks tapaa: yks one to one  - tarkoittaa kyseessä on invoke command kommennon käyttö tai ps istuntoja useampaa koneeseen, mutta jos mitä toimintaan nii tarvitaan
+computer parametri niin se on etähallinta erona on vain menetelmiin siellä kommennot suoritettaan paikallisesti , jos pitää hallita ad:tä niin powershell 
+exchange täytyy olla paikallisesti asennettu powershell josta löytyy exchange kommento, mutta jos käyttää invoke command istunto pohjaista ratkaisua niin suoritettan etähallinnassa
+
+etäyhteys salliminen palvelimessa tarvii jotakin, one to one,  one to many 
+yhdestä yhteen tai yhdestä useampaan . tuloste etäyhteys tai paikkalliseen 
+
+
+Invoke-command - aito  etähallinta kmmento, vaikka ois tommoinnen  kommento nii saattaa  tuoda esille
+
+https://www.commandline.ninja/connecting-to-multiple-computers-with-invoke-command/
+
+tietoturvassa läpinäkyvä, että määrittää mitä voidaan tehdä.  se ei yksinään vastassa domain ympäristössä on kahden ävlinen audentikointi, että tiedetään domain asema, ja tulee hallinta.
+https/http nii  on protokollana jos haluttaan https käyttää nii ätyttää salaus ja varmenteet. myös voi käytää trustedhost list, mutta tietoturvan kannalta kysen alainen se dissaploi kahden välisen
+että tekee trustedhost list välisen yhteys. ei vältämttä paras ratkaisu mutta sillo / tehdään kun cros domain ympäristössä tai ei hallinta ympäristössä 
+
+tarvitaan tietokonetili sinne 
+
+yhteys kone kohtainen liikenteen salaus se on vain kun https yhteys sitten voi olla sovelluksia omia salauksia, että toimii  https protokollan, mutta salaus tapahtuu ennen kun viedään verkkon ylitse
+kokonaisuudessa viedään vietäisi https 
+
+käyttäjätunnus välittäminen niin jos on domain computer trustedhost list on mahdollista ottaa basic authentikointi. 
+
+hallinnassa palvelimessa ei tarvitse  tehdä  (run Enable-PSRemoting)  - joka koneessa pitää antaa/ylläpitää etähallinnassa koska se on  hankala, tätä kommentoa ei voi etänä antaa, mutta saattavilla vapaasti ladattavia apu ohjelmia
+esim.  psadmin tools 
+
+jos on verkkokortti profiili jos on public niin se client ei onnistu, koska sen pitää olla private tai domain. 
+
+
+remoting; one-to-one 
+istunto yhteen koneeseen, alkaminen enter-pssession -computername (name)
+
+esim. $Enter-PSSession -ComputerName localhost
+se tulostuu ja yhteys muodostuu ja sisällä on kohde kone, mihin yhteys kohdistuu, kun annettaan komento nii suoritettaan localhost.
+tietenkin ei eroa mitenkään vaikka suorittaisi normaalisti windows admin powershell:ssä 
+
+miten välitettään dataa etähallinnasta? kirjautumista? tai jopa muuttuja? paikalliset muuttujat? kohde kone ei pysty paikallista muuttjia on oma menetelmä siihen sen argument list 
+yhteyden pysyvyys määrittää aika yhteydelle varataan jos on useampi invoke command ,  konen nimiä määritellään yksi asia on / useampi on se computer name paramaetri nii nseltä väkisinki tulee väli silmukka 
+
+invoke-command miten välitettään tietoja paikallisia parametriä niin etäkoneeseen
+
+https://www.commandline.ninja/jump-start-powershell-remoting/
+
+
+https://learn.microsoft.com/en-us/training/modules/manage-single-multiple-computers-use-windows-powershell-remoting/
+
+invoke-command parametri ei voi käydä käyttää, koska niitä pitää tehdä  järjesteyksesäs toinen tapa on käyttää powershell scope.
+se tarjoaa pääsyn paikallisiiin muuttujiin, josta voi aliaksia, funktioita, ps levyasemia ja johon voidaan ottaa yhteys. $Using syntaksi josta pystyy rajamaan missä voi muuttuu ja tätä tietoa ei välitä tietojan läpi, mutta parantaaa tietoturvaa 
+
+------------------------------------------------------------------------
+
+muita lisukkeet Background jobs
+
+jos on pitkä suoritus kommennossa, powershell menee tukkoon se viittaa kursoriin, mitään ei voi tehdä on mahdollista tehdä background job eli tausta laajeltavaksi tehtäviksi
+
+huono puoli joutuu hakemaan niitä tuloksia koska ei voi olla niitä yks tai kaks välähtää niin pitää hakea scedule työkalua ajastaa 
+
+käynnistää komennolla tai parametriä hallintaan, voi stop, pause tai poistaa job:eja , aina tuloksiin pitää mietiä mitä niiden tehdään, mutta ominaisuudessa tuloksista muistinvarassa niin ne poistuu varassa 
+jos tuloksia käyttää myöhemmin nii on key parametri on mahdollista tuottaa jatkuvuutta 
+
+taustalla suoritettaan kommentoa ja scriptiä tuottaa tulostusta ja tallentuu muistiin
+ajatuksena powershell vapautuu nopeammin muihin tehtäviin (tyyppejä on local, remoting, cim/WMI) jokaisessa job:ssa on oma tehtävä/ominaisuus käyntiin 
+jokaisella job on oma kommento 
+
+schedule jobs
+ajastus, voidaan ajastetula tehtävillä suorittaa powershell ajastetusti
+yksi niistä on ajastaminen 
+
+windows graafinen käyttöliittymä (task scheduler) ajasteltavissa joku tapahtuman perusteella, trikkerin perusteella , kun tehdään nii tapahtuu :action (scriptaus) käyttjäj tunnusta tehdään , trigger (päivittäin, viikkotain tai tapahtuman mukaan), additiona settingts (sekalaisia määrityksiä)
+
+schedule job ajastettu advance ostastolla, voidaan graffisella työkalulla tai ottaa moduuli  ps schedule kommentoja eli ajastettussa tyyppilisesti kuvaus, mahdollisesti optioita, toistuvuus ja jne. triggeri mitä onkaan aika perustainen vaikkapa päivittäin 
+
+sivu: 157 - 158
+omat tunnukset
+
+$cred = Get-Credential 
+perus paikallinen käyttäjätunnus ja salasana 
+
+
+s357 tehtävä 11 asti 
+
+------------------------------------------------------------------------
+Scriptaus  
+
+komentojen pyörittelyt & powershell ISE operaattorit 
+
+erilaisia toimintoja
+
+xml tiedosto, mistä tuodettaan dataa esim. csv sieltä perustellaan tehdään jotakin & powershell script editointi, m uokkaus ja get modul tapahtuu ise.ssä ja ladattui valmiita/pohjia 
+suoritus execution policy sitä joudutaan avaamaan
+
+applocker - voi estää powershell suoritusta ja pitää olla kunnossa jotta script ajaa 
+tärkeä scriptiin digitaalinen allekirjoitus se on yrityksen vaatimus kuin poikkeus, kaikki powershell digitaalisesti allekirjoittaa eli script tekijä varmenteella 
+joko varmenne tai kolmannen osa puolen tekemä 
+
+.ps1 - powershell scripttau tiedosto tyyppi  
+
+olemassa olevia scriptaus olemassa kuin scartch tekemää ja kuin oma tekemää xD siellä on jopa saa ladatua script sopii harjoittelijän ympäristöön, ettei tietyyn sidottu vaan parametroitu kysyy käyttäjältä asioita 
+esim. kohde missä sitä suoritettaan ja silloin jos kolmanesta otettaan script niin kyllä pitää tutkia asioita mitä se oikeasti tekee
+
+execution policy pitä olla joko remote tai profile eli ladattu & pitäisi olla allekrijoitettu versio 
+
+testi ympäristtössä scriptaus pitää olla tarkanna ennen kun tuo varsinaisesti tuotanto ympäristöön
+scriptauksen tekeminen on prosessointi, että lähellä loppu tulosta ja kantsii testata yksi osa kerrallaan ennen varsinaista loppu tulosta ja myös testaa jatkuvasti
+
+powershell module - usein asennettu valmiiksi, siellä on get-command ja jne
+
+scriptauksessa aina pitää antaa polku missä levyasema, hakemisto ja tiedostot ja jne. sekä nimi pääte aina pitää olla .ps1 & esim. C:\Path\Myfile.ps1
+tai suhteellinen polku esim. ..\..\Scripts\file.ps1 
+
+ByPass yksitäiseen tarkoitettu istuntoon, ja muut pysyviä valintoja voimassa. 
+
+ladattu scripti saattaa olla esto 
+
+$Get-executionPolicy
+unrestricted
+
+$Set-executionPolicy allsigned 
+
+edelletyttää allekirjoitettun suorituksen 
+
+digitaalinen signing script  - myöntämiseen allsigned digitaaaliseen scriptauksen polkuun 
+- filepath "C:\path\file.ps1" -certifacte $cert 
+
+kun aloittaa scriptauksen  tekemisen niin ensimmäisenä menee >>>> write-host "jotakin"
+
+datan tuonti on erikseen import csv, json ja muita get-content tiedoston, tekstitiedoston sisällöstä josta aina 1 objekti on  per rivi
+
+cnvertfrom json convertointi tai importointi
+
+---------------------------------------------------------------
+
+advanced settings - normaali rutiini, ei tarkoita oikeasti toimi
+
+script tärkeä osuus on moni käyttöisyys  ja ei tarvi kaikkea kodata sisään. 
+
+käyttäjä input hyväksyminen aina helpottaa/paranntaa scriptauksen monikäyttösyyttä ja eri tilanteessa käytää
+script kiinteä arvoja, ja ei ole helppo muokata
+
+käyttäjä kysymyninen
+
+read-host vähä kuin  koodauksessa, että kysyttään käyttäjältä  jotakin  
+
+scriptauksessa  tärkeint on kommentit ja dokumentit, sekä esimerkkejä, jotta määritellän ja helpottaisi suorittajan tekemistä 
+
+powershell kommentit 
+single line #
+blocks <# asdf #>
+
+virheiden käsittelyt ( troublshooting and error handling)
+erilaisia apu välineitä, ja palaute mikä meni väärin perus scriptttaus, sisäinen virhe käsittelyt & sisään rakennettu $error 
+listaa kyseisen istunnon mitä virheitä toistunut 
+
+$error[0] 
+
+write-host sinne laittaa jotakin muuttujan arvoa, että sen pitääkin ja tietysti kohtaan sijoittaminen 
+
+pysäyttää scriptiin kohtaan on break-point,  $Set-PSbreakPoint -Line 23
+
+funktio ja moduulit
+script moduuli voi olla monipuolisisa funktioita ja mooduli, ja jopa powershell istunnoskin
+
+dot sourcing - luestaan toisesta script sisältöä 
+
+funktio toistuvia tehtäviä ja suoritettaan, data viedään siinä param blockissa
+
+pass data to funtion by using param() block
+
+moduuli, harha se on script moduuli = sama moduuli 
+.psm1 script moduuli tiedosto tyyppisellä ja sillä erottaa moduuli
+
+dot source - lataa contekti scriptausta 
+syntaksi C:\scripts.functions.ps1
+
+seuraavaksi windows & ad tunnukset 
+siten active directory 
