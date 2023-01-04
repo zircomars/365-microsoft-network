@@ -5,6 +5,7 @@ special kommentoja josta voidaan luoda scripttauksia algroitmiä, objectia, para
 ## lisää harjoituksia
 
 https://learn.microsoft.com/en-us/training/browse/
+
 https://learn.microsoft.com/en-us/training/browse/?terms=powershell
 
 ## cmdlet struktuurit
