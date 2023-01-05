@@ -144,5 +144,87 @@ FileWriteOperationsPersec   : 135
 ProcessorQueueLength        : 1
 Uptime                      : 05:57:04
 
+#############
+# Listing namespaces
+PS C:\WINDOWS\system32> Get-WmiObject -Namespace root -List -Recurse | Select -Unique __NAMESPACE
+
+__NAMESPACE
+-----------
+ROOT
+ROOT\subscription
+ROOT\DEFAULT
+ROOT\CIMV2
+ROOT\cimv2
+
+#############
+# CIM and WMI listing classes
+PS C:\WINDOWS\system32> Get-WmiObject -Namespace root\cimv2 -List | Sort Name
+
+   NameSpace: ROOT\cimv2
+
+Name                                Methods              Properties
+----                                -------              ----------
+__AbsoluteTimerInstruction          {}                   {EventDateTime, SkipIfPassed, TimerId}
+__ACE                               {}                   {AccessMask, AceFlags, AceType, GuidInheritedObjectType...}
+__AggregateEvent                    {}                   {NumberOfEvents, Representative}
+__ClassCreationEvent                {}                   {SECURITY_DESCRIPTOR, TargetClass, TIME_CREATED}
+
+PS C:\WINDOWS\system32> Get-CimClass -Namespace root\CIMv2 | Sort CimClassName
+
+
+   NameSpace: ROOT/cimv2
+
+CimClassName                        CimClassMethods      CimClassProperties
+------------                        ---------------      ------------------
+__AbsoluteTimerInstruction          {}                   {SkipIfPassed, TimerId, EventDateTime}
+__ACE                               {}                   {AccessMask, AceFlags, AceType, GuidInheritedObjectType...}
+__AggregateEvent                    {}                   {NumberOfEvents, Representative}
+__ClassCreationEvent                {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass}
+__ClassDeletionEvent                {}                   {SECURITY_DESCRIPTOR, TIME_CREATED, TargetClass}
+
+
+
+# Querying instance class name
+PS C:\WINDOWS\system32> Get-WmiObject -Class Win32_LogicalDisk -Filter "DriveType=3"
+
+DeviceID     : C:
+DriveType    : 3
+ProviderName :
+FreeSpace    : 105234657891
+Size         : 254798120097
+VolumeName   : Windows-SSD
+
+
+PS C:\WINDOWS\system32> Get-CimInstance -ClassName Win32_LogicalDisk -Filter "DriveType=3"
+
+DeviceID DriveType ProviderName VolumeName  Size         FreeSpace
+-------- --------- ------------ ----------  ----         ---------
+C:       3                      Windows-SSD 254798120097 105234657891
+
+
+# using WGL ( vähä kuin njotain mysql select * from jotakin jotakin)
+PS C:\WINDOWS\system32> Get-CimInstance -Query "SELECT * FROM Win32_LogicalDisk WHERE DriveType = 3"
+
+DeviceID DriveType ProviderName VolumeName  Size         FreeSpace
+-------- --------- ------------ ----------  ----         ---------
+C:       3                      Windows-SSD 254798120097 105234657891
+
+
+PS C:\WINDOWS\system32> Get-WmiObject -Query "SELECT * FROM Win32_LogicalDisk WHERE DriveType = 3"
+
+
+DeviceID     : C:
+DriveType    : 3
+ProviderName :
+FreeSpace    : 105234657891
+Size         : 254798120097
+VolumeName   : Windows-SSD
+
+
+
+
+
+
+
 
 
