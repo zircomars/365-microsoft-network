@@ -281,3 +281,12 @@ Domain              : WORKGROUP
 DomainRole          : 0
 ThermalState        : 3
 TotalPhysicalMemory : 8464355328
+
+
+
+
+
+
+
+
+
