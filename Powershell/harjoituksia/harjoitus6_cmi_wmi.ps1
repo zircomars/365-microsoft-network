@@ -220,11 +220,64 @@ FreeSpace    : 105234657891
 Size         : 254798120097
 VolumeName   : Windows-SSD
 
+PS C:\WINDOWS\system32> Get-Service -DisplayName *server*
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  VMwareHostd        VMware Workstation Server
+
+
+#wmi and cim hostname / koneen nimi tai sen id
+
+#perus powershell admin:sta tai ihan tavallinenn powershell tai cmd:stä voi tarkistaa koneen hostname $hostname
+
+PS C:\WINDOWS\system32> hostname
+LAPTOP-idSomething
+
+
+PS C:\WINDOWS\system32> Get-CimInstance Win32_ComputerSystem
+
+Name             PrimaryOwnerName     Domain               TotalPhysicalMemory  Model               Manufacturer
+----             ----------------     ------               -------------------  -----               ------------
+LAPTOP-idSomething  zhao-96@hotmail.com  WORKGROUP            8464355328           81MU                LENOVO
+
+
+#fyysisen koneen datat ja tiedot
+PS C:\WINDOWS\system32> Get-CimInstance Win32_ComputerSystem | Format-List *
+
+
+AdminPasswordStatus         : 0
+BootupState                 : Normal boot
+ChassisBootupState          : 3
+
+
+PS C:\WINDOWS\system32> Get-CimInstance Win32_ComputerSystem | Format-List Cim*
+
+
+CimClass              : root/cimv2:Win32_ComputerSystem
+CimInstanceProperties : {Caption, Description, InstallDate, Name...}
+CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 
 
 
+PS C:\WINDOWS\system32> Get-CimInstance Win32_ComputerSystem | Format-List d*
+
+
+Description      : AT/AT COMPATIBLE
+DaylightInEffect : False
+DNSHostName      : LAPTOP-idSomething
+Domain           : WORKGROUP
+DomainRole       : 0
 
 
 
+PS C:\WINDOWS\system32> Get-CimInstance Win32_ComputerSystem | Format-List d*,t*
 
 
+Description         : AT/AT COMPATIBLE
+DaylightInEffect    : False
+DNSHostName         : LAPTOP-idSomething
+Domain              : WORKGROUP
+DomainRole          : 0
+ThermalState        : 3
+TotalPhysicalMemory : 8464355328
