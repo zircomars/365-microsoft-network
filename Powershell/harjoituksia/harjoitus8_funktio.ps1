@@ -12,7 +12,7 @@ Function my-function
 
 # avaa powershell admin ja tässä osassa suoriutuu se funktio osuus eli periaatteessa voi skipata rivi 15 & suoraan toistaa $my-function
 
-PS C:\WINDOWS\system32> C:\Users\zhao-\Documents\my-function.ps1
+PS C:\WINDOWS\system32> C:\Users\name\Documents\my-function.ps1
 
 PS C:\WINDOWS\system32> my-function
 0 plus 0 equals four
@@ -21,7 +21,7 @@ PS C:\WINDOWS\system32> my-function
 0 plus 0 equals four
 
 #tässä jälkeen kuin kirjauduttaan tai mennään funktio tiedoston toiminnan sisään ja toistettaan noita a ja b:tä
-Hit Line breakpoint on 'C:\Users\zhao-\Documents\my-function.ps1:7'
+Hit Line breakpoint on 'C:\Users\name\Documents\my-function.ps1:7'
 [DBG]: PS C:\WINDOWS\system32>> 
 
 [DBG]: PS C:\WINDOWS\system32>> $a
@@ -53,7 +53,7 @@ PS C:\WINDOWS\system32> my-function
 #script my-function.ps1. Muista, että sinun on käytettävä komentosarjan koko polkua milloin
 #teet tämän. #>
 
-PS C:\WINDOWS\system32> Set-PSBreakpoint -Script C:\Users\zhao-\Documents\my-function.ps1 -Command my-function
+PS C:\WINDOWS\system32> Set-PSBreakpoint -Script C:\Users\name\Documents\my-function.ps1 -Command my-function
 
   ID Script                      Line Command                     Variable                   Action
   -- ------                      ---- -------                     --------                   ------
@@ -83,7 +83,7 @@ Entering debug mode. Use h or ? for help.
 
 Hit Command breakpoint on 'my-function'
 
-At C:\Users\zhao-\Documents\my-function.ps1:2 char:1
+At C:\Users\name\Documents\my-function.ps1:2 char:1
 + {
 + ~
 [DBG]: PS C:\WINDOWS\system32>> $a
@@ -100,7 +100,7 @@ PS C:\WINDOWS\system32>
 PS C:\WINDOWS\system32> my-function -a 12 -b 14
 Hit Command breakpoint on 'my-function'
 
-At C:\Users\zhao-\Documents\my-function.ps1:2 char:1
+At C:\Users\name\Documents\my-function.ps1:2 char:1
 + {
 + ~
 [DBG]: PS C:\WINDOWS\system32>> $a

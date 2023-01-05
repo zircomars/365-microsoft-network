@@ -1,5 +1,3 @@
-
-
 PS C:\WINDOWS\system32> $h = @{
 >> Computername = $env:computername
 >> PSVersion = $PSVersionTable.PSVersion
