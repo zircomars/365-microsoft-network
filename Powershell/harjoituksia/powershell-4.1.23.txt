@@ -8,6 +8,7 @@ muuttujat
 array = list/taulukko
 
 hash tables  - custom tables, viedään data ja mitä tuokaan  
+[ordered]
 
 rajoitettu  istunnon aikana, että powershell scriptauksen aikana, kun sammutaa kerran powershell niin se istunnon scriptaukset poistuu tallenteesta
 

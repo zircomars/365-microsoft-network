@@ -76,7 +76,7 @@ Name  Count    Size
 .BLOB     2  211552
 .MAP      2    8735
 
-#random luku, että count tulostaa kaksi kertaa
+#random luku, että count tulostaa kaksi kertaa & array taulukko
 PS C:\WINDOWS\system32> $arr = "a","b","c","d","e"
 PS C:\WINDOWS\system32> $x = $arr | Get-Random -Count 2
 PS C:\WINDOWS\system32> Switch ($x) {
@@ -87,6 +87,23 @@ PS C:\WINDOWS\system32> Switch ($x) {
 >> "e" { "echo" }
 >> }
 charlie
+
+PS C:\WINDOWS\system32> $arr = 1, 2, 3, 4, 5, 6, 7, 8, 9 , 10
+PS C:\WINDOWS\system32> $arr[5]
+6
+
+# for loop eli tulostettaan joka toinen numero
+PS C:\WINDOWS\system32> $a = 0..9
+PS C:\WINDOWS\system32> for ($i = 0; $i -le ($a.length - 1); $i += 2) {
+>>   $a[$i]
+>> }
+0
+2
+4
+6
+8
+
+
 
 #teksti käänteisenä/peilikuvana
 PS C:\WINDOWS\system32> $text = "PowerShell Forever"
