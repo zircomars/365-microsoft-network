@@ -1,4 +1,4 @@
-#IM and WMI 
+#CIM and WMI 
 
 #common information model
 #windows management instrumentation
