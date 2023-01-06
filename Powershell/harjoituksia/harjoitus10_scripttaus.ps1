@@ -52,7 +52,8 @@ Mode                 LastWriteTime         Length Name
 -a----          4.1.2023     15.23          12338 powershell-4.1.23.txt
 -a----          6.6.2019     21.44        9254861 Filetehtava.zip
 
-# myös voidaan lukaista muita polkuja jotta tulostettaan se yli 1000 kt tiedosto
+# myös voidaan lukaista muita polkuja jotta tulostettaan se yli 1000 kt tiedostoa, 
+# mutta huom. kun tarkistaa oikeasti omasta tietokone tiedosto kansiosta niin se on eri asia, vaikka siellä oiskin useampi kansio, mutta tämä scripti ei lue muita kansion tiedostojen kokoa
 
 PS C:\Users\Name\Documents> .\DirectoryList.ps1 C:\Users\Name\Downloads
 
@@ -75,3 +76,36 @@ Mode                 LastWriteTime         Length Name
 -a----         21.8.2021     20.26     2877227008 ubuntu-20.04.2.0-desktop-amd64.iso
 -a----         22.8.2021     15.16      651468992 VMware-workstation-full-16.1.2-17966106.exe
 -a----         1.10.2020     10.54       11161560 WinSCP-5.17.7-Setup.exe
+
+##########
+# toinen esimerkki
+
+<# scriptissä luetaan verkon valvonnan (network admin), tämä  leikisti tuottaa käynnissä olevan prosessin
+ja kirjoittaa tulokset tekstitiedostoon muotoiltuna ja lajiteltuna taulukkoon
+
+ennen suorittamista, editoi scriptauksen tiedoston polku sijaintia johonkin järkevään paikkaan esim.
+C:\Users\Name\Documents | tai joku muu, koska script yhessä kohdassa tulee sijoittaa sijainti eli:
+ {$strFile = "C:\Users\Name"+ $i +"Processes.txt" 
+koska kun powershell kommennossa kun suoritettaan tämän scriptauksen tiedosto tyyppi, niin se suorittaa toiminnan
+ja tallentaa kyseisen käyttäjän tietokonen sisäisen asetukset ja tallentuu kolme txt tiedosto sinne annettujen tiedosto polku kansioon
+
+tai joskus saattaa tulostaa niitä 3 txt tiedostoa C:\Users\Name\ tähän polkuun (käyttäjä määritti haluamansa polun, mutta tulostuu SEN edellisen kansion)
+ja siinä tulostuu nimenä: 
+Documents127.0.0.1ProcessesTieto
+DocumentslocalhostProcessesTieto
+DocumentsloopbackProcessesTieto
+#>
+
+PS C:\Users\Name\Documents> .\ListProcessesSortResults.ps1
+Testing localhost please wait ...
+Testing loopback please wait ...
+Testing 127.0.0.1 please wait ...
+
+
+
+
+
+
+
+
+
