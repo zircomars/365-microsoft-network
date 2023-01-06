@@ -78,7 +78,7 @@ Mode                 LastWriteTime         Length Name
 -a----         1.10.2020     10.54       11161560 WinSCP-5.17.7-Setup.exe
 
 ##########
-# toinen esimerkki
+# toinen esimerkki harjoitus
 
 <# scriptissä luetaan verkon valvonnan (network admin), tämä  leikisti tuottaa käynnissä olevan prosessin
 ja kirjoittaa tulokset tekstitiedostoon muotoiltuna ja lajiteltuna taulukkoon
@@ -101,6 +101,21 @@ Testing localhost please wait ...
 Testing loopback please wait ...
 Testing 127.0.0.1 please wait ...
 
+#########
+# kolmas esimerkki harjoitus
+
+#  Powershell kometosarjassa voi kirjoittaa jotakin salausta, että niiden tallentamisesta ja jakamisesta helpottaa, jokin salainen komento jossain käsikirjoituksen/scriptien takana.
+# esim. jokin scripti, josta muodostettaan jokin etäyhteys verkkoon oleviin työasemiin ja etsii käyttäjätilejä, jossa ei vaadita salasanaa.
+
+<# mikäli jos on tili on ilman salasanaa on varmasti riski / tietoturvan vaarallinen step! 
+Harjoituksessa käytetty  pienen etsimisen löytäminen win32_Useraccount WMI luokkaa ja kehitetyn scriptin. 
+Koska mahdollistaa tietoturvan ja turvallisuuden, että jakaa muiden yrityksen verkonvalvojalle (network admin) kanssa.
+#> 
+
+PS C:\Users\Name\Documents> .\AccountsWithNoRequiredPassword.ps1
+Connecting to localhost please wait ...
+@{Name=DefaultAccount; Disabled=True; PasswordRequired=False; SID=S-1-5-21-3399044770-442890547-103578917-503; SIDType=1}
+@{Name=Vieras; Disabled=True; PasswordRequired=False; SID=S-1-5-21-3399044770-442890547-103578917-501; SIDType=1}
 
 
 
