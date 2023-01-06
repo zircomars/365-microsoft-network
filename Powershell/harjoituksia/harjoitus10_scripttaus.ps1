@@ -35,14 +35,13 @@ foreach ($i in $args)
  Sort-Object -property name}
 
 
-# toistettaan toi ylempi DirectoryList.ps1 tiedosto powershell kommennossa ja haetaan se kyseinen polku esim. ladattuna tai josta löytää helppoiten
-# ehkä ei kauhea järvkevä, mutta parhaiten, että menet oikeeseen tiedosto polkuun ja toistat $dir kommenon niin näkyy koko sarakke, 
+# toistettaan toi ylempi DirectoryList.ps1 tiedosto powershell kommennossa ja haetaan se kyseinen polku esim. ladattuna tai luoo oman scriptin sijainnin sille jotta löytää helppoiten
+# perus scriptti harjoitus, ei mikä hyvä tai huono, mutta powershell kommennolla menee oikeeseen tiedosto polkuun ja toistat $dir kommenon niin näkyy koko sarakke ja toiminnaltaan sama methodi, 
 # mutta tässä scriptauksessa on rajoitettu, että halutaan nähdä TIEDOSTO on SUUREMPI KUIN 1000 kt (kilotavua)
-# myös voidaan lukaista muita polkuja jotta tulostettaan se yli 1000 kt tiedosto
+# myös voidaan lukaista muita polkuja jotta tulostettaan se yli 1000 kt tiedostonn
 PS C:\Users\Name\Documents> .\DirectoryList.ps1 C:\Users\Name\Documents\
 
     Directory: C:\Users\Name\Documents
-
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
@@ -57,9 +56,7 @@ Mode                 LastWriteTime         Length Name
 
 PS C:\Users\Name\Documents> .\DirectoryList.ps1 C:\Users\Name\Downloads
 
-
     Directory: C:\Users\Name\Downloads
-
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
