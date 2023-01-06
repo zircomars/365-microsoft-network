@@ -1,3 +1,4 @@
+﻿$args = "localhost" 
 foreach ($i in $args) 
  {Write-Host "Connecting to" $i "please wait ..."; 
  Get-WmiObject -computername $i -class win32_UserAccount | 
