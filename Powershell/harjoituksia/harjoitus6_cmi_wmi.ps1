@@ -9,8 +9,8 @@
 #tarkistaa ominaisuuksia että  onko riittävästi muistia ennen kuin suorittaa sen toiminnan ja prosessin 
 #wmi kautta pääsee erilaisiin asioihin ja ehkä jopa monimutkainen kyselly, että riippuuu mitä haetaan ja vaaditaan perustietoa
 
-wmi console 
-$wmic - ehkä pian poistumassa 
+#wmi console & ehkä pian poistumassa & avaa admin powershell, ja näppyttä kommento $wmic
+$wmic
 wmic:root\cli>
 
 
