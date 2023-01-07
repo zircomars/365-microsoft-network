@@ -77,7 +77,7 @@ Mode                 LastWriteTime         Length Name
 -a----         22.8.2021     15.16      651468992 VMware-workstation-full-16.1.2-17966106.exe
 -a----         1.10.2020     10.54       11161560 WinSCP-5.17.7-Setup.exe
 
-##########
+#######################################################
 # toinen esimerkki harjoitus
 
 <# scriptissä luetaan verkon valvonnan (network admin), tämä  leikisti tuottaa käynnissä olevan prosessin
@@ -101,7 +101,7 @@ Testing localhost please wait ...
 Testing loopback please wait ...
 Testing 127.0.0.1 please wait ...
 
-#########
+######################################################
 # kolmas esimerkki harjoitus
 
 #  Powershell kometosarjassa voi kirjoittaa jotakin salausta, että niiden tallentamisesta ja jakamisesta helpottaa, jokin salainen komento jossain käsikirjoituksen/scriptien takana.
@@ -117,10 +117,36 @@ Connecting to localhost please wait ...
 @{Name=DefaultAccount; Disabled=True; PasswordRequired=False; SID=S-1-5-21-3399044770-442890547-103578917-503; SIDType=1}
 @{Name=Vieras; Disabled=True; PasswordRequired=False; SID=S-1-5-21-3399044770-442890547-103578917-501; SIDType=1}
 
+######################################################
+# neljäs esim. harjoitus
+
+<# scripti GetHardDiskDetails.ps1 - sisäisessä funktio/parametrissä on määritetty intdrivetype - arvo muuttuja (data tyyppi kuin int, string, long, double ja jne), joka ei koskaan muutu
+Koska Set-variable rivissä nimi muuttuja tekijälle on määritetty numero 3
+intdrivetype - vakiota käytettään scriptauksen Where - tilanteessa suodatamalla rivin.
+strcomputer - arvo muuttuu kerran jokaisella taulukossa
+arycomputer määritetyille tietokoneen nimelle eli localhost nimi
+
+scriptauksessa tapahtuu kahdesti, eli ensimmäisenä tarkistaa loopback lävitse ja toisen kerran localhost:in lävitse
+mikäli jos admin ylläpitäjä lisää n. yli 100 konetta etähallintaan, ehkä tulostuksena mahdollista olla sama, mutta strcomputer arvo muuttuisi joka kerta silmukan lävitse
+
+#>
+
+PS C:\Users\Name\Documents> .\GetHardDiskDetails.ps1
+Hard drives on: loopback
 
 
+DeviceID     : C:
+DriveType    : 3
+ProviderName :
+FreeSpace    : 1092032123456
+Size         : 254725587103
+VolumeName   : Windows-SSD
 
-
-
-
+Hard drives on: localhost
+DeviceID     : C:
+DriveType    : 3
+ProviderName :
+FreeSpace    : 1092032123456
+Size         : 254725587103
+VolumeName   : Windows-SSD
 
