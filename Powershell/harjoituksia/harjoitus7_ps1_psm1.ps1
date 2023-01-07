@@ -8,17 +8,19 @@ Komento moduuli  on yksinkertainen windows powershell komentosarja, jolla on eri
 
 Lopuksi, komentosarjamoduuli, kuten kaikki muutkin moduulit, joita ei luoda dynaamisesti, on tallennettava kansioon, jonka PowerShell voi kohtuudella löytää. Yleensä tämä on PowerShell-moduulin polulla; mutta tarvittaessa voit kuvata tarkasti, mihin moduulisi on asennettu.
 
-
 #>
 
+####################
+# ensimmäinen psm1 script
 
+simple.psm1
+$testi = "missä minun kahvi on?"
 
+# kun avaa admin tai tavallisen powershell, ja yritettään toistaa psm1 sisisen tekstin eli missä minun kahvi on? 
+# niin se ei toistu, mutta yhtäkkiä avaa sen txt tiedostona & eli tiedoston lataaminen
+PS C:\Users\Name\Documents> .\simple.psm1
 
+###########
+#scriptaus osuus
 
-
-
-
-
-
-
-
+# kun alkaa luoda jokin scriptauksen osuuden eli joko copy-paste tai tyhjin käsin  niin tulee tallentaa tiedosto niin powershell tukee .ps1 , .psd1 , psm1 ja jne, että powershell komento ymmärtää mitä hakee (ainakn melkee), mutta pitää olla tarkanan kommenon polun ja tiedoston kanssa
