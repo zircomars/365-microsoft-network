@@ -8,7 +8,6 @@ muuttujat
 array = list/taulukko
 
 hash tables  - custom tables, viedään data ja mitä tuokaan  
-[ordered]
 
 rajoitettu  istunnon aikana, että powershell scriptauksen aikana, kun sammutaa kerran powershell niin se istunnon scriptaukset poistuu tallenteesta
 
@@ -192,6 +191,7 @@ datan tuonti on erikseen import csv, json ja muita get-content tiedoston, teksti
 cnvertfrom json convertointi tai importointi
 
 ---------------------------------------------------------------
+harjoitus jää  huomiseksi ja  lukemista to :3  
 
 advanced settings - normaali rutiini, ei tarkoita oikeasti toimi
 
@@ -220,6 +220,7 @@ write-host sinne laittaa jotakin muuttujan arvoa, että sen pitääkin ja tietys
 
 pysäyttää scriptiin kohtaan on break-point,  $Set-PSbreakPoint -Line 23
 
+
 funktio ja moduulit
 script moduuli voi olla monipuolisisa funktioita ja mooduli, ja jopa powershell istunnoskin
 
@@ -237,3 +238,5 @@ syntaksi C:\scripts.functions.ps1
 
 seuraavaksi windows & ad tunnukset 
 siten active directory 
+
+to harjoitukset s.  213 - 215, 253 - 257, 505 - 509, 544 - 546

@@ -1,7 +1,5 @@
 powershell  2.1.23
 
-#harjoitukset  löytyy pdf (powershell step by step) s.  alkaen 19 (alku lämmittelyt) ja siitä kohti mennään vaikeampaa
-
 laaja työkalu, kaikkia m365 voi hallinnoida powershell ja m erki pohjainen välinen ja komentotulkki
 
 scripti ympäsristö

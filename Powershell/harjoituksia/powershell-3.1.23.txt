@@ -561,6 +561,7 @@ https://learn.microsoft.com/en-us/training/browse/
 https://learn.microsoft.com/en-us/training/browse/?terms=powershell
 
 
+
 PS C:\WINDOWS\system32> Get-Volume -DriveLetter C | Select-Object -Property DriveLetter,
 >> FileSystemLabel,@{Name="SizeGB";Expression={$_.size/1gb -as [int]}},
 >> @{Name="FreeGB";Expression={$_.SizeRemaining/1gb}}
