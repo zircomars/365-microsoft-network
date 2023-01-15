@@ -1,0 +1,14 @@
+https://support.google.com/a/answer/48090?hl=en
+
+DNS basics
+When using Google Cloud services, you might occasionally need to change your domain's DNS settings. Here are some common terms you might encounter, along with how they apply to Google services. See also Domain name basics.
+
+DNS
+MX Record
+TXT Record
+CNAME Record
+A Record
+NS Record
+Time To Live (TTL)
+Uniform Resource Locator (URL)
+Example DNS configuration

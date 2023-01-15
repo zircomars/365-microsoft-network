@@ -1,0 +1,19 @@
+https://mxtoolbox.com/
+
+
+voi hakea kaikki ip-osoitteet
+https://www.shodan.io/
+
+https://toolbox.googleapps.com/apps/dig/
+https://www.dmarcanalyzer.com/how-to-validate-a-domainkey-dkim-record/
+
+https://www.mail-tester.com/spf-dkim-check
+https://www.appmaildev.com/en/dkim
+
+https://www.mailgenius.com/spf-and-dkim-key-email-checker/
+
+who.is
+https://www.ripe.net/
+
+
+
