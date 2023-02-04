@@ -6,6 +6,8 @@ Cloudfrale toimii kuin välittäjänä asiakkaan ja palvelimen välillä käytt�
 
 Cloudfrale tarjoaa myös DDoS-suojausta, sähköpostien lajittelua, verkkosovellusten palomuuria ja uhkien estämistä. 
 
+![Alt text](images/cloudflare-2.png)
+
 * [Domain nimi](#Domain-nimi)
 * [DNS skannaus](#DNS-skannaus)
 * [Nameserver](#Nameserver)
@@ -13,6 +15,9 @@ Cloudfrale tarjoaa myös DDoS-suojausta, sähköpostien lajittelua, verkkosovell
 
 ## Domain nimi
 
+Yleinen domain luonti / muokkaus muu vastaava
+
+![Alt text](images/cloudflare-1.png)
 
 ## DNS skannaus
 
@@ -21,6 +26,7 @@ Cloudfrale tarjoaa myös DDoS-suojausta, sähköpostien lajittelua, verkkosovell
 
 Suom. nimipalvelin
 
+![Alt text](images/cloudflare-5.PNG)
 
 ## Proxy status
 
