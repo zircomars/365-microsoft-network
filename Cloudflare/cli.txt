@@ -1,0 +1,27 @@
+Jos muodostuu jotakin ongelmia cloudflare dns / domain nimien tyyppien kanssa tarkista varmuuden vuoksi niiden yhteys:
+
+- pinggaus
+- nslookup <domain nimi>
+- ip / mac-osoite
+- nimipalvelin (nameservers)
+
+Yhteyden tarkistamisessa voi käyttää joko ubuntu/linux tai powershell:iä , ei väliä, kunhan pääsee tarkistaa 
+
+Linux:
+$nslookup <domain.nimi> 
+$nslookup -type=NS <domain.nimi>
+$dig ns <domain.nimi>
+$dig ns <domain.nimi> @8.8.8.8
+$
+$
+$
+
+------------
+powershell (resolve-dns - muistuttaa sama kuin linux nslookup kommentoa & vaihtoehtona voi myös käyttää $dig linux:sessakin)
+$Resolve-DnsName <domain.nimi>
+$Resolve-DnsName -Name <domain.nimi>
+$Resolve-DnsName -Name <domain.nimi> -Type MX
+$
+$
+
+
