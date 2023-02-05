@@ -1,0 +1,16 @@
+cloudflare dns record (recordit)
+
+Tähän tulee cloudflare:n dns recordit, ettei sekoitetta readme kanssa.
+
+
+
+
+
+
+
+
+
+
+
+
+
