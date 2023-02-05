@@ -9,9 +9,11 @@ Cloudfrale tarjoaa myös DDoS-suojausta, sähköpostien lajittelua, verkkosovell
 ![Alt text](images/cloudflare-2.png)
 
 * [Domain servers](#Domain-servers)
-* [DNS skannaus](#DNS-skannaus)
+* [DNS servers](#DNS-servers)
+* [dns palomuuri](#dns-palomuuri)
 * [Nameserver](#Nameserver)
 * [Proxy status](#Proxy-status)
+* [muita ohjeita](#muita-ohjeita)
 
 ## Domain nimi
 
@@ -23,10 +25,19 @@ Yleinen domain luonti / muokkaus muu vastaava
 
 Verkkokäyttöiset sovellukset, kuten selaimet, käyttävät jotain nimeltä Stub Resolver vuorovaikutuksessa DNS:n kanssa. Kun sovellus tai selain on saanut verkkosivuston IP-osoitteen, he voivat käyttää sitä HTTP- tai HTTPS-protokollien avulla.
 
-DNS:llä on neljä tyyppistä kategoria nimipalvelimia (nameserver), josta ovat root:in, TDL:n (top-level domain) ja virallinen (authoritative) nimipalvelimet.  Nämä neljä tyyppiset kategoriat toimivat yhdessä harmoniassa suorittakseen tehtävän toiminnan määritettyihin toimialueen IP-osoitteen käyttäjäille/asiakkaalle.
+DNS:llä on neljä tyyppistä kategoria nimipalvelimia (nameserver), josta ovat <b>DNS oma ratkaiseja </b> (resolver) <b> root:in </b>, <b> TDL:n </b> (top-level domain) ja <b> virallinen </b>(authoritative) nimipalvelimet.  Nämä neljä tyyppiset kategoriat toimivat yhdessä harmoniassa suorittakseen tehtävän toiminnan määritettyihin toimialueen IP-osoitteen käyttäjäille/asiakkaalle.
 
 ![Alt text](images/cloudflare-8.PNG)
 
+## DNS palomuuri
+
+Cloudflare:n dns palomuuri välittää kaikkiin DNS kyselyihin nimipalveluihin, josta cloudflare globaalin reunaverkon kautta (global edge network). Toiminnassa se suojaa ylävirran (upstream) nimipalvelun, josta DDoS-hyökkäystä ja vähentää kuormitusta tallentamall DNS-vastausta välimuistiinsa.
+
+DNS-palomuuri on tarkoitettu asiakkaille, joiden on nopeutettava ja suojattava  kokonaisia arvovaltaisia nimipalvelimia (authoritative nameservers), ja suorittaa täys tai osittaisen auktorisointia/arvovaltaisen/standardin DNS:n asiakkaille, jolloin on nopeuttava ja suojattava yksittäisiä vyöhykkeitä.
+
+Myös etuja DNS-palomuurissa on organisaatiot voivat hallita täysin arvovaltaisia nimipalvelimia: DDos lieventämistä, korkea saatavuus, globaali jakelua, parannettujen suorituskykyä, kaistanleveyden säästöä, dns-välimuistia, määrittää pien ja suuren TTL ja jne.
+
+![Alt text](images/cloudflare-firewall-1.png)
 
 ## Nameserver
 
@@ -51,5 +62,28 @@ DNS proxied (oranssi pilvi päällä) tarkoittaa, että näytettään Cloudflare
 Harmaa pilvi eli DNS Only tarkoittaa ei kulje Cloudflare:n ylitse, mitä eroaa pilvi päällä vai ei? Sitä käytettään jotka liittyy muuta kuin verkkoliikennettä kuten organisaatio yksityiset salaiset asiat / dokumentointi mm. sähköposti, ftp, ja ssh, eli tietoliikenneverkon protokollat ja muut salaiset käyttöön ottot. FTP - file transfer protocol.
 
 ![Alt text](images/cloudflare-7.png)
+
+
+## muita ohjeita:
+
+DNS serveri tyyppit (4kpl): <br>
+https://www.cloudflare.com/learning/dns/dns-server-types/ <br>
+https://blog.cloudflare.com/cloudflare-dns-is-simple-fast-and-flexible/ <br><br>
+
+Perus cloudflare dns recordien ja muu domain luonti (tyhjästä alkaen): <br>
+https://www.namecheap.com/support/knowledgebase/article.aspx/9607/2210/how-to-set-up-dns-records-for-your-domain-in-cloudflare-account/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
