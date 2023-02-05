@@ -12,8 +12,8 @@ $nslookup <domain.nimi>
 $nslookup -type=NS <domain.nimi>
 $dig ns <domain.nimi>
 $dig ns <domain.nimi> @8.8.8.8
-$
-$
+$dig ns <domain.nimi> +short
+$whois <domain.nimi>
 $
 
 ------------

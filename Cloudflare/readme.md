@@ -8,7 +8,7 @@ Cloudfrale tarjoaa myös DDoS-suojausta, sähköpostien lajittelua, verkkosovell
 
 ![Alt text](images/cloudflare-2.png)
 
-* [Domain nimi](#Domain-nimi)
+* [Domain servers](#Domain-servers)
 * [DNS skannaus](#DNS-skannaus)
 * [Nameserver](#Nameserver)
 * [Proxy status](#Proxy-status)
@@ -19,14 +19,24 @@ Yleinen domain luonti / muokkaus muu vastaava
 
 ![Alt text](images/cloudflare-1.png)
 
-## DNS skannaus
+## DNS servers
+
+Verkkokäyttöiset sovellukset, kuten selaimet, käyttävät jotain nimeltä Stub Resolver vuorovaikutuksessa DNS:n kanssa. Kun sovellus tai selain on saanut verkkosivuston IP-osoitteen, he voivat käyttää sitä HTTP- tai HTTPS-protokollien avulla.
+
+DNS:llä on neljä tyyppistä kategoria nimipalvelimia (nameserver), josta ovat root:in, TDL:n (top-level domain) ja virallinen (authoritative) nimipalvelimet.  Nämä neljä tyyppiset kategoriat toimivat yhdessä harmoniassa suorittakseen tehtävän toiminnan määritettyihin toimialueen IP-osoitteen käyttäjäille/asiakkaalle.
+
+![Alt text](images/cloudflare-8.PNG)
 
 
 ## Nameserver
 
-Suom. nimipalvelin
+Suom. nimipalvelin, joka viittaa DNS komponentiin, että tärkeä osuus nimitiloissa (namespace) ja Internetissä. Tärkein tehtävänä se on DNS-palvelimen kuin käännös joka tukee <b> domain nimit (verkkotunnus esim. sivusto.fi) </b> ja <b> host/isäntä </b> IP-osoitteen (93.47.123.4), toisena päänimeä tilaa Internetin, joka  käytetään tietokonejärjestelmien ja -resurssien tunnistamista japaikantamista Internetissä. 
+
+Periaatteessa nimipalvelin (nameserver) viittaa DNS:ään (Domain name system), ja sitä voi käyttää myös kaikissa tietokoneohjelmissa, jotka toteuttavat verkkopalvelun (network service)  ja niitä voi vastata hakemistonpalvelua (directory service) ja kääntää usein  inhimilliseen merkitykselliseen tekstiin.
 
 ![Alt text](images/cloudflare-5.PNG)
+
+
 
 ## Proxy status
 
