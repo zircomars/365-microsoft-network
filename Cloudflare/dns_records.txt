@@ -2,11 +2,11 @@ cloudflare dns record (recordit)
 
 Tähän tulee cloudflare:n dns recordit, ettei sekoitetta readme kanssa.
 
+https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/
+https://www.cloudflare.com/learning/dns/glossary/round-robin-dns/
+https://www.digioptimointi.com/cloudflare/
 
-
-
-
-
+https://www.tuonetti.fi/cloudflare-kayttoohje/
 
 
 
