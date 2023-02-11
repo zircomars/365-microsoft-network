@@ -24,7 +24,27 @@ Jos/Kun tarkistaa dns ongelmia, että kantsii tarkistaa pinggaako yhteys eli pow
 DNS erottaa nimiä numeroiksi,  josta tarkennettuna se ratkaisee verkkotunnusta (domain nimiä) IP-osoitteeksi. Usein kirjoitettaan selaimen hakuun verkko-osoite (domain nimi), niin dns ratkaisee/selvittää nimen numeroiksi, ja jonka jälkeen työaseman tietokone ratkaisee sen, että ovat numeroita.
 
 [Selain (chrome/safari)] <-----(www.exmaple.com) / 12.45.87.109 --> [DNS]
+[Selain (chrome/safari)] <---- 12.45.87.109 / tiedosto --------> [web server]
 
-dns-minimap.PNG
+Katso toi kuva: dns-minimap.PNG
+
+DNS-palvelimissa on erityyppisiä tietueita, joiden avulla voidaan hallita ratkaisua tehokkaasti ja tarjota tärkeitä tietoja toimialueesta. Nämä tietueet ovat tietoja, jotka DNS-palvelimet tallentavat välimuistiin. Jokaiseen tietueeseen liittyy TTL (Time To Live) -arvo sekunteina
+
+https://www.geeksforgeeks.org/working-of-domain-name-system-dns-server/amp/
+
+A records – points to IPv4 address of machine where website is hosted
+AAAA records – points to IPv6 address of machine where website is hosted
+MX – points to email servers
+CNAME – canonical name for alias points hostname to hostname
+ANAME – Auto resolved alias, works like cname but points hostname to IP of hostname
+NS – nameservers for subdomains
+PTR – IP address to hostname
+SOA  – containing administrative information about the DNS zone
+SRV – service record for other services
+TXT – Text records mostly used for verification, SPF, DKIM, DMARC and more
+CAA – certificate authority record for SSL/TLS certificate
+
+
+
 
 
