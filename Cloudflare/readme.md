@@ -19,7 +19,11 @@ Cloudfrale tarjoaa myös DDoS-suojausta, sähköpostien lajittelua, verkkosovell
 
 Yleinen domain luonti / muokkaus muu vastaava
 
-![Alt text](images/cloudflare-1.png){: width="200"}
+<b> Type </b> - tarkoittaa valittaan tietty tyyppi usein valitaan joko A = mikä määrittää IPV4 (ip-osoitetta esim. 10.32.182.9) tai AAAA = ipv6 (esim.52:74:f2:ff:fe:b1:a8:7f) tai CNAME = tarkoittaa nimitietue/domain nimi tai tunnusnimi esim. (foo.example.net)
+
+<b>Name - </b> - tähän valikkoon pitää olla tarkanna, että onko kyseessä tulossa jokin domain/verkkotunnus nimi tai host - verkko isäntä nimi
+
+![Alt text](images/cloudflare-1.png)
 
 ## DNS servers
 
