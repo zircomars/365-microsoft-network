@@ -21,7 +21,13 @@ Yleinen domain luonti / muokkaus muu vastaava
 
 <b> Type </b> - tarkoittaa valittaan tietty tyyppi usein valitaan joko A = mikä määrittää IPV4 (ip-osoitetta esim. 10.32.182.9) tai AAAA = ipv6 (esim.52:74:f2:ff:fe:b1:a8:7f) tai CNAME = tarkoittaa nimitietue/domain nimi tai tunnusnimi esim. (foo.example.net)
 
-<b>Name - </b> - tähän valikkoon pitää olla tarkanna, että onko kyseessä tulossa jokin domain/verkkotunnus nimi tai host - verkko isäntä nimi
+<b>Name - </b> - tähän valikkoon pitää olla tarkanna, että onko kyseessä tulossa jokin domain/verkkotunnus nimi tai host - verkko isäntä nimi & tähän valikkoon pitäisi tulla tietty <ins> nimi </ins>
+
+<b>IPV4</b> - tämän valikko ensimmäisenä saattaa tulla mieleen IP-osoite (esim. 10.94.240.254), mikä on periaatteessa oikea vaihtoehto, mutta mikäli jos on erillinen special <ins>vaadittu data</ins>, joten siihen tulee special nimetys tai muu <ins>arvo</ins>
+
+<b>TTL</b> - lyh. time to live , tarkoittaa datan elinaika, että  kuinka usein pitää päivittää, tai käytetään kuvaamaan jonkin verkon yli lähetettävän tai muun datan elinaikaa. Usein oletuksena valittaan automaatinen (auto)
+
+<b>Proxy status </b>
 
 ![Alt text](images/cloudflare-1.png)
 
