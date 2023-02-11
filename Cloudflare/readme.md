@@ -19,7 +19,7 @@ Cloudfrale tarjoaa myös DDoS-suojausta, sähköpostien lajittelua, verkkosovell
 
 Yleinen domain luonti / muokkaus muu vastaava
 
-![Alt text](images/cloudflare-1.png width="200")
+![Alt text](images/cloudflare-1.png){: width="200"}
 
 ## DNS servers
 
