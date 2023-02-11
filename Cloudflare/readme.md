@@ -19,6 +19,8 @@ Cloudfrale tarjoaa myös DDoS-suojausta, sähköpostien lajittelua, verkkosovell
 
 Yleinen domain luonti / muokkaus muu vastaava
 
+![Alt text](images/cloudflare-1.png)
+
 <b> Type </b> - tarkoittaa valittaan tietty tyyppi usein valitaan joko A = mikä määrittää IPV4 (ip-osoitetta esim. 10.32.182.9) tai AAAA = ipv6 (esim.52:74:f2:ff:fe:b1:a8:7f) tai CNAME = tarkoittaa nimitietue/domain nimi tai tunnusnimi esim. (foo.example.net)
 
 <b>Name - </b> - tähän valikkoon pitää olla tarkanna, että onko kyseessä tulossa jokin domain/verkkotunnus nimi tai host - verkko isäntä nimi & tähän valikkoon pitäisi tulla tietty <ins> nimi </ins>
@@ -27,9 +29,8 @@ Yleinen domain luonti / muokkaus muu vastaava
 
 <b>TTL</b> - lyh. time to live , tarkoittaa datan elinaika, että  kuinka usein pitää päivittää, tai käytetään kuvaamaan jonkin verkon yli lähetettävän tai muun datan elinaikaa. Usein oletuksena valittaan automaatinen (auto)
 
-<b>Proxy status </b>
+<b>Proxy status </b> - Proxy status jos on oranssi pilvi eli <b> (enabled)</b>, tarkoittaa liikenne tapahtuu, että verkkoliikenne kulkeutuu Cloudflare järjestelmän kautta ja jos on harmaa pilvi <b>(disabled) </b> niin ei kulje Cloudflare järjestelmään. <ins> Oranssi pilvi </ins> tarkoittaa sen verkkotunnus/sivun nopeus oivallus, että jos on esim. Uutinen & Sekä <ins> harmaa pilvi </ins> tarkoittaa liikenne kulkeutuu suoraan yrityksen  serveriin (palvelimeen), mutta sen tietojen mukaan ei ole cloudflare välityspalvelinta ja  yrityksen tiedot kulkeutuu salattuna jos on esim. Salaisia  dokumenttia/tiedostoja/yksityis keskustellua ja jne. 
 
-![Alt text](images/cloudflare-1.png)
 
 ## DNS servers
 
