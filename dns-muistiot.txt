@@ -1,0 +1,30 @@
+https://support.google.com/a/answer/48090?hl=en
+
+DNS basics
+When using Google Cloud services, you might occasionally need to change your domain's DNS settings. Here are some common terms you might encounter, along with how they apply to Google services. See also Domain name basics.
+
+DNS
+MX Record
+TXT Record
+CNAME Record
+A Record
+NS Record
+Time To Live (TTL)
+Uniform Resource Locator (URL)
+Example DNS configuration
+
+DNS jotakin teoriaa START HERE:
+
+dns linkkien / tietue ymmärtäminen hyvin olennaista jos tulee ongelmia perustellusti osoittaa nimipalvelua (nameserver) esim. yhteys syntyy ip-osoite ei nimellä se on selvästi dns ongelma, dns ajatus on vaihtaa nimi ip-osoiteeks ei vaikuta verkkoon läpi yhteyteen, jos korvataan nimi ip-osoite se selvästi on dns onglema eikä verkko ongelma.
+
+domain controlli toimiva palvelin, jonka lisää pitää olla domain palvelut ja aina pakollinen dns nimipalvelu, dns mahdollistaa ad paikkalistamisen pyörimistä neljä isoa roolia pitää olla saada selvitettyä että dns vastaa siitä, ilman sitä dns ei mikään toimi ja jos ei ole sellaista ole niin se asennettaan ad yhteydessä. se tulee samaan koneeseen tyyppilisesti mihin domain tulee ja muissa domain roolissa. mihin domain controlli tulee ja muissa ensimmäisessä sisään rakennettu dns nimipalveluun. tosi elämässä siinä pitää olla tietää mitä on tekemässä, ongelma tilanteet, koska keskeinen palvelu jos nimipalvelu ei toimi nii ei toimi ad:kaan
+
+Jos/Kun tarkistaa dns ongelmia, että kantsii tarkistaa pinggaako yhteys eli powershell/linux komennosta. Jos yhteys pinggaa pelittää ja ip-osoite näkyy, mutta domain (verkkotunnus sivuston nimi "exmaple.com") ei toimi? Ongelma voi olla mahdollisesti dns tai dns:n sen nimipalvelin (nameserver).
+
+DNS erottaa nimiä numeroiksi,  josta tarkennettuna se ratkaisee verkkotunnusta (domain nimiä) IP-osoitteeksi. Usein kirjoitettaan selaimen hakuun verkko-osoite (domain nimi), niin dns ratkaisee/selvittää nimen numeroiksi, ja jonka jälkeen työaseman tietokone ratkaisee sen, että ovat numeroita.
+
+[Selain (chrome/safari)] <-----(www.exmaple.com) / 12.45.87.109 --> [DNS]
+
+dns-minimap.PNG
+
+
