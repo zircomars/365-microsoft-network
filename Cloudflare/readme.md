@@ -22,22 +22,22 @@ Yleinen domain luonti / muokkaus muu vastaava uusi recordin luonti. Luonti <ins>
 
 ![Alt text](images/cloudflare-1.png)
 
-<b> Type </b> - tarkoittaa valittaan tietty tyyppi usein valitaan joko A record = mikä määrittää IPV4 (ip-osoitetta esim. 10.32.182.9) tai AAAA record = ipv6 (esim.52:74:f2:ff:fe:b1:a8:7f) tai CNAME = tarkoittaa nimitietue/domain nimi tai tunnusnimi esim. (foo.example.net)
+** Type ** - tarkoittaa valittaan tietty tyyppi usein valitaan joko A record = mikä määrittää IPV4 (ip-osoitetta esim. 10.32.182.9) tai AAAA record = ipv6 (esim.52:74:f2:ff:fe:b1:a8:7f) tai CNAME = tarkoittaa nimitietue/domain nimi tai tunnusnimi esim. (foo.example.net)
 
-<b>Name - </b> - tähän valikkoon pitää olla tarkanna, että onko kyseessä tulossa jokin domain/verkkotunnus nimi tai host - verkko isäntä nimi & tähän valikkoon pitäisi tulla tietty <ins> nimi </ins>
+**Name - ** - tähän valikkoon pitää olla tarkanna, että onko kyseessä tulossa jokin domain/verkkotunnus nimi tai host - verkko isäntä nimi & tähän valikkoon pitäisi tulla tietty <ins> nimi </ins>
 
-<b>IPV4</b> - tämän valikko ensimmäisenä saattaa tulla mieleen IP-osoite (esim. 10.94.240.254), mikä on periaatteessa oikea vaihtoehto, mutta mikäli jos on erillinen special <ins>vaadittu data</ins>, joten siihen tulee special nimetys tai muu <ins>arvo</ins>
+**IPV4** - tämän valikko ensimmäisenä saattaa tulla mieleen IP-osoite (esim. 10.94.240.254), mikä on periaatteessa oikea vaihtoehto, mutta mikäli jos on erillinen special <ins>vaadittu data</ins>, joten siihen tulee special nimetys tai muu <ins>arvo</ins>
 
-<b>TTL</b> - lyh. time to live , tarkoittaa datan elinaika, että  kuinka usein pitää päivittää, tai käytetään kuvaamaan jonkin verkon yli lähetettävän tai muun datan elinaikaa. Usein oletuksena valittaan automaatinen (auto). Esim. jos valitsee tietyn luvun n. 14 400 sekuntia (4h), mitä tarkoittaa A record:i tulee päivittämään seuraavan 240 minuuttin päästä eli 4h päästä.
+**TTL** - lyh. time to live , tarkoittaa datan elinaika, että  kuinka usein pitää päivittää, tai käytetään kuvaamaan jonkin verkon yli lähetettävän tai muun datan elinaikaa. Usein oletuksena valittaan automaatinen (auto). Esim. jos valitsee tietyn luvun n. 14 400 sekuntia (4h), mitä tarkoittaa A record:i tulee päivittämään seuraavan 240 minuuttin päästä eli 4h päästä.
 
-<b>Proxy status </b> - Proxy status jos on oranssi pilvi eli <b> (enabled)</b>, tarkoittaa liikenne tapahtuu, että verkkoliikenne kulkeutuu Cloudflare järjestelmän kautta ja jos on harmaa pilvi <b>(disabled) </b> niin ei kulje Cloudflare järjestelmään. <ins> Oranssi pilvi </ins> tarkoittaa sen verkkotunnus/sivun nopeus oivallus, että jos on esim. Uutinen & Sekä <ins> harmaa pilvi </ins> tarkoittaa liikenne kulkeutuu suoraan yrityksen  serveriin (palvelimeen), mutta sen tietojen mukaan ei ole cloudflare välityspalvelinta ja  yrityksen tiedot kulkeutuu salattuna jos on esim. Salaisia  dokumenttia/tiedostoja/yksityis keskustellua ja jne. 
+**Proxy status ** - Proxy status jos on oranssi pilvi eli ** (enabled)**, tarkoittaa liikenne tapahtuu, että verkkoliikenne kulkeutuu Cloudflare järjestelmän kautta ja jos on harmaa pilvi **(disabled) ** niin ei kulje Cloudflare järjestelmään. <ins> Oranssi pilvi </ins> tarkoittaa sen verkkotunnus/sivun nopeus oivallus, että jos on esim. Uutinen & Sekä <ins> harmaa pilvi </ins> tarkoittaa liikenne kulkeutuu suoraan yrityksen  serveriin (palvelimeen), mutta sen tietojen mukaan ei ole cloudflare välityspalvelinta ja  yrityksen tiedot kulkeutuu salattuna jos on esim. Salaisia  dokumenttia/tiedostoja/yksityis keskustellua ja jne. 
 
 
 ## DNS servers
 
 Verkkokäyttöiset sovellukset, kuten selaimet, käyttävät jotain nimeltä Stub Resolver vuorovaikutuksessa DNS:n kanssa. Kun sovellus tai selain on saanut verkkosivuston IP-osoitteen, he voivat käyttää sitä HTTP- tai HTTPS-protokollien avulla.
 
-DNS:llä on neljä tyyppistä kategoria nimipalvelimia (nameserver), josta ovat <b>DNS oma ratkaiseja </b> (resolver) <b> root:in </b>, <b> TDL:n </b> (top-level domain) ja <b> virallinen </b>(authoritative) nimipalvelimet.  Nämä neljä tyyppiset kategoriat toimivat yhdessä harmoniassa suorittakseen tehtävän toiminnan määritettyihin toimialueen IP-osoitteen käyttäjäille/asiakkaalle.
+DNS:llä on neljä tyyppistä kategoria nimipalvelimia (nameserver), josta ovat **DNS oma ratkaiseja ** (resolver) ** root:in **, ** TDL:n ** (top-level domain) ja ** virallinen **(authoritative) nimipalvelimet.  Nämä neljä tyyppiset kategoriat toimivat yhdessä harmoniassa suorittakseen tehtävän toiminnan määritettyihin toimialueen IP-osoitteen käyttäjäille/asiakkaalle.
 
 ![Alt text](images/cloudflare-8.PNG)
 
@@ -45,7 +45,7 @@ DNS:än A-recordi käytetään myös DNSBL (domain name system based blackhole) 
 
 ## DNS zone
 
-DNS *alue* tai *vyöhykke*, joka on DNS:än erityinen alue ja tätä hallinnoi yleensä organisaation itsensä tai ylläpitäjä rooli itsensä. DNS toiminnaltaan on ajettu useisiin eri alueisiin, jotka ovat sisäisen hallitujen DNS-nimitilassa (namespace).
+DNS *alue* tai *vyöhykke*, joka on DNS:än erityinen alue ja tätä hallinnoi yleensä organisaation itsensä tai ylläpitäjä rooli itsensä. DNS toiminnaltaan on ajettu useisiin eri alueisiin, jotka ovat sisäisen hallitujen DNS-nimitilassa (namespace). DNS alueelal sisältää useita **aliverkkotunnuksia** (subdomain) (esim. bloggi.sivusto.com)
 
 ![Alt text](images/cloudflare-9.PNG)
 
@@ -61,7 +61,7 @@ Myös etuja DNS-palomuurissa on organisaatiot voivat hallita täysin arvovaltais
 
 ## Nameserver
 
-Suom. nimipalvelin, joka viittaa DNS komponentiin, että tärkeä osuus nimitiloissa (namespace) ja Internetissä. Tärkein tehtävänä se on DNS-palvelimen kuin käännös joka tukee <b> domain nimit (verkkotunnus esim. sivusto.fi) </b> ja <b> host/isäntä </b> IP-osoitteen (93.47.123.4), toisena päänimeä tilaa Internetin, joka  käytetään tietokonejärjestelmien ja -resurssien tunnistamista japaikantamista Internetissä. 
+Suom. nimipalvelin, joka viittaa DNS komponentiin, että tärkeä osuus nimitiloissa (namespace) ja Internetissä. Tärkein tehtävänä se on DNS-palvelimen kuin käännös joka tukee ** domain nimit (verkkotunnus esim. sivusto.fi) ** ja ** host/isäntä ** IP-osoitteen (93.47.123.4), toisena päänimeä tilaa Internetin, joka  käytetään tietokonejärjestelmien ja -resurssien tunnistamista japaikantamista Internetissä. 
 
 Periaatteessa nimipalvelin (nameserver) viittaa DNS:ään (Domain name system), ja sitä voi käyttää myös kaikissa tietokoneohjelmissa, jotka toteuttavat verkkopalvelun (network service)  ja niitä voi vastata hakemistonpalvelua (directory service) ja kääntää usein  inhimilliseen merkitykselliseen tekstiin.
 
@@ -73,7 +73,7 @@ Periaatteessa nimipalvelin (nameserver) viittaa DNS:ään (Domain name system), 
 
 Organisaatiolla on aina oma työkalu väline, jossa suoriuttuu joko kommunikointi/viestintä tai muu tärkeä väline kuten selaimien chätti kanava, bloggit, dokumenttien säilytys tai muu sovellus, että näillä on tärkeät dokumentit/infot.  
 
-<b> Proxy status </b> tarkoittaa liikenteen osoitteenmuutosta, josta julkisesti liikenöityy <b> IP-osoite </b> joko <ins> yksittyisellä </ins> tai <ins> julkisella </ins> osoitteella. Cloudflare käsittelee tietuen tulevia liikenteitä, että ottaa käyttöön palvelimille A, AAAA ja CNAME tietuet. 
+** Proxy status ** tarkoittaa liikenteen osoitteenmuutosta, josta julkisesti liikenöityy ** IP-osoite ** joko <ins> yksittyisellä </ins> tai <ins> julkisella </ins> osoitteella. Cloudflare käsittelee tietuen tulevia liikenteitä, että ottaa käyttöön palvelimille A, AAAA ja CNAME tietuet. 
 
 ![Alt text](images/cloudflare-6.png)
 
