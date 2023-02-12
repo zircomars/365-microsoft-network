@@ -17,7 +17,7 @@ Cloudfrale tarjoaa myös DDoS-suojausta, sähköpostien lajittelua, verkkosovell
 
 ## Domain nimi
 
-Yleinen domain luonti / muokkaus muu vastaava
+Yleinen domain luonti / muokkaus muu vastaava uusi recordin luonti. Luonti <ins>record:ien</ins> kanssa tapahtuu, että organisaatiossa luodaan tai lisätään jonkinlainen laite yhteys, tai lataa webbi sivuston, että käyttäjä muistaa sen ja hyödyntää kirjamalla IP-osoitetta. Käyttäjän Webbi sivustot suorittaa automaattisen lähettyksen kyselyn DNS-resolver:iin.
 
 ![Alt text](images/cloudflare-1.png)
 
@@ -39,6 +39,8 @@ Verkkokäyttöiset sovellukset, kuten selaimet, käyttävät jotain nimeltä Stu
 DNS:llä on neljä tyyppistä kategoria nimipalvelimia (nameserver), josta ovat <b>DNS oma ratkaiseja </b> (resolver) <b> root:in </b>, <b> TDL:n </b> (top-level domain) ja <b> virallinen </b>(authoritative) nimipalvelimet.  Nämä neljä tyyppiset kategoriat toimivat yhdessä harmoniassa suorittakseen tehtävän toiminnan määritettyihin toimialueen IP-osoitteen käyttäjäille/asiakkaalle.
 
 ![Alt text](images/cloudflare-8.PNG)
+
+DNS:än A-recordi käytetään myös DNSBL (domain name system based blackhole) suom. musta lista käyttämiseen. Musta lista käytettään parhaiten roskapostien suodattamiseen, että lajittelee sähköpostipalvelimiien tunnistamista ja estää tuntematomia sähköpostiaviestejä eli roskapostit.
 
 ## DNS palomuuri
 
