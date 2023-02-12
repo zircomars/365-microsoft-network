@@ -45,7 +45,7 @@ DNS:än A-recordi käytetään myös DNSBL (domain name system based blackhole) 
 
 ## DNS zone
 
-DNS *alue* tai *vyöhykke*, joka on DNS:än erityinen alue ja tätä hallinnoi yleensä organisaation itsensä tai ylläpitäjä rooli itsensä. DNS toiminnaltaan on ajettu useisiin eri alueisiin, jotka ovat sisäisen hallitujen DNS-nimitilassa (namespace). DNS alueelal sisältää useita **aliverkkotunnuksia** (subdomain) (esim. bloggi.sivusto.com)
+DNS *alue* tai *vyöhykke*, joka on DNS:än erityinen alue ja tätä hallinnoi yleensä organisaation itsensä tai ylläpitäjä rooli itsensä. DNS toiminnaltaan on ajettu useisiin eri alueisiin, jotka ovat sisäisen hallitujen DNS-nimitilassa (namespace). DNS alueelal sisältää useita **aliverkkotunnuksia** (subdomain) *(esim. bloggi.sivusto.com)*
 
 ![Alt text](images/cloudflare-9.PNG)
 
