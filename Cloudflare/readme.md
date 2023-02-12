@@ -10,6 +10,7 @@ Cloudfrale tarjoaa myös DDoS-suojausta, sähköpostien lajittelua, verkkosovell
 
 * [Domain servers](#Domain-servers)
 * [DNS servers](#DNS-servers)
+* [DNS zone](#DNS-zone)
 * [dns palomuuri](#dns-palomuuri)
 * [Nameserver](#Nameserver)
 * [Proxy status](#Proxy-status)
@@ -41,6 +42,10 @@ DNS:llä on neljä tyyppistä kategoria nimipalvelimia (nameserver), josta ovat 
 ![Alt text](images/cloudflare-8.PNG)
 
 DNS:än A-recordi käytetään myös DNSBL (domain name system based blackhole) suom. musta lista käyttämiseen. Musta lista käytettään parhaiten roskapostien suodattamiseen, että lajittelee sähköpostipalvelimiien tunnistamista ja estää tuntematomia sähköpostiaviestejä eli roskapostit.
+
+## DNS zone
+
+
 
 ## DNS palomuuri
 
