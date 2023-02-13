@@ -45,7 +45,9 @@ DNS:än A-recordi käytetään myös DNSBL (domain name system based blackhole) 
 
 ## DNS zone
 
-DNS *alue* tai *vyöhykke*, joka on DNS:än erityinen alue ja tätä hallinnoi yleensä organisaation itsensä tai ylläpitäjä rooli itsensä. DNS toiminnaltaan on ajettu useisiin eri alueisiin, jotka ovat sisäisen hallitujen DNS-nimitilassa (namespace). DNS alueelal sisältää useita **aliverkkotunnuksia** (subdomain) *(esim. bloggi.sivusto.com)* tai alemman kuvan mukaan esim. *zone.microsoft.com*
+DNS *alue* tai *vyöhykke*, joka on DNS:än erityinen alue ja tätä hallinnoi yleensä organisaation itsensä tai ylläpitäjä rooli itsensä. DNS toiminnaltaan on ajettu useisiin eri alueisiin, jotka ovat sisäisen hallitujen DNS-nimitilassa (namespace). DNS alueaalla sisältää useita **aliverkkotunnuksia** (subdomain) *(esim. bloggi.sivusto.com)* tai alemman kuvan mukaan esim. *zone.microsoft.com* hierarkki puu näköinen haarukka. DNS-alue alkaa puussa olevasta toimialueesta, ja voi myös ulottua aliverkkotunnuksiin, jotta yksi entiteetti voi hallita useita aliverkkotunnuksia.
+
+Kaikki alueen tiedot tallennetaan, josta kutsuttuun DNS-alue tiedostoksi (DNS zone file), jossa on avain DNS-alueen toiminnan operaattorit. Alueiden tiedoston DNS - palvelin (server) tallennettujen tekstitiedosto, jonka sisältää alueen todellisuuden kuvaus ja sisältää kaikki tietuen (record) alueen toimialue.Alue tiedosto  pitää tulla aina alkaa SOA (start of authority) record:ista, ja sisältää tärkeitä tietoja ja mukaan lukien  alue ylläpitäjän yhteystiedot.
 
 ![Alt text](images/cloudflare-9.PNG)
 
