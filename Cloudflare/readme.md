@@ -69,9 +69,13 @@ Periaatteessa nimipalvelin (nameserver) viittaa DNS:ään (Domain name system), 
 
 ![Alt text](images/cloudflare-5.PNG)
 
-DNS nimipalvelin esim. 
+DNS nimipalvelin esim. & record type voi olla esim. CNAME 
 | example.com | record type: | value : | TTL | 
 | ---------- | ---------- | ------------- | -----------| 
+| @ | nameserver | nameserver1.example.com | AUTO | 
+
+Domain eli verkkotunnuksessa on useita nimipalvelin tukea, jotka voivat osoittaa kyseisen toimialueen ensimmäisen ja toisen sijaisen nimipalvelimen. Ilman asiallista konfigurointia/määritystä nimipalvelin tietukea käyttäjät eivät voi ladata verkkosivua tai sovellusta.
+
 
 
 ## Proxy status
