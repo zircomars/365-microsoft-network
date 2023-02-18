@@ -77,8 +77,13 @@ DNS nimipalvelin esim. & record type voi olla esim. CNAME
 
 Domain eli verkkotunnuksessa on useita nimipalvelin tukea, jotka voivat osoittaa kyseisen toimialueen ensimmäisen ja toisen sijaisen nimipalvelimen. Ilman asiallista konfigurointia/määritystä nimipalvelin tietukea käyttäjät eivät voi ladata verkkosivua tai sovellusta.
 
+Jos on useita subdomain:ia (aliverkkosivustoja) kuten <ins> blog.domain.com </ins> , <ins> intra.domain.com </ins> ja jne. josta nimipalvelin tukee näitä aliverkkoja, josta yhteys toistuu satunnaisesti eli periaatteessa jos tarkistaa powershell tai linux komennosta, niin pitäisi nähdä yksi tai kaksi jopa useampi nimipalvelin nimen id:tä. 
+
 Nimipalvelimien päivitystä tai vaihtoa suorittaa ylläpitäjät/järjestelmänvalvoja. Esim. pilvipalvelutarjoajat tarjoavat nimipalvelinta ja vaatii asiakkaan/käyttäjän osoittamaan niitä. Ylläpitäjä saattaa haluta myös päivittää nimipalvelimien record:in jos haluavat aliverkkotunnuksen (subdomain) käyttävän eri nimipalvelimia (nameserver). 
 
+Jos päivityksen kannalta tulee/toistuu tai tapahtuu sellainen yllätys, josta ensimmäisenä varmasti on se domain sivusto ongelma(sivusto ei toimi), niin mahdollistaa olla nimipalvelimen ongelman, katkos/päivitys tai muu yhteys ongelma, tai jopa palvelin virheily (error) ja jne. Jos on tavallinen päivitys yrityksellä niin tarkista, onko dns nimipalvelimen id:t oikein, mikäli jos ei ole niin kannattaa korjata. Päivityksen kannalta menee ehkä aikavyöhykkeen mukaan n. 24-72h (ei tietoa täsmääkö), ja pyyttää ylläpitäjän tarkistaa spostista, että on tullut ilmoitus. Mikäli jos päivitys on kunnossa niin tarkistaa ubuntu/linux tai powershell kommenosta, että domain sivusto hakee oikean nimipalvelimen id:n
+
+![Alt text](images/cloudflare-nameserver-1.PNG)
 
 ## Proxy status
 

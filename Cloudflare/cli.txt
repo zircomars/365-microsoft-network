@@ -14,7 +14,35 @@ $dig ns <domain.nimi>
 $dig ns <domain.nimi> @8.8.8.8
 $dig ns <domain.nimi> +short
 $whois <domain.nimi>
-$
+
+muutama linux esim. 
+
+DIG query for A (alias) record type
+$ dig domain.com A
+
+DIG query for MX (mail) record type
+$ dig domain.com MX
+
+DIG query for NS (nameserver) record type
+$ dig domain.com NS
+
+DIG query for SOA (start of authority) record type
+$ dig domain.com SOA
+
+DIG query for IPv6 record types
+$ dig @9.10.244.100 domain.com AAAA
+
+DIG query for ALL record types
+$ dig domain.com ANY
+
+DIG query for reverse (PTR) lookup
+$ dig -x 209.132.183.81
+
+DIG query using a specific DNS Server
+$ dig @ns.some.domain.com domain.com
+or
+$ dig @9.6.75.4 domain.com
+
 
 ------------
 powershell (resolve-dns - muistuttaa sama kuin linux nslookup kommentoa & vaihtoehtona voi myös käyttää $dig linux:sessakin)
@@ -36,7 +64,7 @@ $Get-DnsClientServerAddress
 $Get-DnsClientCache
 $Resolve-DnsName domain -CacheOnly
 $Resolve-DnsName domain -DnsOnly
-$Resolve-DnsName domain -Type MX
+$Resolve-DnsName domain -Type MX 
 $Resolve-DnsName domain -Type SOA
 $Resolve-DnsName domain -Type A
 $Resolve-DnsName domain -Type NS
