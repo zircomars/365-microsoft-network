@@ -79,7 +79,6 @@ Domain eli verkkotunnuksessa on useita nimipalvelin tukea, jotka voivat osoittaa
 
 Nimipalvelimien päivitystä tai vaihtoa suorittaa ylläpitäjät/järjestelmänvalvoja. Esim. pilvipalvelutarjoajat tarjoavat nimipalvelinta ja vaatii asiakkaan/käyttäjän osoittamaan niitä. Ylläpitäjä saattaa haluta myös päivittää nimipalvelimien record:in jos haluavat aliverkkotunnuksen (subdomain) käyttävän eri nimipalvelimia (nameserver). 
 
-Ylläpitäjä saattaa suunnittella päivitystä nimipalvelu record:lle, niin saattavat haluta k
 
 ## Proxy status
 
