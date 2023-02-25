@@ -1,10 +1,12 @@
 # Active directory
 
-Active Directory (AD) on Microsoftin Windows-toimialueen käyttäjätietokanta ja hakemistopalvelu, joka sisältää tietoa käyttäjistä, tietokoneista ja verkon resursseista. 
+Active Directory (AD) on Microsoftin Windows toimialueen käyttäjätietokanta ja hakemistopalvelu, joka sisältää tietoa käyttäjistä, tietokoneista ja verkon resurssia. 
 
 AD rakentuu nykyään LDAP (Lightweight Directory Access Protocol)- ja Kerberos-protokollille.
 
+![Alt text](images/active-directory-1.PNG)
 
+##
 
 
 ## AD hyviä harjoituksia
