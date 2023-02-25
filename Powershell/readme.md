@@ -27,10 +27,12 @@ noun eli substantiivit: service, process
 
 Jos tulee pyörittelee powershell komentopohjaa microsoft:in kanssa, niin pitää tarkistaa asetuksista, että se sallii sen integraatio yhteyden ja tukee komentoa. Eli kun käyttää powershell (admin) tai ihan perus tavallista powershell pohjaa on ok, mutta $import module microsoft kanssa tulee ongelmia niin pitää tarkistaa onko ladattu tietyä paketti tiedostoa, jotta työasema tukee microsoftin kanssa. Ehkä saattuu tulla toistuvia ongelmia, että microsoft omista sivustoilta löytyy mitä pitää ladata vielä. 
 
-Esim. "Import-Module : File C:\ProgramFiles\WindowsPowerShell\Modules\ExchangeOnlineManagement\3.1.0\netFramework\ExchangeOnlineManagement.psm1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170. <br>
-At line:1 char:1 <br>
-+ Import-Module ExchangeOnlineManagement <br>
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  <br>
+Esim. <br>
+
+     "Import-Module : File C:\ProgramFiles\WindowsPowerShell\Modules\ExchangeOnlineManagement\3.1.0\netFramework\ExchangeOnlineManagement.psm1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+     At line:1 char:1
+
+    + Import-Module ExchangeOnlineManagement
     + CategoryInfo          : SecurityError: (:) [Import-Module], PSSecurityException  <br>
     + FullyQualifiedErrorId : UnauthorizedAccess,Microsoft.PowerShell.Commands.ImportModuleCommand  <br>
 
@@ -38,12 +40,14 @@ At line:1 char:1 <br>
 Mikäli jotakin puuttuu jotakin niin suorita powershell policy asetukset/oikeudet. HUOM. kantsii kopsata sitä virhe ilmoitusta ja liittää google haku kenttään, koska tässä <b>readme</b> ei ole ihan kaikkea ja ei vältämättä just ole oikea vastaus.. <br>
 https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3 
 
-PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted <br><br>
-Execution Policy Change <br>
-The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies help topic at <br>
-https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy? <br>
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Yes <br>
-PS C:\Windows\system32> Import-Module ExchangeOnlineManagement <br><br>
+     PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted <br>
+     Execution Policy Change
+     The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies help topic at
+     https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
+     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Yes
+    PS C:\Windows\system32> Import-Module ExchangeOnlineManagement <br>
+
+<hr>
 
 ## parametrit
 
