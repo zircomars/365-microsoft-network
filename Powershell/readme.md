@@ -2,6 +2,15 @@
 
 special kommentoja josta voidaan luoda scripttauksia algroitmiä, objectia, parametriä, filteröintiä ja yms
 
+* [lisää harjoituksia](#lisää-harjoituksia)
+* [cmdlet struktuurit](#cmdlet-struktuurit)
+* [tarkista powershell](#tarkista-powershell)
+* [parametrit](#parametrit)
+* [modules](#modules)
+* [Alias](#Alias)
+* [Pipeline(#Pipeline)
+
+
 ## lisää harjoituksia
 
 https://learn.microsoft.com/en-us/training/browse/
@@ -14,6 +23,10 @@ Verbit: get, set, new, add, remove
 noun eli substantiivit: service, process
 
 ![Alt text](harjoituksia/images/powershell-calc-properties-1.PNG)
+
+## tarkista powershell
+
+Jos tulee pyörittelee powershell komentopohjaa microsoft:in kanssa, niin pitää tarkistaa asetuksista, että se sallii sen integraatio yhteyden ja tukee komentoa.
 
 ## parametrit
 
