@@ -31,6 +31,11 @@ Esim. verkon ylläpitäjä (network administrator) on valittava <b> yksittäinen
 
 Domainista, puu (tree) ja mestästä (forest), että on lisäksi AD:n tallennusarkkitehtuurien on kolme lisää osaa, jotka ovat <b>DNS, schema & datastore</b>.
 
+- DNS :
+
+- Schema :
+
+- Datastore :
 
 # AD monipuolisia harjoituksia
 
