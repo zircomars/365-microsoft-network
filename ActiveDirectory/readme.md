@@ -43,3 +43,6 @@ active directory:ssä on jotakin hyviä harjoituksia, mitä voi tukea työpaikas
 
 ![Alt text](images/active-directory-practices-1.PNG)
 
+## Users And Computers
+<br>
+petri.com/install-active-directory-users-and-computers/
