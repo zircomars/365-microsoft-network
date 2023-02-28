@@ -45,4 +45,5 @@ active directory:ssä on jotakin hyviä harjoituksia, mitä voi tukea työpaikas
 
 ## Users And Computers
 <br>
-petri.com/install-active-directory-users-and-computers/
+petri.com/install-active-directory-users-and-computers/ <br>
+www.imanami.com/how-to-install-active-directory-users-and-computers/
