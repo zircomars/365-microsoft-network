@@ -65,6 +65,13 @@ Jaetut sposti eliminoivat kopioida tai välittää spostiketjujina, jotka kertov
 
 - <b> Riskit: </b> sposti lipsuvat hakemistojen läpi tai niihin lähetetään useita vastauksia samanaikaisesti eri tiimin jäseniltä, eli ei tietoa kuka ottaa vastaan tai ei. Saapuvista viesteistä tulee hämmäystä, kun ihmiset kirjautuu muihin tileihin tai vaihtavat näyttöä. 
 Muita seurakuksena monien asikkaiden palvelimien tiimit saattavat korvata muita postilaatikoiden jaetuilla yksittäisellä postilaatikkoilla. 
+<hr>
+
+## Mail-enabled security
+
+Sähköpostia käyttäviä suojausryhmiä käytetään resurssien käyttöoikeuksien määrittämiseen sekä viestien jakamiseen tietylle käyttäjäjoukolle Microsoft 365:ssä.
+
+Joukkoryhmien käsittelykyvyn puuttuminen Microsoft 365:ssä edellyttää käyttäjäystävällistä ratkaisua, joka auttaa säästämään aikaa ja joka kattaa kaikki organisaatiot, joissa on valtava työvoima.
 
 <hr> 
 
