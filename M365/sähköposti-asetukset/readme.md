@@ -5,14 +5,15 @@
 * [shared mailboxes](#shared-mailboxes)
 
 - [powershell määritykset](#powershell-määritykset)
-
-![Alt text](images/GetImage.png)
+- [linkkit & muita ohjeita;](#linkkit--muita-ohjeita)
 
 ## Distribution list vs shared mailbox & shared inboxes 
 
 - Distribution list (jakelulista): Luettelo sähköpostin vastaanottajista, jotka on osoitettu yhdeksi vastaanottajaksi. 
 - Shared mailboxes: yhden tai useamman henkilön kanssa jaettu postilaatikko. 
-- Shared inboxes (ohjelmistoratkaisu): Yhteistyötyökalu, jonka avulla tiimit voivat vastata sähköposteihin yhdessä. 
+- Shared inboxes (ohjelmistoratkaisu): Yhteistyötyökalu, jonka avulla tiimit voivat vastata sähköposteihin yhdessä.
+
+![Alt text](images/GetImage.png)
 
 ### Jakelulista (Distribution list);
 
@@ -30,6 +31,8 @@ Toiminnaltaan: kun lähettää spostiviestin jakelulistan osoitteeseen niin vies
 - <b> Riskit: </b> käyttö voi olla monimutkaista, mutta sekavien postilaattikoiden kannalta  jäsenet saavat kopion jokaisesta viestistä, että se aiheuttaa sekasotkua saapuvista sähköpostilaatikosta ja tehottomuutta. Kopio tarkoittaa, että kaikki tiimin jäsenet käyttävät aikaa samoja spostien kirjoittamista ja lajitteluun.  
 
 Muita ongelmia voi johtaa vastuullisuutta, näkyvyyttä ja yhteistä työn puutetta. Myös seurauksena monen asiakkaiden palvelutiimien voivat korvata jakelulistan sposti pohjaisiin jaettuihin postilaatikkoihin tai jaetuilla posti laatikkon hallinnan yrityksen viestintään. 
+
+<hr> 
 
 ## shared mailboxes
 
@@ -49,4 +52,11 @@ Jaetut sposti eliminoivat kopioida tai välittää spostiketjujina, jotka kertov
 - <b> Riskit: </b> sposti lipsuvat hakemistojen läpi tai niihin lähetetään useita vastauksia samanaikaisesti eri tiimin jäseniltä, eli ei tietoa kuka ottaa vastaan tai ei. Saapuvista viesteistä tulee hämmäystä, kun ihmiset kirjautuu muihin tileihin tai vaihtavat näyttöä. 
 Muita seurakuksena monien asikkaiden palvelimien tiimit saattavat korvata muita postilaatikoiden jaetuilla yksittäisellä postilaatikkoilla. 
 
+<hr> 
+
 # powershell määritykset
+
+# linkkit & muita ohjeita;
+
+https://www.replypad.com/blog/distribution-list-vs-shared-mailbox/ <br>
+https://missiveapp.com/blog/distribution-list-vs-shared-mailbox  <br>
