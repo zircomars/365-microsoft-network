@@ -1,5 +1,13 @@
 # M365 sähköposti asetukset
 
+* [Distribution list vs shared mailbox & shared inboxes ](#distribution-list-vs-shared-mailbox--shared-inboxes)
+    * [Jakelulista (Distribution list);](#jakelulista-distribution-list)
+* [shared mailboxes](#shared-mailboxes)
+
+- [powershell määritykset](#powershell-määritykset)
+
+![Alt text](images/GetImage.png)
+
 ## Distribution list vs shared mailbox & shared inboxes 
 
 - Distribution list (jakelulista): Luettelo sähköpostin vastaanottajista, jotka on osoitettu yhdeksi vastaanottajaksi. 
@@ -41,4 +49,4 @@ Jaetut sposti eliminoivat kopioida tai välittää spostiketjujina, jotka kertov
 - <b> Riskit: </b> sposti lipsuvat hakemistojen läpi tai niihin lähetetään useita vastauksia samanaikaisesti eri tiimin jäseniltä, eli ei tietoa kuka ottaa vastaan tai ei. Saapuvista viesteistä tulee hämmäystä, kun ihmiset kirjautuu muihin tileihin tai vaihtavat näyttöä. 
 Muita seurakuksena monien asikkaiden palvelimien tiimit saattavat korvata muita postilaatikoiden jaetuilla yksittäisellä postilaatikkoilla. 
 
-## powershell määritykset
+# powershell määritykset
