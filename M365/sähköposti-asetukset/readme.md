@@ -1,13 +1,15 @@
 # M365 sähköposti asetukset
 
-* [Distribution list vs shared mailbox & shared inboxes ](#distribution-list-vs-shared-mailbox--shared-inboxes)
+- [Distribution list vs shared mailbox & shared inboxes ](#distribution-list-vs-shared-mailbox--shared-inboxes)
     * [Jakelulista (Distribution list);](#jakelulista-distribution-list)
-* [shared mailboxes](#shared-mailboxes)
+    * [shared mailboxes](#shared-mailboxes)
+    * [dynaaminen jakelulista (Dynamic distribution);](#dynaaminen-jakelulista-dynamic-distribution)
 
 - [powershell määritykset](#powershell-määritykset)
 - [linkkit & muita ohjeita;](#linkkit--muita-ohjeita)
+    * [powershell](#powershell)
 
-## Distribution list vs shared mailbox & shared inboxes 
+# Distribution list vs shared mailbox & shared inboxes 
 
 - Distribution list (jakelulista): Luettelo sähköpostin vastaanottajista, jotka on osoitettu yhdeksi vastaanottajaksi. 
 - Shared mailboxes: yhden tai useamman henkilön kanssa jaettu postilaatikko. 
@@ -15,7 +17,7 @@
 
 ![Alt text](images/GetImage.png)
 
-### Jakelulista (Distribution list);
+## Jakelulista (Distribution list);
 
 perus ylläpitävien luettelon spostin vastaanottamista ja osoitettu yhdeksi vastaanottajaksi. 
 
@@ -32,6 +34,16 @@ Toiminnaltaan: kun lähettää spostiviestin jakelulistan osoitteeseen niin vies
 
 Muita ongelmia voi johtaa vastuullisuutta, näkyvyyttä ja yhteistä työn puutetta. Myös seurauksena monen asiakkaiden palvelutiimien voivat korvata jakelulistan sposti pohjaisiin jaettuihin postilaatikkoihin tai jaetuilla posti laatikkon hallinnan yrityksen viestintään. 
 
+<hr>
+
+## dynaaminen jakelulista (Dynamic distribution);
+
+Dynaaminen jakeluryhmä on sähköpostien ryhmiä, jolloin käytettään sähköpostia lähettämisen ihmisille/asiakkuuksille/käyttäjille, jollloin on tietyt ominaisuudet, kuten osasto tai sijainti niin tätä määritettään <b>Exchange admin center:in</b> azure:ad sijainnissa. 
+
+Eri kuin tavalisen <ins>jakelulista</ins>ryhmä, jotka sisältävät määritettyä jäsenien/käyttäjien joukkoa, dynaamisen jakeluryhmissä jäsenluettelo lasketaan aina, kun ryhmille lähetetään viestin, määrittämisen suodattimisessa ja ehdon perusteella. Kun sähköpostiviesti lähetetään dynaamisen jakeluryhmissä, se toimitetaan kaikille organiaaation vastaanottajille, jotka vastaavat kyseiselle ryhmille määritettyjen ehtoja. 
+
+Kuitenkin (distribution group) jakelulista ryhmä on erityinen objekti Microsoft Exchange (sähköposti) palvelussa ja jolle on määritetty yksilölllinen SMTP-osoite (Simple Mail Transfer Protocol).
+
 <hr> 
 
 ## shared mailboxes
@@ -42,9 +54,9 @@ Jaettuja postilaatikoita käsittelee koko tiimi, kuten asiakastukitiimi, henkil�
 
 Kun asiakas lähettää sähköpostin jaettuun postilaatikon osoitteeseen, se toimittaa viestistä yhden kopion jaettuun postilaatikon osoitteeseen. 
 
-Kun henkilö lähettää viestin jaetussa postilaatikossa tai vastaa siihen, vastaus näyttää tulevan jaetun postilaatikon sähköpostiosoitteesta eikä henkilön sähköpostiosoitteesta. 
+- Kun henkilö lähettää viestin jaetussa postilaatikossa tai vastaa siihen, vastaus näyttää tulevan jaetun postilaatikon sähköpostiosoitteesta eikä henkilön sähköpostiosoitteesta. 
 
-Jos poistaa sähköpostiviestin jaetusta postilaatikosta, se poistaa sähköpostin kaikilta, joilla on pääsy tähän sähköpostiosoitteeseen. 
+- Jos poistaa sähköpostiviestin jaetusta postilaatikosta, se poistaa sähköpostin kaikilta, joilla on pääsy tähän sähköpostiosoitteeseen. 
 
 - <b> Hyödyt: </b> kuka tahansa tiimistä voi käydä käsittelee saapuvia sposteja. Eli saapuvista viesteistä näkee kuka on vastannut ja mihin ei. 
 Jaetut sposti eliminoivat kopioida tai välittää spostiketjujina, jotka kertovat muille tiimin jäsenille, kun he vastaavat siihen/asiakkaalle. Myös saattavat joutua käyttämään menetelmiä sisäisen keskustelluun, mitä voi johtaa sekaannusta.  
@@ -60,3 +72,6 @@ Muita seurakuksena monien asikkaiden palvelimien tiimit saattavat korvata muita 
 
 https://www.replypad.com/blog/distribution-list-vs-shared-mailbox/ <br>
 https://missiveapp.com/blog/distribution-list-vs-shared-mailbox  <br>
+
+## powershell 
+https://office365itpros.com/2021/12/13/modern-dynamic-distribution-lists/
