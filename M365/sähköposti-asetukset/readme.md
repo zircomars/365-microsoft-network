@@ -9,6 +9,8 @@
 - [linkkit & muita ohjeita;](#linkkit--muita-ohjeita)
     * [powershell](#powershell)
 
+![Alt text](images/m365_groups_table.PNG)
+
 # Distribution list vs shared mailbox & shared inboxes 
 
 - Distribution list (jakelulista): Luettelo sähköpostin vastaanottajista, jotka on osoitettu yhdeksi vastaanottajaksi. 
