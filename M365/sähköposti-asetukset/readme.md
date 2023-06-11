@@ -5,3 +5,5 @@
 ryhmä
 
 sähköpostijakelulista
+
+## powershell määritykset
