@@ -75,5 +75,6 @@ Muita seurakuksena monien asikkaiden palvelimien tiimit saattavat korvata muita 
 https://www.replypad.com/blog/distribution-list-vs-shared-mailbox/ <br>
 https://missiveapp.com/blog/distribution-list-vs-shared-mailbox  <br>
 
+
 ## powershell 
 https://office365itpros.com/2021/12/13/modern-dynamic-distribution-lists/
