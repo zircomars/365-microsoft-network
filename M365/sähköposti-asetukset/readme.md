@@ -9,7 +9,7 @@
 - [linkkit & muita ohjeita;](#linkkit--muita-ohjeita)
     * [powershell](#powershell)
     
-- [muita asetuksia](#muita_asetuksia)
+- [muita asetuksia](#muita-asetuksia)
 
 ![Alt text](images/m365_groups_table.PNG)
 
