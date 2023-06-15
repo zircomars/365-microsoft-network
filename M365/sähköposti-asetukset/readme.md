@@ -8,6 +8,8 @@
 - [powershell määritykset](#powershell-määritykset)
 - [linkkit & muita ohjeita;](#linkkit--muita-ohjeita)
     * [powershell](#powershell)
+    
+- [muita asetuksia](#muita_asetuksia)
 
 ![Alt text](images/m365_groups_table.PNG)
 
@@ -76,6 +78,10 @@ Joukkoryhmien käsittelykyvyn puuttuminen Microsoft 365:ssä edellyttää käytt
 <hr> 
 
 # powershell määritykset
+
+# muita asetuksia
+
+erilliset sähköposti asetukset mm. forward, automaatinen vastaaminen (esim. käyttäjä tai kyseinen henkilö on lomalla tai sairaana), ja alias sähköposti.
 
 # linkkit & muita ohjeita;
 
