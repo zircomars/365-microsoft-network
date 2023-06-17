@@ -107,6 +107,9 @@ Jonka jälkeen esim. testaa oman yrityksen/organisaation sähköposti listoi, et
 ## muita kivoja komentoja
 
 Esim. filtteröity/tarkennettu käyttäjiä (Get-Mailbox -Identity john.doe ) ja nimestä ei olla tarkkaan, et just etu- ja sukunimi on isokirjain, kunhan löytää kyseisen käyttäjän. Sama vastaavasti sähköposti, jos tietää kuka sen mm. työsähköposti koko domain:in.
+
+Microsoft:illa on paljon monipuolisia dokumenttejä, et sieltä päivittyy usein niin kantsii vilkaista ja sama niiden komentojen taustaa.
+
 ```
 $Get-Mailbox -Identity "first.lastname" | Select-Object 
 ```
@@ -149,10 +152,27 @@ WhenMailboxCreated       : 2/20/2023 2:24:45 PM
 UsageLocation 
 ```
 
+Tarkistaa kyseisen käyttäjän sähköposti tilin oikeudet ja kaksi tyyppistä vaihtoehtoa, mutta sama methodi
+```
+$Get-MailboxPermission -Identity user@domain.fi
 
+Identity             User                 AccessRights                                                                                                    IsInherited Deny 
 
+--------             ----                 ------------                                                                                                    ----------- ---- 
 
+85a7fXXXX-XXXX-XXX... NT AUTHORITY\SELF    {FullAccess, ReadPermission}                                                                                    False       False 
+```
 
+```
+$Get-MailboxPermission -Identity user@domain.fi | ft -AutoSize 
+
+Identity                             User              AccessRights                 IsInherited Deny 
+
+--------                             ----              ------------                 ----------- ---- 
+
+85a7fXX-XXXX-XXXX-XXXX-XYXYXYXYXYX NT AUTHORITY\SELF {FullAccess, ReadPermission} False       False 
+
+```
 
 <hr>
 
