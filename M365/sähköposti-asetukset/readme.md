@@ -12,6 +12,9 @@
     
 - [muita asetuksia](#muita-asetuksia)
 
+- [linkkit & muita ohjeita;](#linkkit--muita-ohjeita)
+    * [powershell ohjeita](#powershell-ohjeita)
+
 ![Alt text](images/m365_groups_table.PNG)
 
 # Distribution list vs shared mailbox & shared inboxes 
@@ -113,5 +116,5 @@ https://www.replypad.com/blog/distribution-list-vs-shared-mailbox/ <br>
 https://missiveapp.com/blog/distribution-list-vs-shared-mailbox  <br>
 
 
-## powershell 
+## powershell ohjeita
 https://office365itpros.com/2021/12/13/modern-dynamic-distribution-lists/
