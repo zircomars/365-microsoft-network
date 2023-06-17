@@ -9,6 +9,7 @@
 - [linkkit & muita ohjeita;](#linkkit--muita-ohjeita)
 - [powershell](#powershell)
     * [powershell login to microsoft ](#powershell-login-to-microsoft)
+    * [muita kivoja komentoja](#muita-kivoja-komentoja)
     
 - [muita asetuksia](#muita-asetuksia)
 
@@ -83,7 +84,7 @@ Joukkoryhmien käsittelykyvyn puuttuminen Microsoft 365:ssä edellyttää käytt
 
 # powershell määritykset
 
-Powershell on mahdollista määrittää asetuksia, mutta sen komento voi olla hankala määrittää sekä vaikuttaa yhteen ryhmään/grouppi asetuksiin, ja ehkä helpoin tapa on suoraan Microsoft Admin center:in käyttöliittymästä (GUI), mutta on se kivaa jos powershell kommenosta mm. tarkistaa oikeudet, asetukset tai muu määritykset.
+Powershell on mahdollista määrittää asetuksia, mutta sen komento voi olla hankala määrittää sekä vaikuttaa yhteen ryhmään/grouppi asetuksiin, ja ehkä helpoin tapa on suoraan Microsoft Admin center:in käyttöliittymästä (GUI), mutta on se kivaa jos powershell kommenosta mm. tarkistaa oikeudet, asetukset tai muu määritykset. Komentojen määrityksissä pitää olla vähä tarkana, mitä yrittää asettaa, muokata tai poistaa jotakin kyseistä objektia/funktiota niin siihen myös vaikuttaa sen powershell komentojen sallimista et menikö just oikein vai väärin.
 
 ## powershell login to microsoft 
 
@@ -99,14 +100,67 @@ TAI
 $Connect-ExchangeOnline -UserPrincipalName <own_adminEmail> 
 ```
 
-Jonka jälkeen esim. testaa oman yrityksen/organisaation sähköposti listoi, että mitä ja ketä tässä sisältyy, ja vastaavasti toistaa kyseisen objecti ID:n
+Jonka jälkeen esim. testaa oman yrityksen/organisaation sähköposti listoi, että mitä ja ketä tässä sisältyy, ja vastaavasti toistaa kyseisen objecti ID:n. Sama vastaavasti "prohibitsendquota" tarkoittaa paljon sen kyseisen sähköpostin sisäisessa on paljon dataa jäljellä esim. käyttäjä tili on lähettänyt/vastaanottanut sähköpostia ja sisällä voi olla mm. monipuolisia datoja (excel taulukko, powerpoint, zip tiedosto, kuvat).
 
 ![Alt text](images/powershell-connectExchange-1.png)
+
+## muita kivoja komentoja
+
+Esim. filtteröity/tarkennettu käyttäjiä (Get-Mailbox -Identity john.doe ) ja nimestä ei olla tarkkaan, et just etu- ja sukunimi on isokirjain, kunhan löytää kyseisen käyttäjän. Sama vastaavasti sähköposti, jos tietää kuka sen mm. työsähköposti koko domain:in.
+```
+$Get-Mailbox -Identity "first.lastname" | Select-Object 
+```
+
+```
+$Get-Mailbox -Identity john.doe@domain.com
+```
+
+Jokin ryhmä tai sähköpostijakelu listan nimi & anr (ambiguous name resolution) - etsi osan kyseisen nimen ja mahdollista voi olla useita saman nimen tyyppisiä
+```
+$Get-Mailbox -Anr <group-name> 
+```
+
+tämä on vastaavasti syvemmin/tarkemmin kyseisen sähköpostin ominaisuudet ja muut taustat
+```
+$Get-Mailbox -anr <groupName> | Select DisplayName, PrimarySMTPAddress, RecipientTypeDetails, ProhibitSendReceiveQuota, WhenMailboxCreated, UsageLocation 
+
+DisplayName              : Group support 
+
+PrimarySmtpAddress       : support@domain.fi
+
+RecipientTypeDetails     : UserMailbox 
+
+ProhibitSendReceiveQuota : 50 GB (53,687,091,200 bytes) 
+
+WhenMailboxCreated       : 2/3/2023 12:40:22 PM 
+
+UsageLocation            : British
+
+DisplayName              : Group support  
+
+PrimarySmtpAddress       : support@domain.fi
+
+RecipientTypeDetails     : SharedMailbox 
+
+ProhibitSendReceiveQuota : 50 GB (53,687,091,200 bytes) 
+
+WhenMailboxCreated       : 2/20/2023 2:24:45 PM 
+
+UsageLocation 
+```
+
+
+
+
+
+
+<hr>
 
 # muita asetuksia
 
 erilliset sähköposti asetukset mm. forward, automaatinen vastaaminen (esim. käyttäjä tai kyseinen henkilö on lomalla tai sairaana), ja alias sähköposti.
 
+## forwarding email
 
 <hr> 
 
