@@ -88,13 +88,14 @@ Powershell on mahdollista määrittää asetuksia, mutta sen komento voi olla ha
 
 ## powershell login to microsoft 
 
-Avaa ja yhdistää powershell kautta office/microsoft ympäristöön (kirjautuu sisään) 
+Avaa ja yhdistää powershell kautta office/microsoft ympäristöön (kirjautumalla sisään) 
 vähä kuin ponnahtaa sitä ikkunaa, että syötät manuaalisesti mitä sähköpostia haluat kirjautua
 ```
 $connect-exchangeonline 
 ```
 
-TAI 
+<b> TAI </b> 
+Toinen vaihtoehto on sama kuin ylempi, mutta kirjoittaa valmiiksi oman sähköposti domain id:n ja ponnanthaa sama ikkuna, että vain käyttäjä pitää vain syöttää manuaalisesti oman sähköposti tilin salasana ja viimeisenä sitten vahvistamiset eli mfa tai yms methodi.
 
 ```
 $Connect-ExchangeOnline -UserPrincipalName <own_adminEmail> 
@@ -191,4 +192,5 @@ https://missiveapp.com/blog/distribution-list-vs-shared-mailbox  <br>
 
 
 ## powershell ohjeita
-https://office365itpros.com/2021/12/13/modern-dynamic-distribution-lists/
+https://office365itpros.com/2021/12/13/modern-dynamic-distribution-lists/ <br>
+https://lazyadmin.nl/powershell/get-mailbox/ <br>
