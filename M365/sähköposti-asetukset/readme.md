@@ -7,7 +7,8 @@
 
 - [powershell määritykset](#powershell-määritykset)
 - [linkkit & muita ohjeita;](#linkkit--muita-ohjeita)
-    * [powershell](#powershell)
+- [powershell](#powershell)
+    * [powershell login to microsoft ](#powershell-login-to-microsoft)
     
 - [muita asetuksia](#muita-asetuksia)
 
@@ -79,9 +80,32 @@ Joukkoryhmien käsittelykyvyn puuttuminen Microsoft 365:ssä edellyttää käytt
 
 # powershell määritykset
 
+Powershell on mahdollista määrittää asetuksia, mutta sen komento voi olla hankala määrittää sekä vaikuttaa yhteen ryhmään/grouppi asetuksiin, ja ehkä helpoin tapa on suoraan Microsoft Admin center:in käyttöliittymästä (GUI), mutta on se kivaa jos powershell kommenosta mm. tarkistaa oikeudet, asetukset tai muu määritykset.
+
+## powershell login to microsoft 
+
+Avaa ja yhdistää powershell kautta office/microsoft ympäristöön (kirjautuu sisään) 
+vähä kuin ponnahtaa sitä ikkunaa, että syötät manuaalisesti mitä sähköpostia haluat kirjautua
+```
+$connect-exchangeonline 
+```
+
+TAI 
+
+```
+$Connect-ExchangeOnline -UserPrincipalName <own_adminEmail> 
+```
+
+Jonka jälkeen esim. testaa oman yrityksen/organisaation sähköposti listoi, että mitä ja ketä tässä sisältyy, ja vastaavasti toistaa kyseisen objecti ID:n
+
+![Alt text](images/powershell-connectExchange-1.png)
+
 # muita asetuksia
 
 erilliset sähköposti asetukset mm. forward, automaatinen vastaaminen (esim. käyttäjä tai kyseinen henkilö on lomalla tai sairaana), ja alias sähköposti.
+
+
+<hr> 
 
 # linkkit & muita ohjeita;
 
