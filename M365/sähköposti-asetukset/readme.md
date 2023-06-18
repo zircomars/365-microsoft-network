@@ -11,7 +11,8 @@
     * [powershell login to microsoft ](#powershell-login-to-microsoft)
     * [muita kivoja komentoja](#muita-kivoja-komentoja)
     
-- [muita asetuksia](#muita-asetuksia)
+- [muita asetuksia (exchange admin center)](#muita-asetuksia-exchange-admin-center)
+    * [forwarding email](#forwarding-email)
 
 - [linkkit & muita ohjeita;](#linkkit--muita-ohjeita)
     * [powershell ohjeita](#powershell-ohjeita)
@@ -177,7 +178,7 @@ Identity                             User              AccessRights             
 
 <hr>
 
-# muita asetuksia
+# muita asetuksia (exchange admin center)
 
 erilliset sähköposti asetukset mm. forward, automaatinen vastaaminen (esim. käyttäjä tai kyseinen henkilö on lomalla tai sairaana), ja alias sähköposti.
 
