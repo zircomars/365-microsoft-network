@@ -192,7 +192,7 @@ alias sähköposti on kuin käyttäjän tilin sijais tyyppinen sähköposti. Esi
 
 https://www.replypad.com/blog/distribution-list-vs-shared-mailbox/ <br>
 https://missiveapp.com/blog/distribution-list-vs-shared-mailbox  <br>
-
+https://www.youtube.com/watch?v=TASahKesDQU <br>
 
 ## powershell ohjeita
 https://office365itpros.com/2021/12/13/modern-dynamic-distribution-lists/ <br>
