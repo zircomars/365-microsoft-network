@@ -182,9 +182,13 @@ Identity                             User              AccessRights             
 
 erilliset sähköposti asetukset mm. forward, automaatinen vastaaminen (esim. käyttäjä tai kyseinen henkilö on lomalla tai sairaana), ja alias sähköposti.
 
-alias sähköposti on kuin käyttäjän tilin sijais tyyppinen sähköposti. Esim. päätilillä `nimi@domain.fi` niin sen sijais tili olisi `toinen-nimi@domain2.fi` niin esim. asiakkuus/kollega lähettää sähköpostia <ins> domain2.fi </ins> päätteeseen niin se kulkeutuu forwarding moodilla , että päätili saa vastaanotettua sähköpostia. Koska helpottakseen yksinkertaisen korvauksen pitkälle tai vaikeasti muistettavan sähköpostiosoitteen. Toinen esim. `webmaster@domain.fi` ja sen alias; `info@webmaster.fi` Mikäli jos pitää vastata niin päätili on se ainoa millä vastataan tai sitten joudutaan luoda erillisen sähköposti tili. 
+alias sähköposti on kuin käyttäjän tilin sijais tyyppinen sähköposti. Esim. päätilillä `nimi@domain` niin sen sijais tili olisi `toinen-nimi@domain2.fi` niin esim. asiakkuus/kollega lähettää sähköpostia <ins> domain2.fi </ins> päätteeseen niin se kulkeutuu forwarding moodilla , että päätili saa vastaanotettua sähköpostia. Koska helpottakseen yksinkertaisen korvauksen pitkälle tai vaikeasti muistettavan sähköpostiosoitteen. Toinen esim. `webmaster@domain.fi` ja sen alias; `info@webmaster.fi` Mikäli jos pitää vastata niin päätili on se ainoa millä vastataan tai sitten joudutaan luoda erillisen sähköposti tili. 
 
 ## forwarding email
+
+Tarkoittaa, että vastaanottava `A@domain` sähköposti menee eteenpäin esim. kyseinen A-käyttäjä on lomalla pv.kk - pv.kk ajaksi, niin `B@domain` henkilö saa A-käyttäjän sähköpostit. Huomiona, sähköpostit ovat aina henkilökohtisia, että riippuu mihin käyttötarkotukseen ne on tarkotettu, ja riippuu prosessien kuvauksesta.
+
+Forwarding helpoin tapa on määrittää <b>admin center:issä</b>, mutta mikäli jos ylläpitäjä on ns. <ins>kiireinen</ins> niin ehkä mahdollista A-käyttäjä voi itse määrittää kenelle forwarding määritystä voi antaa.. eli seuraamalla ohjeistusta, mistä näitä verkosta löytyy usein ja tutustumalla siihen <b>sähköposti asetuksiin</b>. Tätä määritystä voi määrittää esim. henkilökohtaisessa sähköpostissa mikäli jos on käytössä Microsoft hotmail tili, ja ehkä jopa Google Gmail:kin on sellainen ominaisuus.
 
 <hr> 
 
