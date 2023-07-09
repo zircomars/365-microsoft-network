@@ -188,7 +188,9 @@ alias sähköposti on kuin käyttäjän tilin sijais tyyppinen sähköposti. Esi
 
 Tarkoittaa, että vastaanottava `A@domain` sähköposti menee eteenpäin esim. kyseinen A-käyttäjä on lomalla pv.kk - pv.kk ajaksi, niin `B@domain` henkilö saa A-käyttäjän sähköpostit. Huomiona, sähköpostit ovat aina henkilökohtisia, että riippuu mihin käyttötarkotukseen ne on tarkotettu, ja riippuu prosessien kuvauksesta.
 
-Forwarding helpoin tapa on määrittää <b>admin center:issä</b>, mutta mikäli jos ylläpitäjä on ns. <ins>kiireinen</ins> niin ehkä mahdollista A-käyttäjä voi itse määrittää kenelle forwarding määritystä voi antaa.. eli seuraamalla ohjeistusta, mistä näitä verkosta löytyy usein ja tutustumalla siihen <b>sähköposti asetuksiin</b>. Tätä määritystä voi määrittää esim. henkilökohtaisessa sähköpostissa mikäli jos on käytössä Microsoft hotmail tili, ja ehkä jopa Google Gmail:kin on sellainen ominaisuus.
+Forwarding helpoin tapa on määrittää <b>admin center:issä</b>, mutta mikäli jos ylläpitäjä on ns. <ins>kiireinen</ins> niin ehkä mahdollista A-käyttäjä voi itse määrittää kenelle forwarding määritystä voi antaa.. eli seuraamalla ohjeistusta, mistä näitä verkosta löytyy usein ja tutustumalla siihen <b>sähköposti asetuksiin</b>. Tätä määritystä voi määrittää esim. henkilökohtaisessa sähköpostissa mikäli jos on käytössä Microsoft hotmail tili, ja ehkä jopa Google Gmail:kin on sellainen ominaisuus. 
+
+Windows:in ympäristössä helpoin tapa on määrittää joko työaseman Outlook tai selaimen Office.com / outlook:in kautta, mutta ne menee melkee melko identtisiä. Eli --> View / View Settings / Mail / Forwading & josta loppu peleiss laittaa ruksin [X] Enable forwarding - forwarding_email@domain sähköposti osoite, ja tätä löytyy myös selaimen kauttakin. Ongelmana toimiiko niin ennen sitä pitää jatkuvasti testata monipuolisilla sähköpostilla eli työ ja henkilökohtaisella, koska jossakin tietyissä sähköpostitilissä <b> ettei vastaanota ja ei salli ulkopuolisia sähköposteja </b>, koska se saattaa reagoida ja skannatta roskapostiksi.. kuitenkin, jossakin tilanteessa tulevia roskapostei voi itse manuaalisesti sallia, että "tämä ei ole roskaposti".
 
 <hr> 
 
