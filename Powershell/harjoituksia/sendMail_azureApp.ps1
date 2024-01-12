@@ -41,6 +41,14 @@ $BodyJsonsend = @"
                               }
                             }
                           ]
+
+                          "bccRecipients": [
+                            {
+                            "emailAddress": {
+                            "address": "BCCEmailAdd1"
+                            }
+                            }, ]
+                          
                         },
                         "saveToSentItems": "false"
                       }
