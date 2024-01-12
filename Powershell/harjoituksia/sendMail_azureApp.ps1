@@ -46,4 +46,5 @@ $BodyJsonsend = @"
                       }
 "@
 
-Invoke-RestMethod -Method POST -Uri $URLsend -Headers $headers -Body $BodyJsonsend
+# at end make allow äö or special characters, who will receive the email looks error 
+Invoke-RestMethod -Method POST -Uri $URLsend -Headers $headers -Body $BodyJsonsend -ContentType "application/json; charset=utf-8"
