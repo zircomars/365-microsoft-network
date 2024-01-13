@@ -20,7 +20,7 @@ $headers = @{
     "Content-type"  = "application/json"
 }
 
-#Send Mail, torecipient (To the recipient)
+#Send Mail, torecipient (To the recipient) for single person.
 $URLsend = "https://graph.microsoft.com/v1.0/users/$MailSender/sendMail"
 $BodyJsonsend = @"
                     {
@@ -41,14 +41,7 @@ $BodyJsonsend = @"
                               }
                             }
                           ]
-
-                          "bccRecipients": [
-                            {
-                            "emailAddress": {
-                            "address": "BCCEmailAdd1"
-                            }
-                            }, ]
-                          
+                         
                         },
                         "saveToSentItems": "false"
                       }
