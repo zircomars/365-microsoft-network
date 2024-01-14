@@ -40,26 +40,59 @@ ExchangeOnlineArchiveTransfer Jamy Klotzsche
 
 
 ###################
-# CONNECT TO M365 (START HERE)
+# CONNECT TO M365 (START HERE) 
 
-# if powershell missing module and need installation package for connect to Microsoft services and other environment tools as Active Directory, Exchange online and ect.
+# if powershell missing module and need installation package for connect to Microsoft services and other environment tools as Active Directory, Exchange online and ect. and after the installation get to connect to environment.
 
+######
 # cmdlet to install the Azure Active Directory PowerShell for Graph module
 $ Install-Module -Name AzureAD
 
-# Exchange Online Management Module
+$ Connect-AzureAD
+
+######
+# Exchange Online Management Module and connection
 $ Install-Module -name ExchangOnlineManagement
 
-#  SharePoint Online Management Shell
+$ Connect-ExchangeOnline
+
+######
+#  SharePoint Online Management Shell, once the MSI (Microsoft Software Installer) has beend installed, execute the bellow commands to connection to the admin portal replice <DomainHost> within the name of your M365 domain accordingly.
 $ Install-Module -Name Microsoft.Online.SharePoint.PowerShell
 
+$credential = Get-Credential
+Import-Module Microsoft.Online.SharePoint.PowerShell -DisableNameChecking
+Connect-SPOService -Url https://<domainhost>-admin.sharepoint.com -credential $credentia
 
+######
 # Microsoft TeamsModule & Teams monitoring
-# Install-Module -Name MicrosoftTeams
+$ Install-Module -Name MicrosoftTeams
 
-##########
-# after install if trying to connect to e.g. exchange online & it will pop up the small browser item , so input the M365 accounts to get connection like as data
-$ Connect-ExchangeOnline
+
+######
+# msonline
+$ Install-Module MSOnline
+
+$ Connect-MsolService
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
