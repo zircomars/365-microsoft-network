@@ -110,3 +110,11 @@ useampi kommenotja objektejä mm. filteröinti, muokkausta, mittaamisesta, sortt
 listatat jokeri merkkejä get up computer vs muuta, varsinaiset filtterit where object kommennon käyttö ja basic malli. 
 enumerating viittaa prosessiin haettaan jostakin, yksikerralaan muokkataan niitä ja ei voi tehd yhtä aikaan esim. muokata joidenkin koneiden ominaisuuksia.  haetaan koneet muuttujaan ja sen jälkeen joudutaan yksittelen tekemään muutosta. 
 koska komennossa siellä on parameter computer name, ja sitä nimi voi vaa yhden objektin. jolloin luetaan yksi kerrallaan, for each silmukassa käsitteelee yksittelen ja taas seuraava.
+
+## kommenti
+jos on pitkä kommentti vaikappa pitkä runoilu, mitä tähän scripttiin tulee olemaankaan, ja esim. muistiinpanona tai tämä yksittäinen/pitkä funktio/parametri mitä se tarkoittakaan
+
+<#
+asdfasdfsdgj
+asdfsdf
+#>
