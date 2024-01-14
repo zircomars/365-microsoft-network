@@ -9,6 +9,7 @@ special kommentoja josta voidaan luoda scripttauksia algroitmiä, objectia, para
 * [modules](#modules)
 * [Alias](#Alias)
 * [Pipeline](#Pipeline)
+* [kommentti](#kommentti)
 
 ## lisää harjoituksia
 
@@ -111,8 +112,8 @@ listatat jokeri merkkejä get up computer vs muuta, varsinaiset filtterit where 
 enumerating viittaa prosessiin haettaan jostakin, yksikerralaan muokkataan niitä ja ei voi tehd yhtä aikaan esim. muokata joidenkin koneiden ominaisuuksia.  haetaan koneet muuttujaan ja sen jälkeen joudutaan yksittelen tekemään muutosta. 
 koska komennossa siellä on parameter computer name, ja sitä nimi voi vaa yhden objektin. jolloin luetaan yksi kerrallaan, for each silmukassa käsitteelee yksittelen ja taas seuraava.
 
-## kommenti
-jos on pitkä kommentti vaikappa pitkä runoilu, mitä tähän scripttiin tulee olemaankaan, ja esim. muistiinpanona tai tämä yksittäinen/pitkä funktio/parametri mitä se tarkoittakaan
+## kommentti
+jos on pitkä kommentti vaikappa pitkä runoilu, mitä tähän scripttiin tulee olemaankaan, ja esim. muistiinpanona tai tämä yksittäinen/pitkä funktio/parametri mitä se tarkoittakaan. eli käyttämällä <# #>
 
 <#
 asdfasdfsdgj
