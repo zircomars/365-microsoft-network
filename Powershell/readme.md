@@ -10,6 +10,7 @@ special kommentoja josta voidaan luoda scripttauksia algroitmiä, objectia, para
 * [Alias](#Alias)
 * [Pipeline](#Pipeline)
 * [kommentti](#kommentti)
+* [muita komentoja](#muita-komentoja)
 
 ## lisää harjoituksia
 
@@ -113,9 +114,20 @@ enumerating viittaa prosessiin haettaan jostakin, yksikerralaan muokkataan niit�
 koska komennossa siellä on parameter computer name, ja sitä nimi voi vaa yhden objektin. jolloin luetaan yksi kerrallaan, for each silmukassa käsitteelee yksittelen ja taas seuraava.
 
 ## kommentti
-jos on pitkä kommentti vaikappa pitkä runoilu, mitä tähän scripttiin tulee olemaankaan, ja esim. muistiinpanona tai tämä yksittäinen/pitkä funktio/parametri mitä se tarkoittakaan. eli käyttämällä <# #>
+jos on pitkä kommentti vaikappa pitkä runoilu, mitä tähän scripttiin tulee olemaankaan, ja esim. muistiinpanona tai tämä yksittäinen/pitkä funktio/parametri mitä se tarkoittakaan. eli käyttämällä `<# MEMORY NOTE #>`
 
+```
 <#
 asdfasdfsdgj
 asdfsdf
 #>
+```
+
+## muita komentoja
+
+check versio; 
+`$PSVersionTable` & `$get-host` & `$host.version`
+
+
+
+
