@@ -71,6 +71,7 @@ $ Install-Module -Name MicrosoftTeams
 
 ######
 # msonline
+# Connect-MsolService cmdlet to connect to Azure Active Directory. You will be prompted to enter your credentials. Use the full username and password for the administrator account we created
 $ Install-Module MSOnline
 
 $ Connect-MsolService
