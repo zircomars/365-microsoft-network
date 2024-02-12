@@ -7,3 +7,4 @@ $Get-AzureADUser -ObjectId john.doe@domain.fi | select Department, CompanyName
 Department CompanyName
 ---------- -----------
 HR         Training
+
