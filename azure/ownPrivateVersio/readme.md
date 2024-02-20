@@ -21,6 +21,7 @@ not offered / at least tried and checked
 - admin.microsoft.com - admin center not available, and of course others can see like (exchange, sharepoints and ect)
 
 <hr> 
+
 ## Before login 
 
 Before login need real microsoft account (private account might be fine), just login with it. Ddefault directory overview is free anyway (License Microsoft Entra ID Free).
