@@ -1,0 +1,1 @@
+# Microsoft graph practices
