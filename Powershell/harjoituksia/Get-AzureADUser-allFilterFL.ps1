@@ -11,3 +11,12 @@ CompanyName       : TeamSupport
 UserPrincipalName : ext-Wiliam.Vodka@company.fi
 DisplayName       : William Vodka
 CompanyName       : Wilcode
+
+#############################
+
+# another example show all external list
+
+Get-AzureADUser -All $true | Where-Object {$_.UserPrincipalName -like "ext-*"}                                                  
+
+ObjectId                             DisplayName        UserPrincipalName                  UserType
+--------                             -----------        -----------------                  --------
