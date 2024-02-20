@@ -44,3 +44,4 @@ where need subscriptions, using portal.azure.com bash or powershell command line
 -----------
 small result i can login basic azure (free version), entra id (former name, active directory)
 
+well, this first account (@hotmail.com) was created about.. last year before December 2023, but if is joining to this site as start using these tools of the pages "portal.azure.com" and "entra.microsoft.com" jos it's started today 20.2.2024
