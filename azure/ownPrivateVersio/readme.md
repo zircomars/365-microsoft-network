@@ -1,6 +1,6 @@
 # Own private version
 
-Free entra.microsoft account 
+Free `entra.microsoft account`
 
 well maybe free, but for need the an Azure environment view, maybe NEED real account for it and it will be 12month (with credit). Actually, there might be another similar way go to Azure ad path, but it's all same microsoft service(s). So, without create or go to "Get started with Azure".
 
@@ -10,15 +10,15 @@ for "freelancer" or who continues practices with microsoft services, just go to 
 
 entra id is working as identify/same as other services tools like (aad.portal.azure.com) / azure portal (portal.azure.ocm)
 so.. where this account go and what url path this offers likes;
-- portal.azure.com
-- entra.microsoft.com == (same as) aad.portal.azure.com
-- admin.microsoft.com (well tried, so no work..) 
-- intune.microsoft.com (MDM)
+- `portal.azure.com`
+- `entra.microsoft.com` == (same as) aad.portal.azure.com
+- `admin.microsoft.com` (well tried, so no work..) 
+- `intune.microsoft.com` (MDM)
 - check email, write word, powerpoint and excel sheets just browser version, if need desktop (buy a licenses..)
 
 not offered / at least tried and checked
-- security.microsoft - not available / not offered..
-- admin.microsoft.com - admin center not available, and of course others can see like (exchange, sharepoints and ect)
+- `security.microsoft` - not available / not offered..
+- `admin.microsoft.com` - admin center not available, and of course others can see like (exchange, sharepoints and ect)
 
 <hr> 
 
@@ -26,8 +26,8 @@ not offered / at least tried and checked
 
 Before login need real microsoft account (private account might be fine), just login with it. Ddefault directory overview is free anyway (License Microsoft Entra ID Free).
 
-At "Default directory | overview" --> Manage tenants --> got this same account when logged in (techpad99@hotmail.com)
-but domain name is: techpad99hotmail.onmicrosoft.com
+At "Default directory | overview" --> Manage tenants --> got this same account when logged in (<nicknameDomain>@hotmail.com)
+but domain name is: <nicknameDomain>.onmicrosoft.com
 
 if want to create another tenant as create new company will be give a good name (such a new company and new tenant), and the configuration at end will be <domainName>.onmicrosoft.com 
 
