@@ -41,6 +41,7 @@ $Properties = @(
 $AllUsers = Get-MgUser -All -Property $Properties
 
 # Perform Search
+# search user principal name (domain email is start like Mike) and it will display all start Mike or like who start M names (something e.g. Mike, Michael, Mindy & ...)
 $FilteredUsers = $AllUsers | Where-Object { $_.UserPrincipalName -like "Mike*" }
 
 # Add LastLoginDate property
