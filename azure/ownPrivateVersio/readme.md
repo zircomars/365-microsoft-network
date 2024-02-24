@@ -63,6 +63,10 @@ where need subscriptions, using portal.azure.com bash or powershell command line
 
 Subscriptions and bills are almost important, does there will be coming any bills or ect? So there can check by search "cost management" or under the "subscriptions". Well an Azure account is free for user 12month, but the Microsoft more plus few credits for user that's why need a real credit card (number).
 
+If add subscriptions like creating new vm (virtual machine), testing virtual environment, load balance, need more data storage spaces, security and ect integration and migration, firewall, vpn and other testing systems, then it will cost something huge value. For example Azure offer PaaS (platform as a service) systems and give an cloud server infrastructures. 
+
+But after added subscriptions credit card can check the calculate and how much it cost and usually give a 0.XY/h dollar/euro..
+
 ![Alt text](images/17.png)
 ![Alt text](images/18.png)
 
@@ -70,10 +74,16 @@ Subscriptions and bills are almost important, does there will be coming any bill
 
 ## lifecycle
 
+For who will like practice or as freelancer or who is interesting about Azure Cloud service systems as IT guy, so if <b>do not upgrade/update </b> Azure subscription or the account (in 30 days) or as the credit will end (well hard to say which one come to first..) but anyway it will automatically shut down. If want to continue with Azure cloud it must be upgrade the account. 
+
+Normally as Azure (Microosft) say it's free using it 12 month (1 year). So if upgrade the account it will carry on (maybe) just that 12 month (try version) just cutting and losing free version. Microsft will send to user email notification about time to update/upgrade enterprise credit.
+
+`https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/avoid-charges-free-account`
+
 <h>
 
 ## Small summay
 
-small result i can login basic azure (free version), entra id (former name, active directory)
+Small result i can login basic azure (free version), entra id (former name, active directory)
 
-well, this first account `(@hotmail.com)` was created about.. last year before December 2023, but if is joining to this site as start using these tools of the pages `portal.azure.com` and "entra.microsoft.com" jos it's started today 20.2.2024
+well, this first account `(@hotmail.com)` was created about.. last year before December 2023, but if is joining to this site as start using these tools of the pages `portal.azure.com` and "entra.microsoft.com" it's started today 20.2.2024
