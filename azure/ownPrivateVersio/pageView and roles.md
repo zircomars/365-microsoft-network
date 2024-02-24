@@ -42,4 +42,4 @@ Normally
 ## permissions type
 
 All permission and role types can be found under the link, but global admin (is like super root) and control everything like sharepoint, users data, exchange and ect.
-https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide
+- https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide
