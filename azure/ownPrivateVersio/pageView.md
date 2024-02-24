@@ -20,6 +20,7 @@ Just example add another user, as create account and give a permissions role lev
 ![Alt text](images/14.png)
 
 After created account, it will added to list (all users), if does not first come (REFRESH) the list just in case, but be patiences.
+There is small info need to check, as right column (identiifies) under there is two different types.
 ![Alt text](images/15.png)
 
 ### check the user
@@ -28,7 +29,9 @@ Small warning this user (just normal admin level) DO NOT have any Microsoft lice
 
 ![Alt text](images/16.png)
 
+## login
 
+Normally 
 
 
 
