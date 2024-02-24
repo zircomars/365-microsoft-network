@@ -11,7 +11,7 @@ for "freelancer" or who continues practices with microsoft services, just go to 
 entra id is working as identify/same as other services tools like (aad.portal.azure.com) / azure portal (portal.azure.ocm)
 so.. where this account go and what url path this offers likes;
 - `portal.azure.com`
-- `entra.microsoft.com` == (same as) aad.portal.azure.com
+- `entra.microsoft.com` == (same as) `aad.portal.azure.com`
 - `admin.microsoft.com` (well tried, so no work..) 
 - `intune.microsoft.com` (MDM)
 - check email, write word, powerpoint and excel sheets just browser version, if need desktop (buy a licenses..)
@@ -47,4 +47,4 @@ where need subscriptions, using portal.azure.com bash or powershell command line
 
 small result i can login basic azure (free version), entra id (former name, active directory)
 
-well, this first account (@hotmail.com) was created about.. last year before December 2023, but if is joining to this site as start using these tools of the pages "portal.azure.com" and "entra.microsoft.com" jos it's started today 20.2.2024
+well, this first account `(@hotmail.com)` was created about.. last year before December 2023, but if is joining to this site as start using these tools of the pages `portal.azure.com` and "entra.microsoft.com" jos it's started today 20.2.2024
