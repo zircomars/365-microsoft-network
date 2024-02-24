@@ -1,10 +1,8 @@
 # Own private version
 
-Free `entra.microsoft account`
+Well maybe free, but Microsoft had created an Azure free account (websites) for who like practices, interesting about more Azure cloud services, integration, migration, security and data protection, run REST APIs and other cloud services systems. As all known creating an Azure account it's free and receive 12 month (with credit). There is another method similar way get Azure cloud environment. 
 
-well maybe free, but for need the an Azure environment view, maybe NEED real account for it and it will be 12month (with credit). Actually, there might be another similar way go to Azure ad path, but it's all same microsoft service(s). So, without create or go to "Get started with Azure".
-
-normally if is company admin(s), then normally login with: admin.microsoft.com , OR if need azure.portal.com environment need licenses or account or permissions, but currenlty (feb 2024) latest information it's free, but need credit card for 12 month and free X credit values. And of course it got few options license types.
+Normally if is company admin(s), then normally login with: `admin.microsoft.com` , OR if need `azure.portal.com` environment need licenses or account or permissions, but currenlty (feb 2024) latest information it's free, but need credit card for 12 month and free X credit values. And of course it got few options license types.
 
 for "freelancer" or who continues practices with microsoft services, just go to this webpage; entra.microsoft.com (it is like azure ad / admin center, but this type might be for free)
 
