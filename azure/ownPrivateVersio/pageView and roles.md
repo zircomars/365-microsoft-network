@@ -43,3 +43,13 @@ Normally
 
 All permission and role types can be found under the link, but global admin (is like super root) and control everything like sharepoint, users data, exchange and ect.
 - https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide
+
+hmm.. small surpised even created new user (another member) without any roles can logged to admin center `admin.microsoft.com`, but it can not do any change like update/delete/execute any users just like only view only. But it got allow go to other path websites e.g. azure entra id and ect, but until global admin give an access, then can change something. 
+
+- usually give a <b> principle of least privilege </b> if is new member account, but it is good for practices again.
+
+
+
+
+
+
