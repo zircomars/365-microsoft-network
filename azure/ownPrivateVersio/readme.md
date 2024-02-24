@@ -2,11 +2,11 @@
 
 Well maybe free, but Microsoft had created an Azure free account (websites) for who like practices, interesting about more Azure cloud services, integration, migration, security and data protection, run REST APIs and other cloud services systems. As all known creating an Azure account it's free and receive 12 month (with credit). There is another method similar way get Azure cloud environment. 
 
-Normally if is company admin(s), then normally login with: `admin.microsoft.com` , OR if need `azure.portal.com` environment need licenses or account or permissions, but currenlty (feb 2024) latest information it's free, but need credit card for 12 month and free X credit values. And of course it got few options license types.
+Normally if is company admin(s) or receive companies admin roles/levels permissions, then is accessfully sort of permissions path go to these path of the websites and tools `admin.microosft.com` , `azure.portal.com`. If webpage is not working or other reason it might be need licenses, or permissions or subscriptions or other troublehsoots. Anyway creating an Azure account it's still free for 12month and give a free credit values to user. Latest information Feb 2024.
 
-for "freelancer" or who continues practices with microsoft services, just go to this webpage; entra.microsoft.com (it is like azure ad / admin center, but this type might be for free)
+- For "freelancer" or who continues practices with microsoft services like own environment, just go to this webpage; `entra.microsoft.com` (it is like azure ad / admin center, but this type might be for free and the idea is like small company azure user identity and access management environment)
 
-entra id is working as identify/same as other services tools like (aad.portal.azure.com) / azure portal (portal.azure.ocm)
+entra id is working as identify/same as other services tools like `aad.portal.azure.com` / azure portal `portal.azure.com`
 so.. where this account go and what url path this offers likes;
 - `portal.azure.com`
 - `entra.microsoft.com` == (same as) `aad.portal.azure.com`
@@ -14,15 +14,17 @@ so.. where this account go and what url path this offers likes;
 - `intune.microsoft.com` (MDM)
 - check email, write word, powerpoint and excel sheets just browser version, if need desktop (buy a licenses..)
 
-not offered / at least tried and checked
+Sort of tools and page path can not go through like;
 - `security.microsoft` - not available / not offered..
 - `admin.microsoft.com` - admin center not available, and of course others can see like (exchange, sharepoints and ect)
+
+Because at least there need another account for who can got access like (Global admin - Can manage all aspects of Microsoft Entra ID and Microsoft services that use Microsoft Entra identities.) Of course can be few (more than one got this permission levels)
 
 <hr> 
 
 ## Before login 
 
-Before login need real microsoft account (private account might be fine), just login with it. Ddefault directory overview is free anyway (License Microsoft Entra ID Free).
+Before login, there need to be a real microsoft account (private account might be fine), just login with it. Is like own email account what will receive <b> free default settings and licenses </b> using by Teams, Outlook, Word, powershell, excel application and onedrive 5Gb (cloud storage). But currenlty at Windows desktop support Microsoft accounts like can use it as Outlook (new) desktop app and Teams app. Small new is a can receive free Azure Cloud server by using License Microsoft Entra ID Free version.
 
 At "Default directory | overview" --> Manage tenants --> got this same account when logged in (<nicknameDomain>@hotmail.com)
 but domain name is: <nicknameDomain>.onmicrosoft.com
@@ -40,6 +42,10 @@ https://www.microsoft.com/en-us/security/business/microsoft-entra-pricing
 where need subscriptions, using portal.azure.com bash or powershell command line, or other resources like vm, creating other resources more database storage, devops, logic app, automation, windows server 2019, ubuntu, red hat and ect. getting more services and marketplaces tools like more practicing.
 
 <hr> 
+
+## subscriptions and bills
+
+## lifecycle
 
 ## Small summay
 
