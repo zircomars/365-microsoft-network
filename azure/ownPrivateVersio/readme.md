@@ -22,6 +22,9 @@ Because at least there need another account for who can got access like (Global 
 
 <hr> 
 
+![Alt text](images/1.PNG)
+
+
 ## Before login 
 
 Before login, there need to be a real microsoft account (private account might be fine), just login with it. Is like own email account what will receive <b> free default settings and licenses </b> using by Teams, Outlook, Word, powershell, excel application and onedrive 5Gb (cloud storage). But currenlty at Windows desktop support Microsoft accounts like can use it as Outlook (new) desktop app and Teams app. Small new is a can receive free Azure Cloud server by using License Microsoft Entra ID Free version.
