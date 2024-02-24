@@ -1,5 +1,11 @@
 # Own private version
 
+- [Own private version](#own-private-version)
+  * [Before login](#before-login)
+  * [subscriptions and bills](#subscriptions-and-bills)
+  * [lifecycle](#lifecycle)
+  * [Small summay](#small-summay)
+
 Well maybe free, but Microsoft had created an Azure free account (websites) for who like practices, interesting about more Azure cloud services, integration, migration, security and data protection, run REST APIs and other cloud services systems. As all known creating an Azure account it's free and receive 12 month (with credit). There is another method similar way get Azure cloud environment. 
 
 Normally if is company admin(s) or receive companies admin roles/levels permissions, then is accessfully sort of permissions path go to these path of the websites and tools `admin.microosft.com` , `azure.portal.com`. If webpage is not working or other reason it might be need licenses, or permissions or subscriptions or other troublehsoots. Anyway creating an Azure account it's still free for 12month and give a free credit values to user. Latest information Feb 2024.
@@ -20,21 +26,25 @@ Sort of tools and page path can not go through like;
 
 Because at least there need another account for who can got access like (Global admin - Can manage all aspects of Microsoft Entra ID and Microsoft services that use Microsoft Entra identities.) Of course can be few (more than one got this permission levels)
 
-<hr> 
+<hr>
 
-![Alt text](images/1.PNG)
-
+![Alt text](images/1.png)
+![Alt text](images/2.png)
 
 ## Before login 
 
 Before login, there need to be a real microsoft account (private account might be fine), just login with it. Is like own email account what will receive <b> free default settings and licenses </b> using by Teams, Outlook, Word, powershell, excel application and onedrive 5Gb (cloud storage). But currenlty at Windows desktop support Microsoft accounts like can use it as Outlook (new) desktop app and Teams app. Small new is a can receive free Azure Cloud server by using License Microsoft Entra ID Free version.
 
-At "Default directory | overview" --> Manage tenants --> got this same account when logged in (<nicknameDomain>@hotmail.com)
-but domain name is: <nicknameDomain>.onmicrosoft.com
+At "Default directory | overview" --> Manage tenants --> got this same account when logged in `<nicknameDomain>@hotmail.com`
+but domain name is: `<nicknameDomain>.onmicrosoft.com`
 
-if want to create another tenant as create new company will be give a good name (such a new company and new tenant), and the configuration at end will be <domainName>.onmicrosoft.com 
+If want to create another tenant as create new company will be give a good name (such a new company and new tenant), and the configuration at end will be `<domainName>.onmicrosoft.com`
+
+![Alt text](images/3.png)
 
 of course can another domain names, under "manager/custom domain names", but if add another domain name configuration will happening at "manage tenants" (let's not focusing that, im not creating company name, "techpad" is fine).
+
+![Alt text](images/4.png)
 
 this account "techpad99" is as global administrator role as super root / admininistrator.
 
@@ -44,11 +54,23 @@ https://www.microsoft.com/en-us/security/business/microsoft-entra-pricing
 
 where need subscriptions, using portal.azure.com bash or powershell command line, or other resources like vm, creating other resources more database storage, devops, logic app, automation, windows server 2019, ubuntu, red hat and ect. getting more services and marketplaces tools like more practicing.
 
+![Alt text](images/5.png)
+![Alt text](images/6.png)
+
 <hr> 
 
 ## subscriptions and bills
 
+Subscriptions and bills are almost important, does there will be coming any bills or ect? So there can check by search "cost management" or under the "subscriptions". Well an Azure account is free for user 12month, but the Microsoft more plus few credits for user that's why need a real credit card (number).
+
+![Alt text](images/17.png)
+![Alt text](images/18.png)
+
+<hr>
+
 ## lifecycle
+
+<h>
 
 ## Small summay
 
