@@ -4,6 +4,9 @@ Just normal page view, how it looks like normally (as created and loged inside)
 
   * [add user](#add-user)
     * [check the user](#check-the-user)
+    * 
+- [roles](#roles)
+  * [permission types](#permission-types)
 
 ## add user
 
@@ -34,7 +37,9 @@ Small warning this user (just normal admin level) DO NOT have any Microsoft lice
 Normally 
 
 
+# roles
 
+## permissions type
 
-
-
+All permission and role types can be found under the link, but global admin (is like super root) and control everything like sharepoint, users data, exchange and ect.
+https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide
