@@ -29,6 +29,7 @@ $FilteredUsers | Select-Object UserPrincipalName,CompanyName,LastLoginDate | Exp
 # Upload the CSV file to Sharepoint (START HERE)
 
 # Config Variables, just sharepoint name (https://organizationDomainName.sharepoint/site/...)
+# this function/parameter what it do is what up there every time run this script, it will export azure entra id datas out to file path c:\users\name some under the folder and it immediately sent to sharepoint sites and "Shared Documents" where like for example every or sort of people can see the excel sheets file (security just in case)
 # all site can find out at admin center check all sharepoint site names, e.g. https://<companyName>.sharepoint.com/sites/<siteName>
 # Share document , means that site path "/Documents" will upload and add the exported or exist file to there, and it will be replace every time when run this script (last time uploaded & upgrade 24.12.2023 13:14:00, and now new version is; 4.1.2024 9:00)
 $SiteURL = "https://<domainName>.sharepoint.com/sites/<SiteName>"
