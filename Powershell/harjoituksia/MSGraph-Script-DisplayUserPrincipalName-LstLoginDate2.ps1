@@ -23,7 +23,7 @@ $FilteredUsers | Format-Table UserPrincipalName,CompanyName,LastLoginDate
 
 
 ######terminal display example and saved script
-S C:\Users\ZT> .\MSGraph_getUser_lastLoginDate2.ps1
+C:\Users\ZT> .\MSGraph_getUser_lastLoginDate2.ps1
 
 UserPrincipalName                  CompanyName     LastLoginDate
 -----------------                  -----------     -------------
