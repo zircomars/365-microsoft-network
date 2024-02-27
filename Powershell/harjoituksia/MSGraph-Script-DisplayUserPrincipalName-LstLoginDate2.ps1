@@ -20,15 +20,6 @@ $FilteredUsers | ForEach-Object {
 # Display UserPrincipalName, CompanyName and LastLoginDate properties
 $FilteredUsers | Format-Table UserPrincipalName,CompanyName,LastLoginDate
 
-# if else statements, if "FilteredUsers by word or characters will show up at terminal" , "else if do not found, it will echo "not users found" 
-if ($FilteredUsers) {
-    $FilteredUsers | Format-Table UserPrincipalName,CompanyName,LastLoginDate
-    Write-Host "Success"
-    #using "echo" or "write-host" both is good choice, just reply if works or else "not found"
-} else {
-    Write-Host "No users found"
-}
-
 ######terminal display example and saved script
 C:\Users\ZT> .\MSGraph_getUser_lastLoginDate2.ps1
 
