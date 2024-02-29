@@ -4,6 +4,7 @@
 # login first and login by admin m365 account; connect-MgGraph -Scopes "User.Read.All","Group.ReadWrite.All" 
 #>
 
+# this normal check as azure portal / admin center user properties, as information
 $Properties = @(
     'UserPrincipalName', 'DisplayName', 'CompanyName', 'SignInActivity', 'CreatedDateTime', 'BusinessPhones', 'OtherMails'
 )
@@ -33,7 +34,7 @@ This "if-else statement" check at azure portal named group and object id value, 
 # admin-team1 group id; "A98DB9-73KWL8XP-1LZ94KJF0BM"
 # vpn group id; "1JZYI5H7-ASAIEQO4J0-VS0CM1S"
 #>
-# Get the group members
+# Get the group members as user if-else are in the group id or not
 $GroupMembers = Get-MgGroupMember -GroupId "UUTXM-RW7QP0TVQ-7RCBYQ5YS18"
 
 # Add AccessGroup (VPN access) property
