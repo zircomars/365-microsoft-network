@@ -15,7 +15,7 @@ Normally if is company admin(s) or receive companies admin roles/levels permissi
 entra id is working as identify/same as other services tools like `aad.portal.azure.com` / azure portal `portal.azure.com`
 so.. where this account go and what url path this offers likes;
 - `portal.azure.com`
-- `entra.microsoft.com` == (same as) `aad.portal.azure.com`
+- `entra.microsoft.com` == (same as) `aad.portal.azure.com` == `intuneeducation.portal.azure.com`
 - `admin.microsoft.com` (well tried, so no work..) 
 - `intune.microsoft.com` (MDM)
 - check email, write word, powerpoint and excel sheets just browser version, if need desktop (buy a licenses..)
@@ -25,6 +25,9 @@ Sort of tools and page path can not go through like;
 - `admin.microsoft.com` - admin center not available, and of course others can see like (exchange, sharepoints and ect)
 
 Because at least there need another account for who can got access like (Global admin - Can manage all aspects of Microsoft Entra ID and Microsoft services that use Microsoft Entra identities.) Of course can be few (more than one got this permission levels)
+
+Other links;
+`admin.microsoft.com/servicestatus` , `connectivity.office.com/status` , 
 
 <hr>
 
