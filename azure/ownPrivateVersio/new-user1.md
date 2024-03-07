@@ -15,4 +15,4 @@ ObjectId                             DisplayName UserPrincipalName              
 
 ![Alt text](images/21.png)
 
-![Alt text](images/22.png)
+![Alt text](images/22-1.png)
