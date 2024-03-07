@@ -4,7 +4,8 @@ Usually if got Windows Pro it probably need to install latest or some module, bu
 
 ```
 Copyright (C) Microsoft Corporation. All rights reserved.
-                                                                                                                        Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows                                                                                                                                                       PS C:\WINDOWS\system32> Install-Module -Name AzureAD -Repository PSGallery                                                                                                                                                                      Untrusted repository
+                                                                                                                        Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+PS C:\WINDOWS\system32> Install-Module -Name AzureAD -Repository PSGallery                                                                                                                                                                      Untrusted repository
 You are installing the modules from an untrusted repository. If you trust this repository, change its
 InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure you want to install the modules from
 'PSGallery'?
