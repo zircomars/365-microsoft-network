@@ -109,7 +109,7 @@ WSManStackVersion              3.0
 PSRemotingProtocolVersion      2.3
 SerializationVersion           1.1.0.1
 ```
-
+disconnection `Disconnect-AzureAD` which is like log out from Azure AD
 
 
 
