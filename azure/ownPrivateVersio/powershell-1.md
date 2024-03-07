@@ -2,6 +2,8 @@
 
 Usually if got Windows Pro it probably need to install latest or some module, but just in case check google and what it gives. Some command give an one line and that's all up, but anyway there might be need some update/upgrade commands.
 
+this is just in case install and repository module. after install, when restart the powershell terminal (shut down the terminal) and open again, then is ready connect to azure by this command `$Connect-AzureAD`
+
 ```
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -21,6 +23,7 @@ Account                                     Environment TenantId                
 -------                                     ----------- --------                             ------------
 ```
 
+this is normal configurateion and install module azure package.
 ```
 PS C:\Windows\system32> Install-Module AzureAD 
 PS C:\Windows\system32> Connect-AzureAD
@@ -87,6 +90,22 @@ UserState                      :
 UserStateChangedOn             :
 UserType                       : Member
 
+```
+
+at least is real version 
+```
+PS C:\WINDOWS\system32> $PSVersionTable
+
+Name                           Value
+----                           -----
+PSVersion                      5.1.22621.2506
+PSEdition                      Desktop
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}
+BuildVersion                   10.0.22621.2506
+CLRVersion                     4.0.30319.42000
+WSManStackVersion              3.0
+PSRemotingProtocolVersion      2.3
+SerializationVersion           1.1.0.1
 ```
 
 
