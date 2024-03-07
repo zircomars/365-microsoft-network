@@ -4,6 +4,8 @@ Usually if got Windows Pro it probably need to install latest or some module, bu
 
 this is just in case install and repository module. after install, when restart the powershell terminal (shut down the terminal) and open again, then is ready connect to azure by this command `$Connect-AzureAD` and it will give mFA (app notification) just in case. 
 
+also this installation module might takes for laptop few MB, so small warning and there must be enough spaces for the disk/RAM memories.
+
 ```
 Copyright (C) Microsoft Corporation. All rights reserved.
 
