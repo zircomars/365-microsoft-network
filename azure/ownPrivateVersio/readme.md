@@ -8,7 +8,7 @@
 
 Well maybe free, but Microsoft had created an Azure free account (websites) for who like practices, interesting about more Azure cloud services, integration, migration, security and data protection, run REST APIs and other cloud services systems. As all known creating an Azure account it's free and receive 12 month (with credit). There is another method similar way get Azure cloud environment. 
 
-Normally if is company admin(s) or receive companies admin roles/levels permissions, then is accessfully sort of permissions path go to these path of the websites and tools `admin.microosft.com` , `azure.portal.com`. If webpage is not working or other reason it might be need licenses, or permissions or subscriptions or other troublehsoots. Anyway creating an Azure account it's still free for 12month and give a free credit values to user. Latest information Feb 2024.
+Normally if is company admin(s) or receive companies admin roles/levels permissions, then is accessfully sort of permissions path go to these path of the websites and tools `admin.micosoft.com` , `azure.portal.com`. If webpage is not working or other reason it might be need licenses, or permissions or subscriptions or other troublehsoots. Anyway creating an Azure account it's still free for 12month and give a free credit values to user. Latest information Feb 2024.
 
 - For "freelancer" or who continues practices with microsoft services like own environment, just go to this webpage; `entra.microsoft.com` (it is like azure ad / admin center, but this type might be for free and the idea is like small company azure user identity and access management environment)
 
