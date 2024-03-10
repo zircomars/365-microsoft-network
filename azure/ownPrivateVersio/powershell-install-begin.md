@@ -2,7 +2,9 @@
 
 Usually if got Windows Pro it probably need to install latest or some module, but just in case check google and what it gives. Some command give an one line and that's all up, but anyway there might be need some update/upgrade commands.
 
-this is just in case install and repository module. after install, when restart the powershell terminal (shut down the terminal) and open again, then is ready connect to azure by this command `$Connect-AzureAD` and it will give mFA (app notification) just in case. 
+this is just in case install and repository module. after install, when restart the powershell terminal (shut down the terminal) and open again, then is ready connect to azure by this command `$Connect-AzureAD` and it will give MFA (app notification) just in case.
+
+Currently Microsoft when create new admin to orgization in the tenant host, and login first time it will ask/suggest user perform mfa authentication for phone authentication. Because safe, if do not want use phone receive text messages.
 
 also this installation module might takes for laptop few MB, so small warning and there must be enough spaces for the disk/RAM memories. ANd if like using vs code that also work.
 
