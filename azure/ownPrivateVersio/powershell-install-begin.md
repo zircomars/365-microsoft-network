@@ -37,7 +37,7 @@ Account             Environment TenantId                             TenantDomai
 ## first test
 
 ```
-PS C:\WINDOWS\system32> Get-AzureADUser -ObjectId zhao.admin@techpad99hotmail.onmicrosoft.com | select *
+PS C:\WINDOWS\system32> Get-AzureADUser -ObjectId name.admin@techpad99hotmail.onmicrosoft.com | select *
 
 
 ExtensionProperty              : {[odata.metadata, https://graph.windows.net/1234-f0ec-qwe4qw-8834-asdfsad/$meta
