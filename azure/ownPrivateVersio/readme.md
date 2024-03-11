@@ -20,9 +20,8 @@ so.. where this account go and what url path this offers likes;
 - `intune.microsoft.com` (MDM)
 - check email, write word, powerpoint and excel sheets just browser version, if need desktop (buy a licenses..)
 
-Sort of tools and page path can not go through like;
-- `security.microsoft` - not available / not offered..
-- `admin.microsoft.com` - admin center not available, and of course others can see like (exchange, sharepoints and ect)
+Extra tools where if user got "global admin" role as permission then is available go these path; 
+- `security.microsoft` and `admin.microsoft.com`
 
 Because at least there need another account for who can got access like (Global admin - Can manage all aspects of Microsoft Entra ID and Microsoft services that use Microsoft Entra identities.) Of course can be few (more than one got this permission levels)
 
