@@ -71,7 +71,7 @@ $FilteredUsers | Select-Object UserPrincipalName, DisplayName, CompanyName, Last
 # On this function/parameters need to connect within MS graph to Sharepoint sites
 # NOT COMPLETED STILL MISSING SOMETHING, IF RUN THIS SCRIPT STILL NOT WORK (Z)
 
-#$siteUrl = "https://codemenfi.sharepoint.com/sites/Z-Datoja/Shared%20Documents/Forms/AllItems.aspx"
+#$siteUrl = "https://companyDomain.sharepoint.com/sites/Z-Datoja/Shared%20Documents/Forms/AllItems.aspx"
 #$library = "Documents"
 #$credentials = Get-Credential
 #Connect-PnPOnline -Url $siteUrl -Credentials $credentials
