@@ -21,7 +21,8 @@ so.. where this account go and what url path this offers likes;
 - check email, write word, powerpoint and excel sheets just browser version, if need desktop (buy a licenses..)
 
 Extra tools where if user got "global admin" role as permission then is available go these path; 
-- `security.microsoft` and `admin.microsoft.com`
+- `security.microsoft` , `admin.microsoft.com`
+- `myaccount.microsoft.com` - this path is like organization internal path, where user can check own my account settings, devices if got connection, security info as (phone number and mfa app is available) and others manage settings.
 
 Because at least there need another account for who can got access like (Global admin - Can manage all aspects of Microsoft Entra ID and Microsoft services that use Microsoft Entra identities.) Of course can be few (more than one got this permission levels)
 
