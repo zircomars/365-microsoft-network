@@ -1,4 +1,4 @@
-# Installation Microsoft Graph & SDK
+# Installation Microsoft Graph & SDK (exception case)
 
 Quite first time own laptop got the error and installation problem, former it.
 Normally if following by this steps must be works, but sort of some it's about changes as few % does it work or not, if work once and straight (this feels weird)
