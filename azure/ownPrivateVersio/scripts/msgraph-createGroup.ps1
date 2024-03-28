@@ -10,7 +10,7 @@ $params = @{
 New-MgGroup -BodyParameters $params
 
 
-<# at powershell view & run this scripts
+<# at powershell view & run this scripts, by copy-paste, as paste the function (params), then run it
 PS C:\Users\ZT> $params = @{     
 >>     DisplayName         = "TestMGgTeam"
 >>     Description         = "Test MSGraph teams"
@@ -19,12 +19,15 @@ PS C:\Users\ZT> $params = @{
 >>     SecurityEnabled     = "true"
 >>     Visibility          = "Private"
 >> }
+
+# then run this command/script and it will like run the function/parameters and then it's done!
 PS C:\Users\ZT> New-MgGroup -BodyParameter $params
 
 DisplayName Id                                   MailNickname   Description        GroupTypes
 ----------- --                                   ------------   -----------        ----------
 TestMGgTeam sdfgdfsa-4351-4f8e-1234-34d0f20f31ae TestMailMGName Test MSGraph teams {}
 
+# can check just in case, does it run it and created the group (just down there, last one), so it works!
 PS C:\Users\ZT> Get-MgGroup      
 
 DisplayName   Id                                   MailNickname   Description                                GroupTypes
