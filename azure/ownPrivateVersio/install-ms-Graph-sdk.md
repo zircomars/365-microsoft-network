@@ -105,7 +105,11 @@ Solution there was copilot ai (microsft) gave me command try to install by using
 
 Just open Windows PowerShell (administrator), which input this command, then it will install the Microsoft Graph modules (just it gave me suprised), but it's better to ask Microsoft support and good change ask ChatGPT, Microsoft Copilot (AI) and other AI tools. Whole modules take/took probably couple/few 2-3 Gigabytes (Giga memory from the device memory)
 
-after install, it's better try closed vscode application and open again as restart the vscode application. Then check and try login to Microsoft path by this command `connect-MgGraph -Scopes "Group.ReadWrite.All", "User.Read.All"` & there other command same method can login and give and access the Microsoft Graph permissions.
+after install, it's better try closed vscode application and open again as restart the vscode application. Then check and try login to Microsoft path by this command
+- `connect-MgGraph -Scopes "Group.ReadWrite.All", "User.Read.All"`
+- `Connect-MgGraph -Scopes "User.Read.All", "Group.ReadWrite.All"`
+
+there other command same method can login and give and access the Microsoft Graph permissions.
 
 ## other command checks
 
