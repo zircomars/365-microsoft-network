@@ -103,7 +103,7 @@ At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PSModule.psm
 Solution there was copilot ai (microsft) gave me command try to install by using this command; <br> 
 `Install-Module -Name Microsoft.Graph -requiredVersion 2.16.0 -Repository PSGallery -Scope AllUsers`
 
-Just open Windows PowerShell (administrator), which input this command, then it will install the Microsoft Graph modules (just it gave me suprised), but it's better to ask Microsoft support and good change ask ChatGPT, Microsoft Copilot (AI) and other AI tools. Whole modules take/took probably few Gigabytes (4Giga memory from the device memory)
+Just open Windows PowerShell (administrator), which input this command, then it will install the Microsoft Graph modules (just it gave me suprised), but it's better to ask Microsoft support and good change ask ChatGPT, Microsoft Copilot (AI) and other AI tools. Whole modules take/took probably couple/few 2-3 Gigabytes (Giga memory from the device memory)
 
 after install, it's better try closed vscode application and open again as restart the vscode application. Then check and try login to Microsoft path by this command `connect-MgGraph -Scopes "Group.ReadWrite.All", "User.Read.All"` & there other command same method can login and give and access the Microsoft Graph permissions.
 
