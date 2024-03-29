@@ -108,8 +108,9 @@ Just open Windows PowerShell (administrator), which input this command, then it 
 after install, it's better try closed vscode application and open again as restart the vscode application. Then check and try login to Microsoft path by this command
 - `connect-MgGraph -Scopes "Group.ReadWrite.All", "User.Read.All"`
 - `Connect-MgGraph -Scopes "User.Read.All", "Group.ReadWrite.All"`
+- `Connect-MgGraph -ContextScope Process`
 
-there other command same method can login and give and access the Microsoft Graph permissions.
+there other command same method can login and give and access the Microsoft Graph permissions. It normally popup the new web tab websites and input/write the admin account, type password and normal authentication method as app or send sms.
 
 ## other command checks
 
