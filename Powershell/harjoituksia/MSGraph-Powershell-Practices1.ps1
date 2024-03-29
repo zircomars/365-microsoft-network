@@ -37,3 +37,31 @@ User.Read
 User.Read.All
 User.ReadBasic.All
 email
+
+##########################################
+
+# if trying get more permissions & added more one scopes, where which try to get use signinactivity/lastsigningdate, so it will added to under the scopes under the list, but before that need to connect as gain more privileges as global admin.
+#Use the filter to look for inactive users & login as get the permissions, if without get permissions the command won't run
+Connect-MgGraph -Scopes "AuditLog.Read.All" #required for next command
+
+Connect-MgGraph -Scopes "AuditLog.Read.All" #required for next command
+
+PS C:\Users\zhao-\Documents> (Get-MgContext).Scopes                                                                              
+Application.Read.All
+Application.ReadWrite.All
+AppRoleAssignment.ReadWrite.All
+Group.ReadWrite.All
+openid
+profile
+User.Read
+User.Read.All
+User.ReadBasic.All
+email
+AuditLog.Read.All 
+# now, it's added.
+
+
+
+
+
+
