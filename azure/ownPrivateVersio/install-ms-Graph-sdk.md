@@ -115,6 +115,8 @@ there other command same method can login, give and receive the Microsoft Graph 
 
 ## other command checks
 
+Check the and pass command get the permissions required
+
 ```
 PS C:\Users\ZT> Find-MgGraphCommand -command Get-MgUser | Select -First 1 -ExpandProperty Permissions
 
