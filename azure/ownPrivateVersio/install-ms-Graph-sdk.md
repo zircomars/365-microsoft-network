@@ -109,8 +109,9 @@ after install, it's better try closed vscode application and open again as resta
 - `connect-MgGraph -Scopes "Group.ReadWrite.All", "User.Read.All"`
 - `Connect-MgGraph -Scopes "User.Read.All", "Group.ReadWrite.All"`
 - `Connect-MgGraph -ContextScope Process`
+- `connect-graph -Scopes User.Read.All, Organization.Read.All`
 
-there other command same method can login and give and access the Microsoft Graph permissions. It normally popup the new web tab websites and input/write the admin account, type password and normal authentication method as app or send sms.
+there other command same method can login, give and receive the Microsoft Graph permissions (if is global admin role / permissions). It normally popup the new web tab websites and input/write the admin account, type password and normal authentication method as app or send sms.
 
 ## other command checks
 
