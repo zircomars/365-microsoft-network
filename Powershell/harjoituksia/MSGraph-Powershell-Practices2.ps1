@@ -1,6 +1,10 @@
-# before run these single script command, need to be connect ms-graph sdk first
+# before run these single action command, need to be connect ms-graph sdk first
 # small cheat sheet 
 $Connect-MgGraph -Scopes "User.Read.All","Group.ReadWrite.All"
+
+<# these is trying to get users (entra ID) as internal organization users details like user when was created time and ect. like as IT support & admin user. Same method if company got external user, there can input & output get external users data as information (when user was last time login, when created time and which company and phone) like a register format. each company got own process.
+#>
+
 
 $Get-MgUser -All -Property CreatedDateTime | select CreatedDateTime  
 
