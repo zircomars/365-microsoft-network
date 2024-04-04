@@ -140,8 +140,26 @@ User.ReadWrite.All                           False   Read and write all users' f
 
 ```
 
+check own permissions like what permission got like read Azure's all groups at terminal show id, read all users, all enterprise application and ect.
 
-
+```
+PS C:\Users\ZT> (Get-MgContext).Scopes
+Application.Read.All
+Application.ReadWrite.All
+AppRoleAssignment.ReadWrite.All
+AuditLog.Read.All
+Calendars.ReadWrite
+Group.Read.All
+Group.ReadWrite.All
+Mail.Send
+openid
+Organization.Read.All
+profile
+User.Read
+User.Read.All
+User.ReadBasic.All
+email
+```
 
 
 
