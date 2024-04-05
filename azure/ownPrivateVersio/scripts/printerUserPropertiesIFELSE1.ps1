@@ -5,7 +5,7 @@
 - at If-else parameters check the group object id (as azure portal group's id), for example "sale team 1" - check whole users and scan the this group object id names, these user are in this group normal "access", else if are not then "denied".
 - also at if-else parameter got the function normal check reply the at end, so x - user access printed out, y - user denied printed out and ect at lines.
 
-- if organization got external user, then can filtered user by only get all "ext" user names (check "displayname") if match.
+- if organization got external user, then can open the filtered user by only get all "ext" as external user names (check "displayname") if match.
 
 #>
 
