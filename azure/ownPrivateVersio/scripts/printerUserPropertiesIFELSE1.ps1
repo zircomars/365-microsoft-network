@@ -1,4 +1,11 @@
-<# Small contruction info, how this script work
+<# Small introduction info, how this script work
+- this script check organization all the list as all users without filtered by name like single alphabet words like S-characters all names (Sam, Samuel, Sandy and ect), this is why added the commands.
+- counter the users, normally check all users as how many people will be showed to at powershell terminal. if filtered and get search by named, so it will be less, but now all in the organization all users.
+
+- at If-else parameters check the group object id (as azure portal group's id), for example "sale team 1" - check whole users and scan the this group object id names, these user are in this group normal "access", else if are not then "denied".
+- also at if-else parameter got the function normal check reply the at end, so x - user access printed out, y - user denied printed out and ect at lines.
+
+- if organization got external user, then can filtered user by only get all "ext" user names (check "displayname") if match.
 
 #>
 
@@ -44,6 +51,7 @@ UserPrincipalName                           DisplayName       CompanyName  LastL
 -----------------                           -----------       -----------  ------------- ---------------       -----------   ----                       -----------
 Anna@domainName.onmicrosoft.com             Anna Kim          ZenithPeak                  3/10/2024 10:48:48 AM +1283813197                              Access
 Charlie@domainName.onmicrosoft.com          Charlie Mono      sdfgdsfgsdfg                4/5/2024 10:05:55 AM  +98547645     sdfgdfsgvb@gmail.com       Denied
+ext-Mikko@domainName.onmicrosoft.com        Mikko Niemi       xcvbcvxbcv                 4/3/2024 2:31:47 PM   +453412589734  xcvxc.sda123f@gmail.com    Denied
 ....
 #>
 
