@@ -15,13 +15,13 @@ Write-Host "Total number of users: $userCount"
 $users | Format-Table -AutoSize UserPrincipalName, DisplayName, CompanyName, LastLoginDate, CreatedDateTime, MobilePhone, Mail
 
 <# powershell terminal view e.g. z* words as check own name and all details;
-# small warning at portal.azure.com -> under the user (zhao admin) -> Properties, (contact information )-> "Email" is so different as PowerShell script, because it's written "Mail" not "Email".
+# small warning at portal.azure.com -> under the user (first lastname) -> Properties, (contact information )-> "Email" is so different as PowerShell script, because it's written "Mail" not "Email".
 
 PS C:\Users\ZT\Documents> .\msGraph-practice2.ps1
 Total number of users: 1
 
 UserPrincipalName                           DisplayName CompanyName LastLoginDate CreatedDateTime      BusinessPhones MobilePhone Mail
 -----------------                           ----------- ----------- ------------- ---------------      -------------- ----------- ----
-z.admin@domainName.onmicrosoft.com zhao admin  asdlasdj                  2/23/2024 6:48:22 PM                2435986734  lsdfjghdfsg@hadf.org
+z.t@domainName.onmicrosoft.com zhao admin  asdlasdj                  2/23/2024 6:48:22 PM                2435986734  lsdfjghdfsg@hadf.org
 
 #>
