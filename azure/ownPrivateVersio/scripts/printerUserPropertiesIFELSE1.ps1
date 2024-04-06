@@ -9,6 +9,7 @@
 
 - small probel there is at after "-Property" there is an "Id", that's one problem which why at powershell terminal when run this script everyone is "denied" and might like confuse if-else parameter "$GroupMembers.Id"
 - so do not delete/remove the -Property object an "Id", then the scan who got this group properties will be all denied, and no one got the right access as checked at azure entra groups under will be weird and confused.
+- plus at end after "Format-Table" what programmer/dev will show PowerShell those user data, if add an "Id", it will show Azure Entra Id the user's domain account id value. for example, John Doe | john.doe@domainName.onmicrosoft.com | id; asdfjkh123-123fs |
 
 #>
 
