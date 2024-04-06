@@ -7,6 +7,9 @@
 
 - if organization got external user, then can open the filtered user by only get all "ext" as external user names (check "displayname") if match.
 
+- small probel there is at after "-Property" there is an "Id", that's one problem which why at powershell terminal when run this script everyone is "denied" and might like confuse if-else parameter "$GroupMembers.Id"
+- so do not delete/remove the -Property object an "Id", then the scan who got this group properties will be all denied, and no one got the right access as checked at azure entra groups under will be weird and confused.
+
 #>
 
 # guick cheat sheet command for login to microsoft graph sdk, same as powershell if input the command, it will popup and need authetnication method (optional)
@@ -41,7 +44,7 @@ $orgUsers | ForEach-Object {
 # Print the user names to terminal, but order view format
 $orgUsers | Format-Table -AutoSize UserPrincipalName, DisplayName, CompanyName, LastLoginDate, CreatedDateTime, MobilePhone, Mail, AccessGroup
 
-<# powershell terminal view e.g. z* words as check own name and all details;
+<# powershell terminal view e.g. z* words as check own name and all details, but let's check all users who is in this group by following group object id.
 # small warning at portal.azure.com -> under the user (zhao admin) -> Properties, (contact information )-> "Email" is so different as PowerShell script, because it's written "Mail" not "Email".
 
 PS C:\Users\ZT\Documents> .\msGraph-practice2.ps1
