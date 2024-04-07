@@ -110,6 +110,7 @@ after install, it's better try closed vscode application and open again as resta
 - `Connect-MgGraph -Scopes "User.Read.All", "Group.ReadWrite.All"`
 - `Connect-MgGraph -ContextScope Process`
 - `connect-graph -Scopes User.Read.All, Organization.Read.All`
+- `connect-mggraph -tenantId <Portal-AzureOverview-TenantID>`
 
 there other command same method can login, give and receive the Microsoft Graph permissions (if is global admin role / permissions). It normally popup the new web tab websites and input/write the admin account, type password and normal authentication method as app or send sms.
 
