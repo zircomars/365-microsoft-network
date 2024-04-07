@@ -163,8 +163,10 @@ email
 ```
 
 
+## links;
 
-
+does microsoft graph -ExpandProperty Permissions Id's value, like cheat sheets <br>
+https://matthewdavis111.com/msgraph/azure-ad-permission-details/
 
 
 
