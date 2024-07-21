@@ -61,6 +61,7 @@ $graph = "https://graph.microsoft.com/v1.0/users"
 # the authorization header which contain the access token, keyword is "bearer" and the value inside the token which when receive.
 # this line variable, get line 57 all the users from this endpoint by using this access token. And this variable will get something interesting and in response, and final will display the variable data out. Final sentence will show and give a filtered the value and what user as get the informations data including user's name, fullname, email domain name (first.last@domain.com) and blah blah and read more able like to convert to json format
 $api = Invoke-RestMethod -Headers @{Authorization = "Bearer $($request.access_token)"} -uri $graph -Method Get
+#  optional, but readable; $api.value | select userPrincipalName, accountEnabled | ConvertTo-json
 $api.value | select userPrincipalName, accountEnabled | ConvertTo-json
 
 
