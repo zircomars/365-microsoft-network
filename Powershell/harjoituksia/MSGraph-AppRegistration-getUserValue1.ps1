@@ -34,11 +34,11 @@ $openId.token_endpoint
 # the access token will display & using client credential flow
 $token = $openId.token_endpoint
 
-
+#client_id as own app registration the "Application (client) ID", client_secret will be the "certificate & secrets" that > "lient secrets "value" id
 # declare an object and get multiple set of an informations. Value send 
 $Body = @{
     client_id = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" 
-    client_secret = "YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY"
+    client_secret = "qwertyqwertyqwertyqwertyqwerty"
     redirect_uri = "https://localhost"
     grant_type = "client_credentials"
     resource = "https://graph.microsoft.com"
