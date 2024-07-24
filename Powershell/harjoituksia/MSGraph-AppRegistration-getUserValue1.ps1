@@ -80,11 +80,19 @@ $api = Invoke-RestMethod -Headers @{Authorization = "Bearer $($request.access_to
 #$api.value | Format-Table
 
 
-### example 4 , this was the original by following the video tutorial. here "select" as chosen properties item what we want to see and readable now using "convertTo-json"
+### example 4 , (two types) this was the original by following the video tutorial. here "select" as chosen properties item what we want to see and readable now using "convertTo-json"
 #$api.value | select userPrincipalName, accountEnabled | convertTo-json
-
-$api.value | Select-Object -Last 10 -Property businessPhones, displayName, mobilePhone, userPrincipalName, id | Format-Table
-
+#$api.value | Select-Object -Last 10 -Property businessPhones, displayName, mobilePhone, userPrincipalName, id | Format-Table
 
 
+Write-Host "#################################################################################################"
+
+### example 5, like export does $api.value what will output to powershell terminal, but as same data and information export to csv (excel sheets). The is same as those other examples, but this example get all users as information from the organization to excel sheets. 
+# at this app registration > API permissions > set this application and granted "Reports.Read.All"
+# More important is -Property is like what data want to see , but not export everything to sheets then will is not readable, get some what might be important, usefull and important data.
+# Write-Host "Excel sheets is done check that path"
+
+# open bottom / remove the command mark, then the script can run
+#$filteredReport = $api.value | Select-Object -Property UserPrincipalName, businessPhones, displayName, mobilePhone, id, LastActivityDate
+#$filteredReport | Export-Csv -Path "C:\Users\zhao-\Documents\ActiveUserReport1.csv" -NoTypeInformation -Encoding UTF8
 
