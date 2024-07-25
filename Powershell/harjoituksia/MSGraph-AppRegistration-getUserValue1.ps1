@@ -88,7 +88,8 @@ $api = Invoke-RestMethod -Headers @{Authorization = "Bearer $($request.access_to
 Write-Host "#################################################################################################"
 
 ### example 5, like export does $api.value what will output to powershell terminal, but as same data and information export to csv (excel sheets). The is same as those other examples, but this example get all users as information from the organization to excel sheets. 
-# it would be better check the $api.value - terminal what does there output the data and information out there then open these excel actions commands
+## it would be better check the $api.value - terminal what does there output the data and information out there then open these excel actions commands Because as make sure name or as check those -Property name as subject, what do you want to see as result and more like important data what might be usefull for example another department need to see. e.g. user's informatiosn basic mail, fullname, phonenumbers, access if does have or not and if is filtered names by external users and ect.
+
 # at this app registration > API permissions > set this application and granted "Reports.Read.All"
 # More important is -Property is like what data want to see , but not export everything to sheets then will is not readable, get some what might be important, usefull and important data.
 # Write-Host "Excel sheets is done check that path"
