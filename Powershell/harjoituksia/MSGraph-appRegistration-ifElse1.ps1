@@ -76,8 +76,12 @@ try {
     # Check if the group exists
     $groupExists = $response.value | Where-Object { $_.displayName -eq $GroupName }
     
+    # if groupExist as match, show little bit more details like show to terminal group's id, displayname, the descriptions and others information
     if ($groupExists) {
         Write-Host "Group '$GroupName' exists."
+        #Write-Host "Group ID: $($groupExists.id) & $($groupExists.description)" |Format-Table -AutoSize
+        $groupExists | Select-Object -Property DisplayName, description, id, Email, GroupType, Source, Privacy | Format-Table -AutoSize
+
         # Add your additional logic here (e.g., perform specific actions)
     } else {
         Write-Host "Group '$GroupName' does not exist."
