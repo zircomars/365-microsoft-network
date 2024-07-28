@@ -63,10 +63,10 @@ $graph = "https://graph.microsoft.com/v1.0/users"
 $api = Invoke-RestMethod -Headers @{Authorization = "Bearer $($request.access_token)"} -uri $graph -Method Get
 # optional, but readable; $api.value | select userPrincipalName, accountEnabled | ConvertTo-json
 
-##############
-# few output types and how it result looks like, and good practices
+##########################################################################################
+###### few output types and how it result looks like, and good practices #######
 
-## example 1 (two types output one sit like json and other horizontal line, and get first or lasts names with some value from the organization)
+##### example 1 (two types output one sit like json and other horizontal line, and get first or lasts names with some value from the organization)
 # powershell show api.the value | pipeline select-object like show 10 names if organization got over 100 people then -Property like sort "-First" or "-Last" peoples from organization and filtered show as individual like user properties | final readable like "ConvertTo-json" or "Fortmat-Table"
 # $api.value | Select-Object -First 10 -Property businessPhones, displayName, mobilePhone, userPrincipalName, id | Format-Table
 # $api.value | Select-Object -Last 10 -Property businessPhones, displayName, mobilePhone, userPrincipalName, id | ConvertTo-json
@@ -80,7 +80,7 @@ $api = Invoke-RestMethod -Headers @{Authorization = "Bearer $($request.access_to
 #$api.value | Format-Table
 
 
-### example 4 , (two types) this was the original by following the video tutorial. here "select" as chosen properties item what we want to see and readable now using "convertTo-json"
+#### example 4 , (two types) this was the original by following the video tutorial. here "select" as chosen properties item what we want to see and readable now using "convertTo-json"
 #$api.value | select userPrincipalName, accountEnabled | convertTo-json
 #$api.value | Select-Object -Last 10 -Property businessPhones, displayName, mobilePhone, userPrincipalName, id | Format-Table
 
@@ -97,4 +97,52 @@ Write-Host "####################################################################
 # open bottom / remove the command mark, then the script can run
 #$filteredReport = $api.value | Select-Object -Property UserPrincipalName, businessPhones, displayName, mobilePhone, id, LastActivityDate
 #$filteredReport | Export-Csv -Path "C:\Users\zhao-\Documents\ActiveUserReport1.csv" -NoTypeInformation -Encoding UTF8
+
+##############################################################
+####### ACCESS TOKEN LIFETIME (START HERE); ##############
+### example 6
+# microsoft graph access token got lifetime, as default lifetime is assigned a random value ranging between 60-90 minutes (75 minutes on average)
+# this lower script as code where calculate and check how long does access token have a lifetime.
+
+# as begin where input and here are going to use again for new query
+$accessToken = $request.access_token
+
+# Decode the access token
+$tokenParts = $accessToken -split '\.'
+$tokenPayload = $tokenParts[1]
+$tokenPayload += '=' * ((4 - $tokenPayload.Length % 4) % 4)
+$tokenPayloadDecoded = [System.Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($tokenPayload))
+$tokenPayloadJson = $tokenPayloadDecoded | ConvertFrom-Json
+
+# Display the token lifetime and take the current time this dippend where the programmer/admin lives like us, european and other timezones. But it might automatically will set British timezone
+$expiryTime = [datetime]::FromFileTimeUtc($tokenPayloadJson.exp * 10000000 + 116444736000000000)
+$currentTime = (Get-Date).ToUniversalTime()
+$tokenLifetime = $expiryTime - $currentTime
+
+Write-Host "The access token expires at: $expiryTime UTC"
+Write-Host "The token lifetime is: $tokenLifetime"
+
+<# example how much time left (timelife) got this access token and powershell terminal output; 
+still no idea is this real or not??
+
+The access token expires at: 07/28/2024 17:06:32 UTC
+The token lifetime is: 00:59:59.2405111
+
+#>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
