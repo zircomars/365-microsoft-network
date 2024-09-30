@@ -1,0 +1,22 @@
+Eli jos yritys (pien/keski-kokoinen) tai joku alkava yritys.
+
+Jos on pieni firma aloittaa jotakin Active directory joka on hyvä periaatteessa, mutta ongelmana tämä palvelin pitää olla 24/7 ympärivuorokauden, koska siinä pyöritettään käyttäjätilien hallintaa, oikeutta ja jne, josta pitää olla erillinen tietokone, muistit ja serveri huone. 
+
+Tämä serveri tulee olamaan kuin "domain controller server" eli semmoinen serveri ja palvelin.
+
+Ongelmana tässä Active directory tulee suorittaa ja vaadittaan Windows Pro, Enterprise tai Education versiota, jos on Home-versio niin semmoista ei tueta. Koska 
+
+Sama lisäksi näiden Windows versioissa eli Pro, Enterprise ja Education versiossa voidaan asettaa Bitlocker (lukitus hajausalgoritmi). Kuitenkin on paljon ominaisuutta mitä ei tarjota ja ei tueta Home versiossa. 
+
+Pilvipalvelut
+Nykyään ja tulevaisuudessa jatkossa tullaan käyttää paljon pilvipalvelua tai jopa toisen/kolmannen osapuoli tarjoamia pilvipalveluita. Pilvipalvelua voidaan tarjota jopa Active directory:ä - eli paikallisen käyttäjätiliä. 
+
+Usein Windows versioissa eli Enterprise, Pro ja Education versioissa voidaan konfiguroida ja liittää microsoft intuneen, josta voidaan suorittaa etähallintaa ja etäresetointia, policy asetuksia ja jopa etähallinnassa lukittaa koneen jos yhtäkkiä se on varastettu tai muusta poikkeuksellisen syystä. Ongelmana Home-versiossa ei tue intunessa joten voi voi.. Kuitenkin Windows enterprise versiossa tarjoaa laajempia hallinta- ja suojausominaisuuksia, mutta ei välttämätön Azure AD:n ja Intunen peruskäyttöön. 
+
+Eli intune + microsoft/Azure ad (entra id) pilvipalvelu on toinen tarjoama ominaisuus, mikäli jos ei halua pyörittää mitään palvelinta just tämän Active Directoryn:n kanssa. 
+
+-----------
+Jos ei käytä kumppaakaan eli Active Directory ja Intune/Azure AD:n käyttöä ja jos on tiukka budjetti ja näin, että joutuu käyttää Home versiota. Niin toinen mahdollisuus on avata koneesta ensimmäisen oletus käyttäjän tilin (eli yksi oletus tili, josta päästää sisään vaikappa "admin:password1") ja luo toisen tilin niin joka menee käyttäjälle väliaikaisesti. Niin käyttäjä palauttaa koneen niin menee kirjautuu siihen admin tilille, niin sieltä poistaa toisen käyttäjän. Vähä sama idea kuin kotona perheessä on lapsi, niin isä/äiti voi hallinnoida ja poistaa lapsen sen läppärin tilin.
+
+
+
