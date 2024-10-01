@@ -15,8 +15,22 @@ Usein Windows versioissa eli Enterprise, Pro ja Education versioissa voidaan kon
 
 Eli intune + microsoft/Azure ad (entra id) pilvipalvelu on toinen tarjoama ominaisuus, mikäli jos ei halua pyörittää mitään palvelinta just tämän Active Directoryn:n kanssa. 
 
+Toisen mahdollisuuden pilvipalvelu on Withsecure endpoint protection mikälie, eli Withsecure Elements - F-secure , periaatteessa sama organisaatio mutta nimi vain hämää. Tämäkin menee lisenssi prosessilla, että XXXXX-XXXXXXX-XXXX aktivoituu määräaikaisena hinta x per kk tai vuosi lisenssi hinta. Sekin toimii periaatteessa sama idea kuin intune, mutta riippuu mitä se B2B oikein tarjoaa..
+
+
 -----------
 Jos ei käytä kumppaakaan eli Active Directory ja Intune/Azure AD:n käyttöä ja jos on tiukka budjetti ja näin, että joutuu käyttää Home versiota. Niin toinen mahdollisuus on avata koneesta ensimmäisen oletus käyttäjän tilin (eli yksi oletus tili, josta päästää sisään vaikappa "admin:password1") ja luo toisen tilin niin joka menee käyttäjälle väliaikaisesti. Niin käyttäjä palauttaa koneen niin menee kirjautuu siihen admin tilille, niin sieltä poistaa toisen käyttäjän. Vähä sama idea kuin kotona perheessä on lapsi, niin isä/äiti voi hallinnoida ja poistaa lapsen sen läppärin tilin.
+
+
+-----------
+Macbook koneet
+
+Jos yrityksessä on tiukat budjettit ettei käytetä mitään näistä eli withsecure tai intune (microsoft) näistäkään työkaluna eli pilvipalvelun tietoturva/virustorjuntana niin käyttää sen apple tarjoaman vaihtoehdon. Apple mac koneella on aika hyvät ja pitäisi riittääkin, koska siinä on se "filevault" ja mikälie, mutta sitä asetusta ja jne ei ole kauheasti tarjolla, mutta sieltä löytyy se.
+
+tässä ongelmana pitää kirjautua omalla private tunnarilla sisään ja liittää se puhelin numero, vähä kuin mfa vahvistamisessa. Sekä vain itse omistajana pystyy resetoida ja poistaa tunnarit. 
+
+Parasta ja varmuuden vuodella on lisätä toinen käyttis, jos mikäli käyttäjä irtisanoutuu tai lähtee organisaatiosta niin se admin voi poistaa sen toisen tunnarin pois alta. Samahan molemmat tunnarit tulee olemaan admin level, koska jotta toinen käyttäjä voi esim. ladata sovelluksia mm. chrome, adobe ja jne työkaluja työhön käyttöön varten.
+
 
 
 
