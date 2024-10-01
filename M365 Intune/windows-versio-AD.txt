@@ -31,6 +31,6 @@ tässä ongelmana pitää kirjautua omalla private tunnarilla sisään ja liitt�
 
 Parasta ja varmuuden vuodella on lisätä toinen käyttis, jos mikäli käyttäjä irtisanoutuu tai lähtee organisaatiosta niin se admin voi poistaa sen toisen tunnarin pois alta. Samahan molemmat tunnarit tulee olemaan admin level, koska jotta toinen käyttäjä voi esim. ladata sovelluksia mm. chrome, adobe ja jne työkaluja työhön käyttöön varten.
 
-
+Macbook koneet ovat silti kalliittaa, jos hankkii Macbook Air tyyppisen joka riittä toimisto käyttöön varten ja jos Pro tyyppisen niin johonkin vakavempaan ja jossain sovelluksessaa vaadittaan parempaa suorituskykyä ja jos tekee jotakin photoshop, videointia ja jne.
 
 
