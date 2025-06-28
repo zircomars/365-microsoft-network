@@ -17,6 +17,9 @@ Ennen 2024, käytettiin **azuread** moduulia PowerShell:issä, jotta pääsee ki
 
 Tässä on lyhyesti miten se lataus ohje meni. Fyysisen työasemaan (windows), avaa *Windows powershell* (run as admin) - niin siinä ponnahtaa harmaa ikkuna, josta salli tekemät muutokset. 
 
+💡 Huomio: Ennen kuin asentaa **Microsoft Graph PowerShell** -moduulin koneelle, kokeile komentoa `Connect-MgGraph` 
+🔍 Jos saa virheilmoituksen "komentoa ei tunnistettu", moduuli ei ole asennettu tai ladattu — ja skripti ei toimi ennen sitä.
+
 ```
 S C:\WINDOWS\system32> Import-Module Microsoft.Graph.Authentication -Force
 Import-Module : File C:\Users\zhao-\OneDrive\Asiakirjat\WindowsPowerShell\Modules\Microsoft.Graph.Authentication\2.28.0
@@ -66,6 +69,13 @@ DisplayName       Id                                   Mail                     
 Admin Company     ABC123-ABC123-ABC123-ABC123456789ABC                                               admin@companyName...
 ```
 
+Jossakin tilanteessa jos kirjautuu myöhemmin uudestaan `connect-MgGraph` - MgGraph voi kirjoittaa myös pienellä (mggraph) - se tunnistaa sen tekstin/sanansa. Niin voi tulla automaattinen "Tervetuloa Microsoft Graph" - englanniksi. Tämä tarkoittaa se istunto on yhä tallella ja tallentanut muistiinsa. Jos halutaan kirjautua ulos sessiosta, niin täyttyy antaa komento, joka ikään kuin katkaisee / kirjautuu ulos yhteydestä Graph (Microsoft) palveluun `Disconnect-MgGraph` . 
+
+Tämä komento sulkee yhteyden Microsoft Graphiin ja poistaa nykyisen todennustiedon PowerShell-istunnosta. Tämä pätee kirjautumista toisella tunnuksella ja testata eri käyttöoikeutta ja/tai sovellustunnusta.
+
+Joskus voi olla hyvä myös tyhjentää `TokenCache`, jos kirjautumiset menevät oudosti välimuistin kautta. Tämän voi tehdä esim. sulkemalla PowerShell-ikkunan tai käyttämällä MSAL-kirjastoja tarkemmin.
+
+---
 
 # Microsoft 365
 Office 365 (kait tunnetaan parhaiten Word, excel, power point ja jne)
