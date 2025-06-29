@@ -22,7 +22,7 @@ Tässä on lyhyesti miten se lataus ohje meni. Fyysisen työasemaan (windows), a
 
 ```
 S C:\WINDOWS\system32> Import-Module Microsoft.Graph.Authentication -Force
-Import-Module : File C:\Users\zhao-\OneDrive\Asiakirjat\WindowsPowerShell\Modules\Microsoft.Graph.Authentication\2.28.0
+Import-Module : File C:\Users\User\OneDrive\Asiakirjat\WindowsPowerShell\Modules\Microsoft.Graph.Authentication\2.28.0
 \Microsoft.Graph.Authentication.psm1 cannot be loaded because running scripts is disabled on this system. For more
 information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
 At line:1 char:1
