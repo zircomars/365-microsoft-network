@@ -40,7 +40,66 @@ Mitä ei voi tehdä Developer Planilla?
 	• Et saa tukea tuotantokäytön SLAs:ää (Service Level Agreement) varten.
 	• Käyttöoikeudet ja kapasiteetti ovat rajatut verrattuna maksullisiin lisensseihin.
 
-## Käytännössä:
+---
+
+## Yleis kuvauksena
+
+**Power Apps** on Microsoftin matalan koodin alusta, joka mahdollistaa sovellusten luomisen ilman perinteistä ohjelmointia. Sovellukset voivat käyttää tietolähteinään esimerkiksi SharePoint-listoja, Excel-tiedostoja, tai Dataverseä. Power Apps toimii saumattomasti Microsoft 365 -ympäristössä.
+
+## 🔍 Power Apps vs SharePoint-sivusto
+
+| Ominaisuus            | Power Apps                              | SharePoint-sivusto                         |
+|------------------------|------------------------------------------|---------------------------------------------|
+| Tarkoitus              | Sovellusten kehittäminen                | Sisällönhallinta ja yhteistyö              |
+| Käyttötapa             | Mobiili- ja selainpohjainen sovellus     | Selainpohjainen verkkosivusto               |
+| Räätälöinti            | Laaja visuaalinen muokattavuus           | Rajallisempi muokkaus                       |
+| Tietolähteet           | Useita (esim. SharePoint, Excel, Dataverse) | Pääasiassa SharePointin listat/kirjastot |
+| Loppukäyttäjäkokemus   | App-tyyppinen, voidaan näyttää omalta     | Verkkosivumainen käyttöliittymä             |
+
+---
+
+## 🧩 Power Apps & Microsoft 365 -ekosysteemi
+
+| Alusta              | Sisältö                                       | Integrointi Power Appsilla                      |
+|---------------------|-----------------------------------------------|-------------------------------------------------|
+| Microsoft 365       | Outlook, Excel, Teams, SharePoint, OneDrive  | Sovellukset voivat hyödyntää M365-resursseja    |
+| Power Platform      | Power Apps, Power Automate, Power BI         | Sovellusten ja automaatioiden rakentaminen      |
+| M365-ryhmät         | Ryhmän SharePoint-listat, tiedostot          | Voidaan käyttää sovellusten taustadatana        |
+
+---
+
+## ⚙️ Toiminnallisuudet Power Appsilla
+
+| Käyttötarve           | Tuki Power Appsissa                | Huomioitavaa                              |
+|-----------------------|------------------------------------|--------------------------------------------|
+| 📂 Tietokanta             | ✅ SharePoint, Excel, Dataverse     | Premium-yhdistimet vaativat lisenssin      |
+| 📎 Liitteiden käsittely   | ✅ Voidaan ladata/tallentaa         | Esim. SharePointiin tai OneDriveen         |
+| 💬 Viestien jättäminen    | ✅ Lomake-elementeillä              | Ei sisäänrakennettua chat-toimintoa        |
+| 📍 GPS-sijainti           | ✅ Mobiililaitteilla                | Paikannus toimii Android/iOS               |
+| 💳 Maksaminen             | ❌ Ei suoraan tuettu                | Vaatii ulkoisia palveluita & yhdistimiä    |
+| 🎵 Mediasisältö (musiikki)| ⚠️ Rajoitettu                      | Vaatii monimutkaisempia ratkaisuja         |
+
+---
+
+## 🛡️ Tietoturva & lisenssi
+
+- Power Apps toimii Microsoftin pilvessä (SharePoint, Dataverse, OneDrive)
+- GDPR-yhteensopiva kun käytetään oikein
+- Ilmaisella lisenssillä voi käyttää sovelluksia SharePointin ja OneDriven kanssa
+- Premium-toiminnot kuten SQL, Dataverse, maksuyhdistimet vaativat maksullisen lisenssin
+- Sovellukset jaetaan käyttäjille Microsoft-tilin kautta – ei tarvitse asentaa erikseen
+
+---
+
+## 📲 Laitetuki
+
+- **Selaimessa** (Chrome, Edge, Safari jne.)
+- **Mobiilissa** (Android & iOS Power Apps -sovelluksella)
+- **Tableteilla ja tietokoneilla**
+
+---
+
+# Käytännössä:
 
 - Jos haluaa opetella Power Apps -kehitystä, tehdä uusia sovellusideoita ja kokeilla miten eri liitännät toimivat, Developer Plan on erinomainen ja ilmainen työkalu siihen. Mutta jos haluat tehdä bisneskäyttöön sovelluksia, jotka työntekijät tai asiakkaat oikeasti käyttävät, tarvitset maksullisen lisenssin.
 
