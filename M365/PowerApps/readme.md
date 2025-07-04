@@ -87,7 +87,7 @@ Mitä ei voi tehdä Developer Planilla?
 - Jos  haluaa opetella Power Apps -kehitystä, tehdä uusia sovellusideoita ja kokeilla miten eri liitännät toimivat, Developer Plan on erinomainen ja ilmainen työkalu siihen. 
 - Jos haluat tehdä bisneskäyttöön sovelluksia, jotka työntekijät tai asiakkaat oikeasti käyttävät, tarvitset maksullisen lisenssin.
 
-## Mihn tämä sopisi:
+## Mihin tämä sopisi:
 - Tämä Power Apps toimi kuin nopean kehityksen työkalupakki nykyaikaisten sovellusten luomiseen – ilman tarvetta kirjoittaa perinteistä koodia.
 - Tämä toimii kuin nopea low-code-työkaluna - tarkoittaa kehitysympäristöä tai alustaa, jossa asovellus, sivusto ja/tai automaatiota voi rakentaa kehittäjän puolesta, mutta joskus tarvitaan pientä koodinpätkää jos haluaa tehdä jotakin räätälöityä ominaisuutta.
 - Power Apps on tarkoitettu sisäisille (yrityksen organisaation) henkilölle kuten yksittäisen/tietyn tiimeille, osastoille tai projektiryhmille. Tätä Power Apps rakennettua projektia ei ole tarkoitettu julkaisuun esim. Tuotantoon ja tätä ei ole tarkoitettu koko organisaatioon "virallisiin" tai julkisiin julkaisuihin.
@@ -137,6 +137,44 @@ Mitä ei voi tehdä Developer Planilla?
 - **Tableteilla ja tietokoneilla**
 
 Power Apps -sovellukset ovat responsiivisia ja toimivat kaikilla päätelaitteilla (puhelin, tabletti, tietokone), riippumatta käyttöjärjestelmästä tai merkistä – kunhan käytössä on Power Apps -sovellus tai selain.
+
+---
+
+# Power Apps - huonoja puolia - START HERE;
+
+## ❌ 1. Ei pääsyä varsinaiseen koodiin
+- Et voi käyttää HTML:ää, JavaScriptiä, Node.js:ää tai TypeScriptiä.
+- Kehittäjä ei pääse katsomaan tai muokkaamaan taustalla olevaa sovellusrakennetta.
+
+## ❌ 2. Rajoittunut muokattavuus
+- Vain Power FX -kaavakieli käytössä.
+- Ei täyttä kontrollia UI-komponenteista tai logiikasta.
+- Monimutkaiset prosessit muuttuvat nopeasti vaikeasti hallittaviksi.
+
+## ❌ 3. Ei sovellu julkiseen tuotantokäyttöön
+- Sovelluksia ei voi jakaa anonyymille käyttäjälle ilman Power Pages -ratkaisuja.
+- Skaalautuvuus ja suorituskyky eivät riitä suuren käyttäjävolyymin tuotantojärjestelmiin.
+
+## ❌ 4. Lisensointi voi tulla kalliiksi
+- Maksulliset lisenssit (Per App / Per User) vaaditaan liiketoimintakäytössä.
+- Dataverse, API-kutsut ja osa liittimistä vaativat lisämaksuja.
+
+## ❌ 5. Tietojen tallennus ulkoistettu
+- Power Apps ei itse säilytä tietoa, vaan tarvitsee erillisen tietolähteen:
+  - SharePoint, SQL, Dataverse, jne.
+- Tämä lisää arkkitehtuurin monimutkaisuutta.
+
+## ❌ 6. Vikasietoisuus ja virheenkäsittely rajoittunutta
+- Ei tukea kunnolliselle virheenkäsittelylle (esim. try-catch).
+- Sovelluksen virhetilanteet voivat jäädä epäselviksi.
+
+## ❌ 7. Responsiivisuus ei täydellinen
+- Sovellus ei aina skaalaudu automaattisesti eri laitteille.
+- Vaatii erikseen suunnittelua mobiili- ja tablet-näkymille.
+
+## ❌ 8. Sovellusten hallinta ei kehittäjäystävällistä
+- CI/CD-prosessit (DevOps) vaativat erikoisosaamista ja erilliset työkalut.
+- Sovellusten siirto eri ympäristöjen välillä ei ole saumaton.
 
 
 
