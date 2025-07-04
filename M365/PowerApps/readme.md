@@ -136,4 +136,8 @@ Mitä ei voi tehdä Developer Planilla?
 - **Mobiilissa** (Android & iOS Power Apps -sovelluksella)
 - **Tableteilla ja tietokoneilla**
 
-Power Apps -sovellukset ovat responsiivisia ja toimivat kaikilla päätelaitteilla (puhelin, tabletti, tietokone), riippumatta käyttöjärjestelmästä tai merkistä – kunhan käytössä on Power Apps -sovellus tai selain.![Uploading image.png…]()
+Power Apps -sovellukset ovat responsiivisia ja toimivat kaikilla päätelaitteilla (puhelin, tabletti, tietokone), riippumatta käyttöjärjestelmästä tai merkistä – kunhan käytössä on Power Apps -sovellus tai selain.
+
+
+
+
