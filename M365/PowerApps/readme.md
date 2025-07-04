@@ -81,13 +81,52 @@ Mitä ei voi tehdä Developer Planilla?
 
 ---
 
-## 🛡️ Tietoturva & lisenssi
+# Power Apps - käytännössä lyhyesti tiivistettynä
+
+## Käytännössä:
+- Jos  haluaa opetella Power Apps -kehitystä, tehdä uusia sovellusideoita ja kokeilla miten eri liitännät toimivat, Developer Plan on erinomainen ja ilmainen työkalu siihen. 
+- Jos haluat tehdä bisneskäyttöön sovelluksia, jotka työntekijät tai asiakkaat oikeasti käyttävät, tarvitset maksullisen lisenssin.
+
+## Mihn tämä sopisi:
+- Tämä Power Apps toimi kuin nopean kehityksen työkalupakki nykyaikaisten sovellusten luomiseen – ilman tarvetta kirjoittaa perinteistä koodia.
+- Tämä toimii kuin nopea low-code-työkaluna - tarkoittaa kehitysympäristöä tai alustaa, jossa asovellus, sivusto ja/tai automaatiota voi rakentaa kehittäjän puolesta, mutta joskus tarvitaan pientä koodinpätkää jos haluaa tehdä jotakin räätälöityä ominaisuutta.
+- Power Apps on tarkoitettu sisäisille (yrityksen organisaation) henkilölle kuten yksittäisen/tietyn tiimeille, osastoille tai projektiryhmille. Tätä Power Apps rakennettua projektia ei ole tarkoitettu julkaisuun esim. Tuotantoon ja tätä ei ole tarkoitettu koko organisaatioon "virallisiin" tai julkisiin julkaisuihin.
+- Kehittäjälle esim. Lisäisi monimutkaisempaa logiikka, integraatiota, suunnittelijalle ja osa koodaajille.
+
+## Käyttötarkoitus:
+- Power Apps on tarkoitettu enemmän käyttöliittymän rakentamiseen (lomakkeet, painikkeet, galleriat, hakutoiminnat ja jne). Vähä kuin demoaisi jonkinlaisen sovelluksen pohjan, mutta sitä ei kannata käyttää tiedostojen tallentamiseen. 
+- Jos tietojen tallentamista käyttää niin kannattaa mennä SharePoint. 
+- Sama pätee tätä ei kannata rakentaa mitään verkkokauppan kaltaista sovellusta, koska sen maksamisen prosessi, skaalauttuvuutta ja suorituskyvykyyttä verkkokauppanmaailmaa.
+
+## Samaan tuotannosta:
+- Power Apps sovellukset ei ole takoitettu julkisiin palveluihin ja ei ole tarkoitettu tuotantoon käyttöön. 
+- Jos tuotannosta aikoo mietiä, se on tarkoitettu kevyen, rajoitettu sisäiseen työkaluun ja sama pätee Azure (entra ID) tenant mukaan ja vain sisäisille organisaation käyttäjille ja nimetyt henkilöt.
+- Tämä Power Apps ei korvaa täysmittaista sovellusta (HR, CRM- tai ERP järjestelmää).
+
+---
+
+# 🛡️ Power Apps: Tietoturva & lisenssi
 
 - Power Apps toimii Microsoftin pilvessä (SharePoint, Dataverse, OneDrive)
 - GDPR-yhteensopiva kun käytetään oikein
 - Ilmaisella lisenssillä voi käyttää sovelluksia SharePointin ja OneDriven kanssa
 - Premium-toiminnot kuten SQL, Dataverse, maksuyhdistimet vaativat maksullisen lisenssin
 - Sovellukset jaetaan käyttäjille Microsoft-tilin kautta – ei tarvitse asentaa erikseen
+
+## Tietoturva ja tietosuoja osa - 1:
+- Kesken eräisimmät on kuitenkin käsitellä henkilötietoja just lomakkeet ja sopimukset kuten HR tietoja. Kuitenkin Power Apps ei ole tarkoitettukaan julkiseen käyttöön, se silti soveltuu hyvin sisäisen tiedonhallintaan.
+- Microsoft pilviympäristöstä aina pitää olla vahva suojaus:
+  - TSL-salaus tiedonsiirto
+  - Tietojen salauksen lepo (SQL TDE)
+  - Käyttäjäoikeuksien hallinta (Entra ID, roolit, ryhmät ja lisenssit)
+- Yleisen GDPR yhteensopivuus ja pätee ISO 27000 standardiinsa. GDPR osalta vaatii hallitun tallennuspaikat esim. SharePoint. 
+- Tietojen sijainti ja hallinta, että pätee CIA - triad (luottamus, eheys ja saatavuus)
+- Tietoja ja GDPR vaatimuksia on huomioitava kuitenkin aina tapauskohtaisesti.
+
+## Tietoturva ja tietosuoja osa - 2:
+- Power Apps sovelluksien osalta toimivat vain Microsoft pilvessä ja perustuviin Azure AD (Entra ID ) käyttäjähallintaan, että sovellusten käyttö voidaan rajata turvalisesti organisaation sisäisille käyttäjille.
+- Sovelluksen osalta ei itsensään takaa tietoturvaa ja tietosuojaa - se riippuu mitä tietoa sovelluksesta aikoo käsitellä ja rakentaa, että missä data tallennettan esim. Just SharePoint.
+- Kertauksena: Power Apps sovellus ei ole suunniteltu arkaluontoisen tai luottamuksellisen tiedon varsinaiseksi käsittelyalustaksi, vaan käyttöliittymäksi. Tallennus ja suojaus tulee aina ratkaista erikseen taustajärjestelmässä.
 
 ---
 
@@ -97,16 +136,4 @@ Mitä ei voi tehdä Developer Planilla?
 - **Mobiilissa** (Android & iOS Power Apps -sovelluksella)
 - **Tableteilla ja tietokoneilla**
 
----
-
-# Käytännössä:
-
-- Jos haluaa opetella Power Apps -kehitystä, tehdä uusia sovellusideoita ja kokeilla miten eri liitännät toimivat, Developer Plan on erinomainen ja ilmainen työkalu siihen. Mutta jos haluat tehdä bisneskäyttöön sovelluksia, jotka työntekijät tai asiakkaat oikeasti käyttävät, tarvitset maksullisen lisenssin.
-
-
-
----
-
-# Koodausta
-
-# Tietoturvasta koskien Power Apps
+Power Apps -sovellukset ovat responsiivisia ja toimivat kaikilla päätelaitteilla (puhelin, tabletti, tietokone), riippumatta käyttöjärjestelmästä tai merkistä – kunhan käytössä on Power Apps -sovellus tai selain.![Uploading image.png…]()
