@@ -141,6 +141,8 @@ Mitä ei voi tehdä Developer Planilla?
 
 Power Apps -sovellukset ovat responsiivisia ja toimivat kaikilla päätelaitteilla (puhelin, tabletti, tietokone), riippumatta käyttöjärjestelmästä tai merkistä – kunhan käytössä on Power Apps -sovellus tai selain.
 
+Power Apps sovelluksen projekteissa voi testata erillaisia esim. tabletti, puhelin tai jopa tietokonen (Win & Apple Mac) koneiden näyttöjen koon resolluution mukaan. Esim. tukevat sitä kokoa, mutta useimmin ne on automaattisesti 
+
 ---
 
 # Power Apps - huonoja puolia - START HERE;
