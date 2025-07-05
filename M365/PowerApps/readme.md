@@ -146,10 +146,14 @@ Power Apps -sovellukset ovat responsiivisia ja toimivat kaikilla päätelaitteil
 - Et voi käyttää HTML:ää, JavaScriptiä, Node.js:ää tai TypeScriptiä.
 - Kehittäjä ei pääse katsomaan tai muokkaamaan taustalla olevaa sovellusrakennetta.
 
+(Tämä tarkoittaa vaikka exporttaisi tiedoston työaseman alle ja editoi VSCode/NotePad tai muu koodaus ohjelman alla - se ei onnistu. Koska tämä Power Apps toimii vain Microsoft omansa ohjelman ja sillä tallennus tyypin mukaan).
+
 ## ❌ 2. Rajoittunut muokattavuus
 - Vain Power FX -kaavakieli käytössä.
 - Ei täyttä kontrollia UI-komponenteista tai logiikasta.
 - Monimutkaiset prosessit muuttuvat nopeasti vaikeasti hallittaviksi.
+
+(Tämä tarkoittaa käyttäen Power Apps sitä tiettyä sovellusta, josta sieltä kautta rakentaa esim. yksittäisen koodin - mm. nappi - button tervehdys.)
 
 ## ❌ 3. Ei sovellu julkiseen tuotantokäyttöön
 - Sovelluksia ei voi jakaa anonyymille käyttäjälle ilman Power Pages -ratkaisuja.
@@ -158,6 +162,27 @@ Power Apps -sovellukset ovat responsiivisia ja toimivat kaikilla päätelaitteil
 ## ❌ 4. Lisensointi voi tulla kalliiksi
 - Maksulliset lisenssit (Per App / Per User) vaaditaan liiketoimintakäytössä.
 - Dataverse, API-kutsut ja osa liittimistä vaativat lisämaksuja.
+
+| Malli                | Hinta                                  | Käyttötarkoitus                                     |
+|----------------------|----------------------------------------|-----------------------------------------------------|
+| **Developer Plan**   | Ilmainen                               | Kehitykseen, testaukseen ja oppimiseen henkilökohtaisesti |
+| **Per App Plan**     | ~5 USD/kk per käyttäjä per sovellus    | Pienille projekteille, yksittäinen sovellus         |
+| **Per User Plan**    | ~20 USD/kk per käyttäjä                 | Rajaton käyttö useissa Power Apps -sovelluksissa    |
+| **Pay‑As‑You‑Go**    | ~10 USD/kk per aktiivinen käyttäjä/sovellus | Dynaaminen hinnoittelu, perustuu todelliseen käyttöön |
+
+Tästä koskien Entra ID (oma ilmais versio) on mahdollista integroida Power Apps + Entra ID (enterprise application tai app registration) kanssa. Huomioina, että molemmissa jos sovellus ei jaeta muille käyttäjille - on mahdollista testata/integroida SharePoint:ia, mutta sharepointiin vaattii toinen lisenssi.
+
+
+## 🔗 Lisätiedot ja huomioitavaa
+- **Developer Plan** ei ole sallittu liiketoimintakäytössä tai muiden käyttäjien käytettäväksi. Tätä on mahdollista avata ja käyttääki esim. jos on käytössä Entra ID (Azure AD):ssa se ilmais lisenssi versio ja aktivoimalla tämän Power Apps sovelluksensa niin saa sen 1000 kpl ilmais lisenssin.
+- **Standard-liittimet** (SharePoint, Outlook, OneDrive) sisältyvät Microsoft 365 -lisenssiin.
+- **Premium-liittimet** (Dataverse, SQL, Custom Connector) edellyttävät maksullista lisenssiä.
+- **Dataverse** vaatii aina premium-lisenssin, paitsi Teams-ympäristössä (rajatusti).
+
+Developer plan kuitenkin voi teststa ja rakentaa integraatioa, mutta siinä on rajoitusta: <br>
+- Ei voida jakaa sovellusta muille käyttäjille tai käyttää sitä liiketoimintakäytössä (tuotannossa)
+- Ei saa käyttää esim. HR järjestelmänä oikeassa työelämässä ja ei kannatta tallentaa mitään koskien sopimusta, koodia ja ei voida muokata ja tarkistaa sitä koodia.![image
+
 
 ## ❌ 5. Tietojen tallennus ulkoistettu
 - Power Apps ei itse säilytä tietoa, vaan tarvitsee erillisen tietolähteen:
