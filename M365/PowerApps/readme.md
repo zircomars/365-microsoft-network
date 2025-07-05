@@ -90,6 +90,9 @@ Mitä ei voi tehdä Developer Planilla?
 ## Mihin tämä sopisi:
 - Tämä Power Apps toimi kuin nopean kehityksen työkalupakki nykyaikaisten sovellusten luomiseen – ilman tarvetta kirjoittaa perinteistä koodia.
 - Tämä toimii kuin nopea low-code-työkaluna - tarkoittaa kehitysympäristöä tai alustaa, jossa asovellus, sivusto ja/tai automaatiota voi rakentaa kehittäjän puolesta, mutta joskus tarvitaan pientä koodinpätkää jos haluaa tehdä jotakin räätälöityä ominaisuutta.
+
+- Kehittyneemmät käyttäjät voivat käyttää Power Platform CLI:tä ja purkaa sovelluksen YAML/JSON-muotoon, mutta se ei ole sama kuin avoin lähdekoodi.
+
 - Power Apps on tarkoitettu sisäisille (yrityksen organisaation) henkilölle kuten yksittäisen/tietyn tiimeille, osastoille tai projektiryhmille. Tätä Power Apps rakennettua projektia ei ole tarkoitettu julkaisuun esim. Tuotantoon ja tätä ei ole tarkoitettu koko organisaatioon "virallisiin" tai julkisiin julkaisuihin.
 - Kehittäjälle esim. Lisäisi monimutkaisempaa logiikka, integraatiota, suunnittelijalle ja osa koodaajille.
 
