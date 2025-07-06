@@ -1,6 +1,6 @@
 # Ensimmäinen Power Apps sovellus - heinäkuu 2025
 
-Tämä on ensimminen power apps sovellus ja kirjauduin omalla admin tunnuksilla sisään, että kuinka tämä toimii ja harjoituksen kannalta kokeilin "start with copilot".
+Tämä on ensimminen power apps sovellus ja kirjauduin omalla admin tunnuksilla sisään, että kuinka tämä toimii ja harjoituksen kannalta kokeilin "start with copilot". 
 
 Tässä on muutama kuva, josta kuin kirjautuu ja aktivoi ensimmäisen kerran Power App:sin sovelluksen/työkalunsa.
 
@@ -24,10 +24,13 @@ New app listan alta:
 - Start with Copilot (tekoälyavusteinen sovelluksen luonti)
 - Start from Data (aloita valitsemalla tietolähde, esim. SharePoint, Excel)
 - Start from a page design (rakennetaan valitusta sivusta)
+- Start from an app template (valmiin mallin käyttö)
 
  ![alt text](./PowerApps-image/6.png) 
 
+ ![alt text](./PowerApps-image/7.png) 
 
+ ![alt text](./PowerApps-image/8.png) 
 
 
 
