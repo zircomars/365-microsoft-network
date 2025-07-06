@@ -18,27 +18,34 @@ Power Platform on laajempi osa Microsoftin ekosysteemiä, mutta se toimii tiivii
 
 # Power Apps Developer Plan — Mitä sillä voi tehdä?
 
-1. Ilmainen henkilökohtainen kehitysympäristö
-	• Saat käyttöön oman, erillisen Power Apps -ympäristön pilvessä.
-	• Voit luoda ja testata sovelluksia ilman, että tarvitset maksullista lisenssiä tai tuotantoympäristöä.
-2. Sovellusten rakentaminen ja testaaminen
-	• Voit rakentaa Canvas- ja Model-driven -tyyppisiä sovelluksia.
-	• Käyttää Dataverse-tietokantaa (Microsoftin pilvipohjainen tietovarasto).
-	• Testata sovelluksia ja niiden toimintoja kokonaan vapaasti.
-3. Oppiminen ja kokeilu
-	• Sopii loistavasti, jos haluat opetella Power Apps -kehitystä.
-	• Voit tehdä prototyyppejä ennen kuin otat käyttöön maksulliset lisenssit.
-	• Voit kokeilla integraatioita eri Microsoft- ja ulkopuolisten palvelujen kanssa.
-4. Ei tuotantokäyttöön
-	• Developer Plan on tarkoitettu vain kehitykseen ja testaukseen, ei oikeisiin bisneskäyttöihin.
-	• Sovelluksia ei voi jakaa laajasti organisaatiossa tai ulkopuolisille käyttäjille.
-	• Käytät sitä omissa kehitystarkoituksissasi.
+1. Ilmainen henkilökohtainen kehitysympäristö <br>
+• Saat käyttöön oman, erillisen Power Apps -ympäristön pilvessä. <br>
+• Voit luoda ja testata sovelluksia ilman, että tarvitset maksullista lisenssiä tai tuotantoympäristöä. <br>
+<br>
 
-Mitä ei voi tehdä Developer Planilla?
-	• Et voi julkaista sovelluksia tuotantokäyttöön tai jakaa niitä laajasti.
-	• Et voi käyttää sovelluksia yrityksen virallisessa arjessa.
-	• Et saa tukea tuotantokäytön SLAs:ää (Service Level Agreement) varten.
-	• Käyttöoikeudet ja kapasiteetti ovat rajatut verrattuna maksullisiin lisensseihin.
+3. Sovellusten rakentaminen ja testaaminen <br>
+• Voit rakentaa Canvas- ja Model-driven -tyyppisiä sovelluksia. <br>
+• Käyttää Dataverse-tietokantaa (Microsoftin pilvipohjainen tietovarasto). <br>
+• Testata sovelluksia ja niiden toimintoja kokonaan vapaasti. <br>
+<br>
+
+4. Oppiminen ja kokeilu <br>
+• Sopii loistavasti, jos haluat opetella Power Apps -kehitystä. <br>
+• Voit tehdä prototyyppejä ennen kuin otat käyttöön maksulliset lisenssit. <br>
+• Voit kokeilla integraatioita eri Microsoft- ja ulkopuolisten palvelujen kanssa. <br>
+
+<br>
+5. Ei tuotantokäyttöön <br>
+• Developer Plan on tarkoitettu vain kehitykseen ja testaukseen, ei oikeisiin bisneskäyttöihin. <br>
+• Sovelluksia ei voi jakaa laajasti organisaatiossa tai ulkopuolisille käyttäjille. <br>
+• Käytät sitä omissa kehitystarkoituksissasi. <br>
+
+<br>
+Mitä ei voi tehdä Developer Planilla? <br>
+• Et voi julkaista sovelluksia tuotantokäyttöön tai jakaa niitä laajasti. <br>
+• Et voi käyttää sovelluksia yrityksen virallisessa arjessa. <br>
+• Et saa tukea tuotantokäytön SLAs:ää (Service Level Agreement) varten. <br>
+• Käyttöoikeudet ja kapasiteetti ovat rajatut verrattuna maksullisiin lisensseihin. <br>
 
 ---
 
@@ -175,7 +182,7 @@ Power Apps sovelluksen projekteissa voi testata erillaisia esim. tabletti, puhel
 | **Per User Plan**    | ~20 USD/kk per käyttäjä                 | Rajaton käyttö useissa Power Apps -sovelluksissa    |
 | **Pay‑As‑You‑Go**    | ~10 USD/kk per aktiivinen käyttäjä/sovellus | Dynaaminen hinnoittelu, perustuu todelliseen käyttöön |
 
-Tästä koskien Entra ID (jos on ilmais versio) on mahdollista integroida Power Apps + Entra ID (enterprise application tai app registration) kanssa. Huomioina, että molemmissa jos sovellus ei jaeta muille käyttäjille - on mahdollista testata/integroida SharePoint:ia, mutta sharepointiin vaattii toinen lisenssi.
+Tästä koskien Entra ID (jos on ilmais versio) on mahdollista integroida Power Apps + Entra ID (enterprise application tai app registration) kanssa. Huomioina, että molemmissa jos sovellus ei jaeta muille käyttäjille - on mahdollista testata/integroida SharePoint:ia, mutta sharepointiin vaattii toinen lisenssi. - Tämä koskee yrityksien tai harrastelijoiden budjetointia, että onko tarvetta ja tarvitseeko esim. sitä lisessointia joko **P1/P2:lle**. P1 ja P2 lisessoinnissa vaadittaan ja avautuu muita konfigurointi asetuksia esim. conditional access , identity governance , App proxy ja jne, mitä Entra ID:n asetuksista löytyy.
 
 
 ## 🔗 Lisätiedot ja huomioitavaa
@@ -205,7 +212,4 @@ Developer plan kuitenkin voi teststa ja rakentaa integraatioa, mutta siinä on r
 ## ❌ 8. Sovellusten hallinta ei kehittäjäystävällistä
 - CI/CD-prosessit (DevOps) vaativat erikoisosaamista ja erilliset työkalut.
 - Sovellusten siirto eri ympäristöjen välillä ei ole saumaton.
-
-
-
 
