@@ -136,16 +136,30 @@ Tällä on jotakin eronsa verrattuna normaaliin Entra ID (app registration ja en
 
 Tosiaan tässä Power Apps sovelluksessa ja editoinnin alla ei voi koodata, että se on suurin pettymys ja voi vain koodata tonne lisäämällä noita editointi välineitä esim. klikkaa nappi ja tulostaa tekstin vaikappa viestin: (Hello world!).
 
+1. Otin tuosta tyhjän blank vähä kuin tyhjä kenttä sivuston.
+
 ![alt text](./PowerApps-image/28.png) 
+
+2. lisätään komponentteja: "Insert" --> haku sanalla "button"
+3. lisätään myös sama komponentteja "Label" koska halutaan näyttää button klikkattusta nappista tulostettuna label-kenttään.
 
 ![alt text](./PowerApps-image/29.png) 
 
+4. kirjoitettaan "koodi" Power FX kaavaan
+5. oikealla tulee button nappien lisäominaisuutta niin "advanced" kentän alle "actions" osuuden -> "OnSelect" kenttään tulee se pieni määritettämä haluamansa viesti esim. just joku tervehdys.
+
 ![alt text](./PowerApps-image/30.png) 
+
+Klikkaa Label-komponenttia ja sen Text-ominaisuuteen kirjoita: myMessage.
 
 ![alt text](./PowerApps-image/31.png) 
 
 ![alt text](./PowerApps-image/32.png) 
 
+## 🔍 Mitä tässä tapahtui? <br>
+- Set() on Power Fx:n komento, jolla tallennetaan arvo muuttujaan (tässä myMessage)
+- Label.Text = myMessage näyttää sen arvon
+- Kun käyttäjä klikkaa painiketta, viesti muuttuu
 
 
 
