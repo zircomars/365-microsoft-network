@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/98c7e440-538d-4d23-b199-ced55078286f)![image](https://github.com/user-attachments/assets/b6ca3d46-fd92-4f29-a6ce-1e98c90ad84e)![image](https://github.com/user-attachments/assets/a608b2b0-6e13-4cf6-af0d-8b64f81588ad)![image](https://github.com/user-attachments/assets/9a255c93-cd53-4f1c-a257-e04439da0c02)![image](https://github.com/user-attachments/assets/4bf5b913-b7c1-4e12-a994-c9402554005a)# Ensimmäinen Power Apps sovellus - heinäkuu 2025
+# Ensimmäinen Power Apps sovellus - heinäkuu 2025
 
 Tämä on ensimminen power apps sovellus ja kirjauduin omalla admin tunnuksilla sisään, että kuinka tämä toimii ja harjoituksen kannalta kokeilin "start with copilot". 
 
