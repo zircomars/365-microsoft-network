@@ -19,33 +19,33 @@ Power Platform on laajempi osa Microsoftin ekosysteemiä, mutta se toimii tiivii
 # Power Apps Developer Plan — Mitä sillä voi tehdä?
 
 1. Ilmainen henkilökohtainen kehitysympäristö <br>
-• Saat käyttöön oman, erillisen Power Apps -ympäristön pilvessä. <br>
-• Voit luoda ja testata sovelluksia ilman, että tarvitset maksullista lisenssiä tai tuotantoympäristöä. <br>
+- Saat käyttöön oman, erillisen Power Apps -ympäristön pilvessä. <br>
+- Voit luoda ja testata sovelluksia ilman, että tarvitset maksullista lisenssiä tai tuotantoympäristöä. <br>
 <br>
 
 3. Sovellusten rakentaminen ja testaaminen <br>
-• Voit rakentaa Canvas- ja Model-driven -tyyppisiä sovelluksia. <br>
-• Käyttää Dataverse-tietokantaa (Microsoftin pilvipohjainen tietovarasto). <br>
-• Testata sovelluksia ja niiden toimintoja kokonaan vapaasti. <br>
+- Voit rakentaa Canvas- ja Model-driven -tyyppisiä sovelluksia. <br>
+- Käyttää Dataverse-tietokantaa (Microsoftin pilvipohjainen tietovarasto). <br>
+- Testata sovelluksia ja niiden toimintoja kokonaan vapaasti. <br>
 <br>
 
 4. Oppiminen ja kokeilu <br>
-• Sopii loistavasti, jos haluat opetella Power Apps -kehitystä. <br>
-• Voit tehdä prototyyppejä ennen kuin otat käyttöön maksulliset lisenssit. <br>
-• Voit kokeilla integraatioita eri Microsoft- ja ulkopuolisten palvelujen kanssa. <br>
+- Sopii loistavasti, jos haluat opetella Power Apps -kehitystä. <br>
+- Voit tehdä prototyyppejä ennen kuin otat käyttöön maksulliset lisenssit. <br>
+- Voit kokeilla integraatioita eri Microsoft- ja ulkopuolisten palvelujen kanssa. <br>
 
 <br>
 5. Ei tuotantokäyttöön <br>
-• Developer Plan on tarkoitettu vain kehitykseen ja testaukseen, ei oikeisiin bisneskäyttöihin. <br>
-• Sovelluksia ei voi jakaa laajasti organisaatiossa tai ulkopuolisille käyttäjille. <br>
-• Käytät sitä omissa kehitystarkoituksissasi. <br>
+- Developer Plan on tarkoitettu vain kehitykseen ja testaukseen, ei oikeisiin bisneskäyttöihin. <br>
+- Sovelluksia ei voi jakaa laajasti organisaatiossa tai ulkopuolisille käyttäjille. <br>
+- Käytät sitä omissa kehitystarkoituksissasi. <br>
 
 <br>
 Mitä ei voi tehdä Developer Planilla? <br>
-• Et voi julkaista sovelluksia tuotantokäyttöön tai jakaa niitä laajasti. <br>
-• Et voi käyttää sovelluksia yrityksen virallisessa arjessa. <br>
-• Et saa tukea tuotantokäytön SLAs:ää (Service Level Agreement) varten. <br>
-• Käyttöoikeudet ja kapasiteetti ovat rajatut verrattuna maksullisiin lisensseihin. <br>
+- Et voi julkaista sovelluksia tuotantokäyttöön tai jakaa niitä laajasti. <br>
+- Et voi käyttää sovelluksia yrityksen virallisessa arjessa. <br>
+- Et saa tukea tuotantokäytön SLAs:ää (Service Level Agreement) varten. <br>
+- Käyttöoikeudet ja kapasiteetti ovat rajatut verrattuna maksullisiin lisensseihin. <br>
 
 ---
 
@@ -115,7 +115,7 @@ Mitä ei voi tehdä Developer Planilla? <br>
 
 ---
 
-# 🛡️ Power Apps: Tietoturva & lisenssi
+# 🛡️ Power Apps: Tietoturva, arkkitehtuuri ja käyttöympäristö:
 
 - Power Apps toimii Microsoftin pilvessä (SharePoint, Dataverse, OneDrive)
 - GDPR-yhteensopiva kun käytetään oikein
@@ -137,6 +137,51 @@ Mitä ei voi tehdä Developer Planilla? <br>
 - Power Apps sovelluksien osalta toimivat vain Microsoft pilvessä ja perustuviin Azure AD (Entra ID ) käyttäjähallintaan, että sovellusten käyttö voidaan rajata turvalisesti organisaation sisäisille käyttäjille.
 - Sovelluksen osalta ei itsensään takaa tietoturvaa ja tietosuojaa - se riippuu mitä tietoa sovelluksesta aikoo käsitellä ja rakentaa, että missä data tallennettan esim. Just SharePoint.
 - Kertauksena: Power Apps sovellus ei ole suunniteltu arkaluontoisen tai luottamuksellisen tiedon varsinaiseksi käsittelyalustaksi, vaan käyttöliittymäksi. Tallennus ja suojaus tulee aina ratkaista erikseen taustajärjestelmässä.
+
+
+## 1. Ei omaa palvelinta tai backend-koodia
+
+- Et tarvitse omaa Node.js-, TypeScript- tai muuta palvelinta → Microsoftin pilvipalvelu ylläpitää ja ajaa sovellusta.
+- Ei tarvitse murehtia palvelimen päivityksistä, kapasiteetista, skaalauksesta tai haavoittuvuuksista, kuten:
+ - Express.js:n tietoturvapäivitykset
+ - NPM-pakettien CVE:t
+ - HTTPS-sertifikaatit
+- Toki tämä tuo hyvää turvallisuutta, mutta samalla rajoittaa hallintaa ja joustavuutta.
+
+
+## 2. Power Apps toimii Microsoftin pilvessä (Azure)
+
+- Kaikki Power Apps -sovellukset ajetaan Microsoftin infrastruktuurissa, omassa tenantissasi.
+- Sovellukset sidotaan organisaation käyttäjiin Azure AD / Entra ID:n kautta.
+- Pääsy sovellukseen on rajattu:
+  - ✅ Organisaation käyttäjiin (oletuksena)
+  - 🔒 Ei ole avoin internetiin, ellei tietoisesti ja teknisesti jaeta ulkopuolelle (edellyttää Power Pages tms.)
+
+## 3. Tietoturva on pääosin hallittavissa Microsoft 365:n kautta
+
+### ✅ Hyvät puolet:
+- Autentikointi hoidetaan automaattisesti Azure AD:n avulla — ei tarvitse rakentaa omaa kirjautumislogiikkaa.
+- Voit käyttää Microsoftin omaa Conditional Accessia, MFA:ta, roolipohjaisia käyttöoikeuksia.
+- Voit rajata sovelluksia esim. vain tietyn ryhmän tai käyttäjän saataville.
+
+### 🔒 Huomioitavaa:
+- Et voi tehdä omaa "käsin tehtyä" autentikointia (kuten JWT-tokenin hallintaa, salasanakenttiä tai käyttäjän luontia).
+- Olet sidottu Microsoftin tietoturva- ja pääsynhallintamalliin.
+- Käytetyt tietolähteet (kuten SharePoint tai Dataverse) perivät pääsyn samoilla ehdoilla — jos käyttäjällä ei ole oikeuksia tietoon, ei Power Appsillakaan pääse siihen.
+
+## 4. API:t ja ulkopuoliset yhteydet
+- Power Appsissa voi käyttää valmiita liittimiä (connectors), esim. SharePoint, Excel, Outlook, SQL jne.
+- Custom API-yhteydet mahdollisia, mutta niiden käyttö vaatii usein:
+  - Premium-lisenssiä
+  - API:n pitää olla turvallisesti julkaistu (HTTPS, autentikointi)
+  - API:a ei voi käsitellä kovin matalalla tasolla (esim. HTTP-pyyntöjen yksityiskohtainen hallinta on rajallinen)
+
+
+## 🎯 Mihin tämä sopii erityisesti?
+- Intranetsovellukset, lomakkeet, raportointi, hyväksymisprosessit.
+- Organisaation sisäiset työkalut, jotka eivät vaadi täydellistä räätälöintiä.
+- Sovellukset, joissa tietoturva ja pääsynhallinta delegoidaan Microsoftin palveluille.
+
 
 ---
 
