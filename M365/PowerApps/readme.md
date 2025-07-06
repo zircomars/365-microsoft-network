@@ -1,6 +1,9 @@
 # Power Apps
 
-Power Apps kuuluu Microsoftin ekosysteemiin, mutta se on osa Microsoft 365 -kokonaisuutta — erityisesti silloin, kun käytetään Power Appsia yhdessä SharePointin, Excelin, OneDriven tai Teamsin kanssa
+Power Apps kuuluu Microsoftin ekosysteemiin, mutta se on osa Microsoft 365 -kokonaisuutta — erityisesti silloin, kun käytetään Power Appsia yhdessä SharePointin, Excelin, OneDriven tai Teamsin kanssa.
+
+Tämä on pikalinkki kuinka pääsee Power Apps sivustolle: **https://make.powerapps.com** 
+- yleensä saattaa automaattisesti lisätä url microsoft alkuun toi power apps, mutta sekin on yksi tapa **(https://powerapps.microsoft.com)**
 
 ![alt text](https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/PowerApps_Hero_2378x1536_RE4pD1x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1920&qlt=90&fmt=png-alpha&fit=constrain)
 
