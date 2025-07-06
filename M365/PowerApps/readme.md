@@ -182,7 +182,7 @@ Power Apps sovelluksen projekteissa voi testata erillaisia esim. tabletti, puhel
 | **Per User Plan**    | ~20 USD/kk per käyttäjä                 | Rajaton käyttö useissa Power Apps -sovelluksissa    |
 | **Pay‑As‑You‑Go**    | ~10 USD/kk per aktiivinen käyttäjä/sovellus | Dynaaminen hinnoittelu, perustuu todelliseen käyttöön |
 
-Tästä koskien Entra ID (jos on ilmais versio) on mahdollista integroida Power Apps + Entra ID (enterprise application tai app registration) kanssa. Huomioina, että molemmissa jos sovellus ei jaeta muille käyttäjille - on mahdollista testata/integroida SharePoint:ia, mutta sharepointiin vaattii toinen lisenssi. - Tämä koskee yrityksien tai harrastelijoiden budjetointia, että onko tarvetta ja tarvitseeko esim. sitä lisessointia joko **P1/P2:lle**. P1 ja P2 lisessoinnissa vaadittaan ja avautuu muita konfigurointi asetuksia esim. conditional access , identity governance , App proxy ja jne, mitä Entra ID:n asetuksista löytyy.
+Tästä koskien Entra ID (jos on ilmais versio) on mahdollista integroida Power Apps + Entra ID (enterprise application tai app registration) kanssa. Huomioina, että molemmissa jos sovellus ei jaeta muille käyttäjille - on mahdollista testata/integroida SharePoint:ia, mutta sharepointiin vaattii toinen lisenssi. - Tämä koskee yrityksien tai harrastelijoiden budjetointia, että onko tarvetta ja tarvitseeko esim. sitä lisessointia joko **P1/P2:lle**. P1 ja P2 lisessoinnissa vaadittaan ja avautuu muita konfigurointi asetuksia esim. conditional access , identity governance , App proxy ja jne, mitä Entra ID:n asetuksista löytyy. **(Ajalta ja haettu/kyselty tekoälyltä apua heinäkuu 2025)**
 
 
 ## 🔗 Lisätiedot ja huomioitavaa
