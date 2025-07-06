@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/759dffed-24d1-4557-aca5-d0c2358f99c8)# Ensimmäinen Power Apps sovellus - heinäkuu 2025
+![image](https://github.com/user-attachments/assets/98c7e440-538d-4d23-b199-ced55078286f)![image](https://github.com/user-attachments/assets/b6ca3d46-fd92-4f29-a6ce-1e98c90ad84e)![image](https://github.com/user-attachments/assets/a608b2b0-6e13-4cf6-af0d-8b64f81588ad)![image](https://github.com/user-attachments/assets/9a255c93-cd53-4f1c-a257-e04439da0c02)![image](https://github.com/user-attachments/assets/4bf5b913-b7c1-4e12-a994-c9402554005a)# Ensimmäinen Power Apps sovellus - heinäkuu 2025
 
 Tämä on ensimminen power apps sovellus ja kirjauduin omalla admin tunnuksilla sisään, että kuinka tämä toimii ja harjoituksen kannalta kokeilin "start with copilot". 
 
@@ -50,17 +50,38 @@ Otin nyt "start with copilot" pohja
 
  ![alt text](./PowerApps-image/9.png) 
 
+ Start from Copilot ja anna tekoälylle ohjeet: esim. "Create a simple contact form app" — se luo sinulle sovelluksen automaattisesti.
+
  ![alt text](./PowerApps-image/10.png) 
  
  ![alt text](./PowerApps-image/11.png) 
 
+ Sitten se alkaa generoimaan ja antaa se Apps tehdä oman hommansa.
+
  ![alt text](./PowerApps-image/12.png) 
+
+
+Sitten voila ja tuloksena se loi jonkinlaisen taulukonsa: <br>
+Kokeilin ton "copilot" vähä kuin chätti oletuksena, että tekee jotakin ja esim. Rakentaa/muokkaa/lisää uutta taulukkoa alle.
 
  ![alt text](./PowerApps-image/13.png) 
 
  ![alt text](./PowerApps-image/14.png) 
  
  ![alt text](./PowerApps-image/15.png) 
+
+### 🔎 Mitä "Start with Copilot" teki? 
+
+Kun kirjoitin:
+- "Create a simple contact form app"
+Power Apps rakensi automaattisesti sinulle pienen sovelluksen, jossa:
+- On Contact-näkymä (lista yhteystiedoista)
+- On Contact Details -näkymä (lomake yksittäisen kontaktin tiedoille)
+
+<br>
+Tuossa yhdessä kohdassa "Department" luokkan sisään lisäsin toisen kategorian joka on IT (california) <br><br>
+
+### Seuraavaksi tallennettaan ja avataan tämä ns. Mini sovellus:
 
  ![alt text](./PowerApps-image/16.png) 
 
@@ -74,34 +95,56 @@ Otin nyt "start with copilot" pohja
 
  ![alt text](./PowerApps-image/21.png) 
 
+
+ Tässähan se kalifornia onkin.
+ 
  ![alt text](./PowerApps-image/22.png) 
+
+ Tässä jatkuu jotenkin jännästi
  
  ![alt text](./PowerApps-image/23.png) 
 
  ![alt text](./PowerApps-image/24.png) 
 
- ![alt text](./PowerApps-image/25.png) 
+Jotenkin jännästi yrittää julkaista, mutta tuleeko käyttäjille oikeuksia sitten pitää tarkistaa..
 
- ![alt text](./PowerApps-image/26.png) 
+![alt text](./PowerApps-image/25.png) 
+
+![alt text](./PowerApps-image/26.png) 
+
+Kun menee takaisin Power Apps etusivulle (https://make.powerapps.com/environments/<omatenant-ID>) ja vaseman kategoriasta (apps) - niin siinä näkyy tallennettu sovellus.
  
- ![alt text](./PowerApps-image/27.png) 
+![alt text](./PowerApps-image/27.png) 
 
+---
 
+# Julkaiseminen ja jakaminen tämä sovellus käyttöön - START HERE - MINI OHJE JA TEORIA:
 
+miten Power Apps -sovellus voidaan jakaa muille, ja miten se poikkeaa Azure AD:n "Enterprise Applications" ja "App registrations" -konsepteista.
 
+Tällä on jotakin eronsa verrattuna normaaliin Entra ID (app registration ja enterprise application) sovellukseensa. 
 
+| **Kysymys** | **Vastaus** |
+|------------|-------------|
+| Voinko jakaa Power Apps -sovelluksen Developer Planista muille? | ❌ Et voi |
+| Miten voin jakaa sen? | ✅ Siirrä sovellus tuotantoympäristöön, jossa on Power Apps -lisenssit |
+| Liittyvätkö "App Registration" ja "Enterprise Application" Power Appsiin? | ❌ Ei suoraan – ne liittyvät Azure AD:n käyttöoikeuksiin ja API-käyttöön |
 
+---
 
+# Jatkuu pieni lisäys koodina - Power FX kaava - START HERE;
 
+Tosiaan tässä Power Apps sovelluksessa ja editoinnin alla ei voi koodata, että se on suurin pettymys ja voi vain koodata tonne lisäämällä noita editointi välineitä esim. klikkaa nappi ja tulostaa tekstin vaikappa viestin: (Hello world!).
 
+![alt text](./PowerApps-image/28.png) 
 
+![alt text](./PowerApps-image/29.png) 
 
+![alt text](./PowerApps-image/30.png) 
 
+![alt text](./PowerApps-image/31.png) 
 
-
-
-
-
+![alt text](./PowerApps-image/32.png) 
 
 
 
