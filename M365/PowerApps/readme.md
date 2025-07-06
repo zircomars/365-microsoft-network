@@ -233,6 +233,12 @@ Tästä koskien Entra ID (jos on ilmais versio) on mahdollista integroida Power 
 
 **Developer Plan** - on täysin ilmainen ja sillä ei ole 30 päivän kokeilua verrattuna muilla ja osalla Microsoft työkalujen/ohjelmien kanssa esim. Dynamic 365 sillä on 30 päivän kokeilu. Kuitenkin tällä Power Apps **Developer Plan** suunnitelman lisenssillä on nimenomaan tarkoitettu kehittäjälle, jotka haluavat kehittää/oppia ja kokeilla Power Apps:iä, että ilman aikarajaa ja tämä lisenssi ei vanhene automaattisesti 30 päivän jälkeen.
 
+<br>
+(Tässä esim. yleisen admin centeristä voi tarkistellaa lisenssit (*https://admin.microsoft.com*) ja global admin tai tietty admin tasoinen oikeus).
+
+ ![alt text](./PowerApps-image/1.png) 
+
+
 ## 🔗 Lisätiedot ja huomioitavaa
 - **Developer Plan** ei ole sallittu liiketoimintakäytössä tai muiden käyttäjien käytettäväksi. Tätä on mahdollista avata ja käyttääki esim. jos on käytössä Entra ID (Azure AD):ssa se ilmais lisenssi versio ja aktivoimalla tämän Power Apps sovelluksensa niin saa sen 1000 kpl ilmais lisenssin.
 - **Standard-liittimet** (SharePoint, Outlook, OneDrive) sisältyvät Microsoft 365 -lisenssiin.
