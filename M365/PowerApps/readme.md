@@ -229,6 +229,9 @@ Power Apps sovelluksen projekteissa voi testata erillaisia esim. tabletti, puhel
 
 Tästä koskien Entra ID (jos on ilmais versio) on mahdollista integroida Power Apps + Entra ID (enterprise application tai app registration) kanssa. Huomioina, että molemmissa jos sovellus ei jaeta muille käyttäjille - on mahdollista testata/integroida SharePoint:ia, mutta sharepointiin vaattii toinen lisenssi. - Tämä koskee yrityksien tai harrastelijoiden budjetointia, että onko tarvetta ja tarvitseeko esim. sitä lisessointia joko **P1/P2:lle**. P1 ja P2 lisessoinnissa vaadittaan ja avautuu muita konfigurointi asetuksia esim. conditional access , identity governance , App proxy ja jne, mitä Entra ID:n asetuksista löytyy. **(Ajalta ja haettu/kyselty tekoälyltä apua heinäkuu 2025)**
 
+## Lisesointia koskien lisätietoa:
+
+**Developer Plan** - on täysin ilmainen ja sillä ei ole 30 päivän kokeilua verrattuna muilla ja osalla Microsoft työkalujen/ohjelmien kanssa esim. Dynamic 365 sillä on 30 päivän kokeilu. Kuitenkin tällä Power Apps **Developer Plan** suunnitelman lisenssillä on nimenomaan tarkoitettu kehittäjälle, jotka haluavat kehittää/oppia ja kokeilla Power Apps:iä, että ilman aikarajaa ja tämä lisenssi ei vanhene automaattisesti 30 päivän jälkeen.
 
 ## 🔗 Lisätiedot ja huomioitavaa
 - **Developer Plan** ei ole sallittu liiketoimintakäytössä tai muiden käyttäjien käytettäväksi. Tätä on mahdollista avata ja käyttääki esim. jos on käytössä Entra ID (Azure AD):ssa se ilmais lisenssi versio ja aktivoimalla tämän Power Apps sovelluksensa niin saa sen 1000 kpl ilmais lisenssin.
