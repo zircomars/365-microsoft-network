@@ -106,6 +106,16 @@ Mitä ei voi tehdä Developer Planilla? <br>
 - Power Apps on tarkoitettu sisäisille (yrityksen organisaation) henkilölle kuten yksittäisen/tietyn tiimeille, osastoille tai projektiryhmille. Tätä Power Apps rakennettua projektia ei ole tarkoitettu julkaisuun esim. Tuotantoon ja tätä ei ole tarkoitettu koko organisaatioon "virallisiin" tai julkisiin julkaisuihin.
 - Kehittäjälle esim. Lisäisi monimutkaisempaa logiikka, integraatiota, suunnittelijalle ja osa koodaajille.
 
+### Muita Low code
+
+Microsoftin Power Apps on yksi tunnetuimmista low-code- tai no-code-alustoista, mutta markkinoilla on useita muitakin vaihtoehtoja eri käyttötarkoituksiin, kuten sovelluskehitykseen, automaatioon, raportointiin ja verkkosivujen rakentamiseen. 
+
+- **OutSystems**, **Mendix**, **Appian** ja **Zoho Creator** – vahvoja enterprise-luokan low-code-ratkaisuja.
+- **Bubble**, **Adalo**, **Glide** ja **Thunkable** – no-code-työkaluja mobiili- ja web-sovellusten kehittämiseen.
+- **Zapier**, **Make** (entinen Integromat), **n8n** ja **Microsoft Power Automate** – automaatio- ja integraatiotyökaluja, joilla voi yhdistää eri järjestelmiä ja työnkulkuja ilman koodia.
+- **Power BI**, **Tableau** ja **Looker Studio** – visuaalisia raportointi- ja datatyökaluja, joilla voidaan analysoida ja esittää tietoa selkeästi.
+
+
 ## Käyttötarkoitus:
 - Power Apps on tarkoitettu enemmän käyttöliittymän rakentamiseen (lomakkeet, painikkeet, galleriat, hakutoiminnat ja jne). Vähä kuin demoaisi jonkinlaisen sovelluksen pohjan, mutta sitä ei kannata käyttää tiedostojen tallentamiseen. 
 - Jos tietojen tallentamista käyttää niin kannattaa mennä SharePoint. 
