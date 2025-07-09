@@ -28,5 +28,3 @@ Täällä voit hallita:
 Lisätietoa: [Microsoft Learn – Power Platform Admin Settings](https://learn.microsoft.com/en-us/power-platform/admin/power-platform-settings)
 
 ---
-
-Haluatko, että teen tästä myös visuaalisen kaavion tai lisään esimerkin tyypillisestä ympäristörakenteesta (esim. testi vs. tuotanto)?
