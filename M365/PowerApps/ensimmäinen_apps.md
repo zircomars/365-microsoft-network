@@ -4,6 +4,8 @@ Tämä on ensimminen power apps sovellus ja kirjauduin omalla admin tunnuksilla 
 
 Tässä on muutama kuva, josta kuin kirjautuu ja aktivoi ensimmäisen kerran Power App:sin sovelluksen/työkalunsa.
 
+ ![alt text](./PowerApps-image/1.png) 
+
  ![alt text](./PowerApps-image/2.png) 
 
  ![alt text](./PowerApps-image/3.png) 
