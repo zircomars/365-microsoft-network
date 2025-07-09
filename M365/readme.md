@@ -69,11 +69,65 @@ DisplayName       Id                                   Mail                     
 Admin Company     ABC123-ABC123-ABC123-ABC123456789ABC                                               admin@companyName...
 ```
 
-Jossakin tilanteessa jos kirjautuu myöhemmin uudestaan `connect-MgGraph` - MgGraph voi kirjoittaa myös pienellä (mggraph) - se tunnistaa sen tekstin/sanansa. Niin voi tulla automaattinen "Tervetuloa Microsoft Graph" - englanniksi. Tämä tarkoittaa se istunto on yhä tallella ja tallentanut muistiinsa. Jos halutaan kirjautua ulos sessiosta, niin täyttyy antaa komento, joka ikään kuin katkaisee / kirjautuu ulos yhteydestä Graph (Microsoft) palveluun `Disconnect-MgGraph` . 
+Jossakin tilanteessa jos kirjautuu myöhemmin uudestaan `connect-MgGraph` - MgGraph voi kirjoittaa myös pienellä (mggraph) - se tunnistaa sen tekstin/sanansa. Niin voi tulla automaattinen "Tervetuloa Microsoft Graph" - englanniksi. Tämä tarkoittaa se istunto on yhä tallella ja tallentanut muistiinsa. Jos halutaan **kirjautua ulos sessiosta**, niin täyttyy antaa komento, joka ikään kuin **katkaisee / kirjautuu ulos yhteydestä** Graph (Microsoft) palveluun `Disconnect-MgGraph` . 
 
 Tämä komento sulkee yhteyden Microsoft Graphiin ja poistaa nykyisen todennustiedon PowerShell-istunnosta. Tämä pätee kirjautumista toisella tunnuksella ja testata eri käyttöoikeutta ja/tai sovellustunnusta.
 
 Joskus voi olla hyvä myös tyhjentää `TokenCache`, jos kirjautumiset menevät oudosti välimuistin kautta. Tämän voi tehdä esim. sulkemalla PowerShell-ikkunan tai käyttämällä MSAL-kirjastoja tarkemmin.
+
+Seuraavaksi nämä ovat yleisiä komentoja kirjauduttua PowerShell yhdistyneet Microsoft pilvipalveluun, joka ideana on kuin tehdä tarkistus: <br>
+
+Tämä komento liittyy icrosoft Graph PowerShell -moduuliin, ja sen tarkoitus on näyttää nykyisen istunnon kontekstitiedot. Tämä tulostaa tiedot nykyisestä Microsoft Graph -istunnosta, mikä on hyödyllistä esimerkiksi skriptien vianmäärityksessä tai varmistaaksesi, että olet kirjautunut oikealla identiteetillä ja käyttöoikeuksilla.
+```
+PS C:\WINDOWS\system32> Get-MgContext
+
+ClientId               : aT7pL$2jVqZ9#rB8-XXXXXXXXXXXX
+TenantId               : zR8wE^4k1uKXXXXXXXXXXXX-XXXXXXXXXXXX
+Scopes                 : {Application.Read.All, Application.ReadWrite.All, AppRoleAssignment.ReadWrite.All,
+                         AuditLog.Read.All...}
+AuthType               : Delegated
+TokenCredentialType    : InteractiveBrowser
+CertificateThumbprint  :
+CertificateSubjectName :
+SendCertificateChain   : False
+Account                : jackjack.admin@domain.onmicrosoft.com
+AppName                : Microsoft Graph Command Line Tools
+ContextScope           : CurrentUser
+Certificate            :
+PSHostVersion          : 5.1.123456.1234
+ManagedIdentityId      :
+ClientSecret           :
+Environment            : Global
+```
+
+
+Tämä tarkistaa oman käyttöoikeudet. Huomioi, että tämä koskee juuri sillä hetkellä kirjautunutta tunnusta ja vain, jos istunto jatkuu ilman uloskirjautumista. `(Get-MgContext).Scopes` palauttaa ne käyttöoikeudet eli "scopet", joihin kulloinkin kirjautunut tunnus on antanut suostumuksen kyseisessä istunnossa Microsoft Graphin kanssa. Ne kuvaavat, mitä kyseinen tunnus saa Graph-rajapinnan kautta tehdä ja mihin tietoihin se saa päästä.
+
+```
+PS C:\WINDOWS\system32> (Get-MgContext).Scopes
+Application.Read.All
+Application.ReadWrite.All
+AppRoleAssignment.ReadWrite.All
+AuditLog.Read.All
+Calendars.ReadWrite
+Directory.Read.All
+Group.Read.All
+Group.ReadWrite.All
+Mail.Send
+openid
+Organization.Read.All
+Policy.Read.All
+profile
+RoleManagement.ReadWrite.Directory
+User.Read
+User.Read.All
+User.ReadBasic.All
+email
+```
+
+
+
+
 
 ---
 
