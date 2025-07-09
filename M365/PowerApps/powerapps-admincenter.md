@@ -2,7 +2,7 @@
 
 Jokaisella Microsoftin työkalulla on oma **admin-ympäristö**, jonka kautta hallitaan kyseisen sovelluksen asetuksia ja käyttäjiä. Tässä muutamia esimerkkejä:
 
-- **Yleinen Microsoft 365 Admin Center** (`admin.microsoft.com`)  
+- **Yleinen Microsoft 365 Admin Center** (`admin.microsoft.com`)  - tämä on sama identtinen asetus idea kuin virallinen entra etusivu, azure ad portaali (entra id) ja jne - mutta nämä sivustot tarjoaa saman työkalun riippuu vain asetuksen hallintaa mitä halua muuttaa. Esim. lisenssi voi lisätä admin centerin kautta.
   → Käyttäjien, ryhmien, lisenssien ja organisaation asetusten hallinta
 
 - **Exchange Admin Center**  
