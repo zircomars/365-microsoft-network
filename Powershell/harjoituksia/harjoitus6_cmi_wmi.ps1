@@ -239,7 +239,7 @@ PS C:\WINDOWS\system32> Get-CimInstance Win32_ComputerSystem
 
 Name             PrimaryOwnerName     Domain               TotalPhysicalMemory  Model               Manufacturer
 ----             ----------------     ------               -------------------  -----               ------------
-LAPTOP-idSomething  zhao-96@hotmail.com  WORKGROUP            8464355328           81MU                LENOVO
+LAPTOP-idSomething domain@hotmail.com  WORKGROUP            923485721           81MU                LENOVO
 
 
 #fyysisen koneen datat ja tiedot
