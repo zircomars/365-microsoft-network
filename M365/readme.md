@@ -125,8 +125,11 @@ User.ReadBasic.All
 email
 ```
 
+**Huomioina** koskien kirjauttumista PowerShell MS graph moduulilla tonne omaan tenant ympäristöön, jossakin tilanteessa saattaa kysyä _oikeuden pyyntöä_, koska saattaa olla ensimmäinen kerta käyttö vaikka ei ole kirjauttunut aikaisemmin sillä työaseman istunnolla esim. uusi työasema tai uusi käyttöjärjestelmä vaikappa kirjaudttu virtualmachine laiteella. Vaikka oikeudesta esim. Entra ID:ssä on **global admin** tämä silti tulee kysellee ja onko tarvetta, on hyvä myös hyväksyä ja ylemmän komennosta voi toistaa PowerShell terminaalissa esim. tarkistaa oman API permisson oikeudet
 
+<img src="images/powershell-msgraph1.png">
 
+<img src="images/powershell-msgraph2.png">
 
 
 ---
